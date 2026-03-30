@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+*.o
+*.a
+*.so
+*.dylib
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# KiCad
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pro-bak
+*-cache.lib
+*~
+
+# Gerber and fabrication files
+*.gbr
+*.gbl
+*.gbs
+*.gbt
+*.gbx
+*.gbo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# Temporary files
+*.tmp
+*.bak
+.#*

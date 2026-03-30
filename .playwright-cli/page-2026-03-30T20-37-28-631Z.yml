@@ -1,0 +1,111 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "SA" [ref=e3] [cursor=pointer]:
+      - /url: index.html#top
+    - generic [ref=e4]:
+      - link "Projects" [ref=e5] [cursor=pointer]:
+        - /url: index.html#projects
+      - link "Experience" [ref=e6] [cursor=pointer]:
+        - /url: index.html#experience
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: index.html#about
+      - link "Contact" [ref=e8] [cursor=pointer]:
+        - /url: index.html#contact
+      - link "Resume" [ref=e9] [cursor=pointer]:
+        - /url: index.html#resume
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - link "← Back to portfolio" [ref=e12] [cursor=pointer]:
+        - /url: index.html#projects
+      - generic [ref=e13]:
+        - generic [ref=e14]: Theme Accent
+        - generic "Accent color switcher" [ref=e15]:
+          - button "Blue accent" [ref=e16] [cursor=pointer]
+          - button "Purple accent" [ref=e17] [cursor=pointer]
+          - button "Green accent" [ref=e18] [cursor=pointer]
+          - button "Orange accent" [ref=e19] [cursor=pointer]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]: Robotics Hardware
+            - generic [ref=e24]: Most Complex Board
+          - heading "CANable, CAN-to-USB Converter" [level=1] [ref=e25]
+          - paragraph [ref=e26]: Compact STM32-based CAN-to-USB interface board that lets the onboard PC communicate with distributed robot electronics over the CAN bus for IGVC.
+          - generic [ref=e27]:
+            - generic [ref=e28]: STM32
+            - generic [ref=e29]: CAN Bus
+            - generic [ref=e30]: USB
+            - generic [ref=e31]: Embedded Firmware
+            - generic [ref=e32]: PCB Design
+            - generic [ref=e33]: Robot Electronics
+          - generic [ref=e34]:
+            - generic [ref=e35]: Private robotics work
+            - link "Contact Me" [ref=e36] [cursor=pointer]:
+              - /url: index.html#contact
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - heading "Overview" [level=2] [ref=e40]
+              - paragraph [ref=e41]: This board represents some of my most technically challenging PCB work to date. It sits at the center of distributed robot communication, bridging the onboard PC and embedded subsystems over CAN while balancing firmware, hardware reliability, and board-level integration.
+            - generic [ref=e42]:
+              - generic [ref=e43]:
+                - generic [ref=e44]:
+                  - paragraph [ref=e45]: Embedded 3D PCB Viewer
+                  - heading "CANable Interactive Board" [level=2] [ref=e46]
+                  - paragraph [ref=e47]: Inspect the CAN-to-USB robotics board directly on the page with PCB, 3D, and schematic views from the hosted Altium source archive.
+                  - generic "Available PCB views" [ref=e48]:
+                    - generic [ref=e49]: 3D
+                    - generic [ref=e50]: PCB
+                    - generic [ref=e51]: Schematic
+                - link "Download board archive" [ref=e53] [cursor=pointer]:
+                  - /url: assets/altium-archives/canable-altium-project.zip
+              - generic [ref=e55]:
+                - img "CANable Interactive Board fallback preview" [ref=e56]
+                - generic [ref=e57]:
+                  - strong [ref=e58]: Viewer activates once the site is deployed
+                  - paragraph [ref=e59]: Altium needs a public URL to fetch this hosted archive, so localhost previews stay in fallback. On the deployed site, this section can load the embedded board directly.
+              - paragraph [ref=e60]: Altium needs a public URL to fetch this hosted archive, so localhost previews stay in fallback. On the deployed site, this section can load the embedded board directly.
+            - generic [ref=e61]:
+              - heading "Technical Highlights" [level=2] [ref=e62]
+              - list [ref=e63]:
+                - listitem [ref=e64]: Created a robust hardware bridge between the onboard computer and distributed CAN nodes.
+                - listitem [ref=e65]: Worked through the practical constraints of USB, CAN transceivers, and embedded board integration.
+                - listitem [ref=e66]: Designed for use in a real robotics environment rather than as a lab-only concept.
+            - generic [ref=e67]:
+              - heading "Media + Documentation" [level=2] [ref=e68]
+              - generic [ref=e69]:
+                - article [ref=e70]:
+                  - generic [ref=e71]: CAN / USB Schematic
+                  - generic [ref=e72]:
+                    - heading "Schematic Export" [level=3] [ref=e73]
+                    - paragraph [ref=e74]: Add the schematic showing the STM32, transceiver, USB path, and power routing.
+                - article [ref=e75]:
+                  - generic [ref=e76]: 3D PCB View
+                  - generic [ref=e77]:
+                    - heading "3D Board Render" [level=3] [ref=e78]
+                    - paragraph [ref=e79]: Show the 3D PCB model or routing screenshots to highlight board complexity.
+                - article [ref=e80]:
+                  - generic [ref=e81]: System Integration
+                  - generic [ref=e82]:
+                    - heading "Robot Integration Photo" [level=3] [ref=e83]
+                    - paragraph [ref=e84]: Include a photo of the board installed on the robot or connected during bring-up.
+          - complementary [ref=e85]:
+            - generic [ref=e86]:
+              - heading "Project Snapshot" [level=3] [ref=e87]
+              - generic [ref=e88]:
+                - generic [ref=e89]:
+                  - generic [ref=e90]: Type
+                  - generic [ref=e91]: STM32 + CAN Board
+                - generic [ref=e92]:
+                  - generic [ref=e93]: Visibility
+                  - generic [ref=e94]: Private robotics work
+                - generic [ref=e95]:
+                  - generic [ref=e96]: Best For
+                  - generic [ref=e97]: Schematics, 3D PCB renders, UI screenshots, or short demos
+            - generic [ref=e98]:
+              - heading "Add Media Later" [level=3] [ref=e99]
+              - paragraph [ref=e100]: This page is ready for your schematics, board renders, demo videos, or screenshots. As you collect assets, these cards can be replaced with real visuals.
+  - contentinfo [ref=e101]:
+    - generic [ref=e102]:
+      - paragraph [ref=e103]: Case study view for Shawn Agarwal’s projects.
+      - paragraph [ref=e104]: Electrical Engineer | PCB Designer | AI / ML Engineer

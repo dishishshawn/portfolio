@@ -1,0 +1,117 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "SA" [ref=e3] [cursor=pointer]:
+      - /url: index.html#top
+    - generic [ref=e4]:
+      - link "Projects" [ref=e5] [cursor=pointer]:
+        - /url: index.html#projects
+      - link "Experience" [ref=e6] [cursor=pointer]:
+        - /url: index.html#experience
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: index.html#about
+      - link "Contact" [ref=e8] [cursor=pointer]:
+        - /url: index.html#contact
+      - link "Resume" [ref=e9] [cursor=pointer]:
+        - /url: index.html#resume
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - link "← Back to portfolio" [ref=e12] [cursor=pointer]:
+        - /url: index.html#projects
+      - generic [ref=e13]:
+        - generic [ref=e14]: Theme Accent
+        - generic "Accent color switcher" [ref=e15]:
+          - button "Blue accent" [ref=e16] [cursor=pointer]
+          - button "Purple accent" [ref=e17] [cursor=pointer]
+          - button "Green accent" [ref=e18] [cursor=pointer]
+          - button "Orange accent" [ref=e19] [cursor=pointer]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]: Sensing + Embedded
+            - generic [ref=e24]: STORM
+          - heading "Infrared Sensor Board" [level=1] [ref=e25]
+          - paragraph [ref=e26]: Raspberry Pi Pico-based infrared sensing board using TSOP receivers to detect, decode, and transmit IR signals back to the main PC in real time for STORM.
+          - generic [ref=e27]:
+            - generic [ref=e28]: Raspberry Pi Pico
+            - generic [ref=e29]: TSOP IR Receivers
+            - generic [ref=e30]: Embedded C/C++
+            - generic [ref=e31]: Real-time Signal Decoding
+            - generic [ref=e32]: Serial Communication
+          - generic [ref=e33]:
+            - link "View GitHub Repo" [ref=e34] [cursor=pointer]:
+              - /url: https://github.com/dishishshawn/InfaredPCB
+            - link "Contact Me" [ref=e35] [cursor=pointer]:
+              - /url: index.html#contact
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - heading "Overview" [level=2] [ref=e39]
+              - paragraph [ref=e40]: The infrared sensing board was designed for real-time signal capture and communication inside the STORM robot system. It brought together embedded firmware, sensor interfacing, and system-level data handoff to the main computer.
+            - generic [ref=e41]:
+              - generic [ref=e42]:
+                - generic [ref=e43]:
+                  - paragraph [ref=e44]: Embedded 3D PCB Viewer
+                  - heading "Infrared Sensor Board Interactive Board" [level=2] [ref=e45]
+                  - paragraph [ref=e46]: Inspect the infrared sensor board directly on the page with 3D, PCB, and schematic views from the public GitHub archive.
+                  - generic "Available PCB views" [ref=e47]:
+                    - generic [ref=e48]: 3D
+                    - generic [ref=e49]: PCB
+                    - generic [ref=e50]: Schematic
+                - link "Open board source" [ref=e52] [cursor=pointer]:
+                  - /url: https://github.com/dishishshawn/InfaredPCB
+              - generic [ref=e53]:
+                - generic [ref=e55]:
+                  - link "PCB File Viewer by Altium" [ref=e56] [cursor=pointer]:
+                    - /url: https://www.altium.com/altium-designer-viewer/
+                  - iframe [ref=e57]:
+                    
+                - generic:
+                  - img "Infrared Sensor Board Interactive Board fallback preview"
+                  - generic:
+                    - strong: Preview stays visible while the live viewer loads
+                    - paragraph: This viewer uses the public GitHub archive for the infrared sensor board, so the 3D board can load directly inside the case study.
+              - paragraph [ref=e58]: This viewer uses the public GitHub archive for the infrared sensor board, so the 3D board can load directly inside the case study.
+            - generic [ref=e59]:
+              - heading "Technical Highlights" [level=2] [ref=e60]
+              - list [ref=e61]:
+                - listitem [ref=e62]: Captured and decoded incoming IR signals using a Pico-based embedded platform.
+                - listitem [ref=e63]: Passed processed sensor data back to the main PC in real time.
+                - listitem [ref=e64]: Supported a larger robotics system through sensor-focused hardware design.
+            - generic [ref=e65]:
+              - heading "Media + Documentation" [level=2] [ref=e66]
+              - generic [ref=e67]:
+                - article [ref=e68]:
+                  - generic [ref=e69]: IR Circuit View
+                  - generic [ref=e70]:
+                    - heading "Sensor Schematic" [level=3] [ref=e71]
+                    - paragraph [ref=e72]: Add a screenshot of the sensor connections, decoding logic, and communication path.
+                - article [ref=e73]:
+                  - generic [ref=e74]: Sensor Hardware
+                  - generic [ref=e75]:
+                    - heading "Board Photo" [level=3] [ref=e76]
+                    - paragraph [ref=e77]: Show the assembled board or its mounting within the robot system.
+                - article [ref=e78]:
+                  - generic [ref=e79]: Real-Time Output
+                  - generic [ref=e80]:
+                    - heading "Signal Demo" [level=3] [ref=e81]
+                    - paragraph [ref=e82]: Include serial output, logs, or a demo of signal detection in use.
+          - complementary [ref=e83]:
+            - generic [ref=e84]:
+              - heading "Project Snapshot" [level=3] [ref=e85]
+              - generic [ref=e86]:
+                - generic [ref=e87]:
+                  - generic [ref=e88]: Type
+                  - generic [ref=e89]: Pico-based Sensor Board
+                - generic [ref=e90]:
+                  - generic [ref=e91]: Visibility
+                  - generic [ref=e92]: Public repository
+                - generic [ref=e93]:
+                  - generic [ref=e94]: Best For
+                  - generic [ref=e95]: Schematics, 3D PCB renders, UI screenshots, or short demos
+            - generic [ref=e96]:
+              - heading "Add Media Later" [level=3] [ref=e97]
+              - paragraph [ref=e98]: This page is ready for your schematics, board renders, demo videos, or screenshots. As you collect assets, these cards can be replaced with real visuals.
+  - contentinfo [ref=e99]:
+    - generic [ref=e100]:
+      - paragraph [ref=e101]: Case study view for Shawn Agarwal’s projects.
+      - paragraph [ref=e102]: Electrical Engineer | PCB Designer | AI / ML Engineer

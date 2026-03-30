@@ -1,0 +1,2 @@
+[    2033ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/styles.css:0
+[    2046ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://127.0.0.1:4173/project-data.js:0

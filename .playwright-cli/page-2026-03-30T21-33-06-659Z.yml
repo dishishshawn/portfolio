@@ -1,0 +1,30 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "SA" [ref=e3] [cursor=pointer]:
+      - /url: index.html#top
+    - generic [ref=e4]:
+      - link "Projects" [ref=e5] [cursor=pointer]:
+        - /url: index.html#projects
+      - link "Experience" [ref=e6] [cursor=pointer]:
+        - /url: index.html#experience
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: index.html#about
+      - link "Contact" [ref=e8] [cursor=pointer]:
+        - /url: index.html#contact
+      - link "Resume" [ref=e9] [cursor=pointer]:
+        - /url: index.html#resume
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - link "← Back to portfolio" [ref=e12] [cursor=pointer]:
+        - /url: index.html#projects
+      - generic [ref=e13]:
+        - text: Theme Accent
+        - generic "Accent color switcher" [ref=e14]:
+          - button "Blue accent" [ref=e15]
+          - button "Purple accent" [ref=e16]
+          - button "Green accent" [ref=e17]
+          - button "Orange accent" [ref=e18]
+  - contentinfo [ref=e19]:
+    - generic [ref=e20]:
+      - paragraph [ref=e21]: Case study view for Shawn Agarwal’s projects.
+      - paragraph [ref=e22]: Electrical Engineer | PCB Designer | AI / ML Engineer

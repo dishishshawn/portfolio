@@ -1,0 +1,109 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "SA" [ref=e3] [cursor=pointer]:
+      - /url: index.html#top
+    - generic [ref=e4]:
+      - link "Projects" [ref=e5] [cursor=pointer]:
+        - /url: index.html#projects
+      - link "Experience" [ref=e6] [cursor=pointer]:
+        - /url: index.html#experience
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: index.html#about
+      - link "Contact" [ref=e8] [cursor=pointer]:
+        - /url: index.html#contact
+      - link "Resume" [ref=e9] [cursor=pointer]:
+        - /url: index.html#resume
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - link "← Back to portfolio" [ref=e12] [cursor=pointer]:
+        - /url: index.html#projects
+      - generic [ref=e13]:
+        - generic [ref=e14]: Theme Accent
+        - generic "Accent color switcher" [ref=e15]:
+          - button "Blue accent" [ref=e16] [cursor=pointer]
+          - button "Purple accent" [ref=e17] [cursor=pointer]
+          - button "Green accent" [ref=e18] [cursor=pointer]
+          - button "Orange accent" [ref=e19] [cursor=pointer]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]: Competition Robotics
+            - generic [ref=e24]: STORM
+          - heading "STORM Control Board" [level=1] [ref=e25]
+          - paragraph [ref=e26]: Main control and interface board for the STORM robot, integrating subsystem inputs and outputs with onboard microcontroller logic for reliable robot control.
+          - generic [ref=e27]:
+            - generic [ref=e28]: Microcontroller
+            - generic [ref=e29]: Embedded Systems
+            - generic [ref=e30]: Digital / Analog I/O
+            - generic [ref=e31]: PCB Design
+            - generic [ref=e32]: Robot Controls
+          - generic [ref=e33]:
+            - generic [ref=e34]: Private robotics work
+            - link "Contact Me" [ref=e35] [cursor=pointer]:
+              - /url: index.html#contact
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - heading "Overview" [level=2] [ref=e39]
+              - paragraph [ref=e40]: The STORM Control Board was developed to serve as a core interface layer between robot subsystems. The design emphasized reliable I/O handling, clean control integration, and practical embedded deployment under robotics constraints.
+            - generic [ref=e41]:
+              - generic [ref=e42]:
+                - generic [ref=e43]:
+                  - paragraph [ref=e44]: Embedded 3D PCB Viewer
+                  - heading "STORM Control Board Interactive Board" [level=2] [ref=e45]
+                  - paragraph [ref=e46]: Explore the STORM robot control board in 3D directly inside the case-study page.
+                  - generic "Available PCB views" [ref=e47]:
+                    - generic [ref=e48]: 3D
+                    - generic [ref=e49]: PCB
+                - link "Download board archive" [ref=e51] [cursor=pointer]:
+                  - /url: assets/altium-archives/storm-control-board-altium-project.zip
+              - generic [ref=e53]:
+                - img "STORM Control Board Interactive Board fallback preview" [ref=e54]
+                - generic [ref=e55]:
+                  - strong [ref=e56]: Viewer activates once the site is deployed
+                  - paragraph [ref=e57]: Altium needs a public URL to fetch this hosted archive, so localhost previews stay in fallback. On the deployed site, this section can load the embedded board directly.
+              - paragraph [ref=e58]: Altium needs a public URL to fetch this hosted archive, so localhost previews stay in fallback. On the deployed site, this section can load the embedded board directly.
+            - generic [ref=e59]:
+              - heading "Technical Highlights" [level=2] [ref=e60]
+              - list [ref=e61]:
+                - listitem [ref=e62]: Centralized interface logic between multiple robot subsystems.
+                - listitem [ref=e63]: Handled mixed signal I/O and control-oriented board design requirements.
+                - listitem [ref=e64]: Built for integration into a larger competition robotics platform.
+            - generic [ref=e65]:
+              - heading "Media + Documentation" [level=2] [ref=e66]
+              - generic [ref=e67]:
+                - article [ref=e68]:
+                  - generic [ref=e69]: Control Schematic
+                  - generic [ref=e70]:
+                    - heading "Schematic Export" [level=3] [ref=e71]
+                    - paragraph [ref=e72]: Add a schematic capture showing major I/O and subsystem interfaces.
+                - article [ref=e73]:
+                  - generic [ref=e74]: PCB Render
+                  - generic [ref=e75]:
+                    - heading "3D Board Render" [level=3] [ref=e76]
+                    - paragraph [ref=e77]: Show the 3D model or board routing used for the STORM system.
+                - article [ref=e78]:
+                  - generic [ref=e79]: Installed Board Photo
+                  - generic [ref=e80]:
+                    - heading "Robot Integration" [level=3] [ref=e81]
+                    - paragraph [ref=e82]: Include a system photo with the board mounted and wired into the robot.
+          - complementary [ref=e83]:
+            - generic [ref=e84]:
+              - heading "Project Snapshot" [level=3] [ref=e85]
+              - generic [ref=e86]:
+                - generic [ref=e87]:
+                  - generic [ref=e88]: Type
+                  - generic [ref=e89]: Robot Control Electronics
+                - generic [ref=e90]:
+                  - generic [ref=e91]: Visibility
+                  - generic [ref=e92]: Private robotics work
+                - generic [ref=e93]:
+                  - generic [ref=e94]: Best For
+                  - generic [ref=e95]: Schematics, 3D PCB renders, UI screenshots, or short demos
+            - generic [ref=e96]:
+              - heading "Add Media Later" [level=3] [ref=e97]
+              - paragraph [ref=e98]: This page is ready for your schematics, board renders, demo videos, or screenshots. As you collect assets, these cards can be replaced with real visuals.
+  - contentinfo [ref=e99]:
+    - generic [ref=e100]:
+      - paragraph [ref=e101]: Case study view for Shawn Agarwal’s projects.
+      - paragraph [ref=e102]: Electrical Engineer | PCB Designer | AI / ML Engineer

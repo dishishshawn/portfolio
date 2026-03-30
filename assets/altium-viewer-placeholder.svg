@@ -1,0 +1,26 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="28" fill="#0D1626"/>
+  <rect x="44" y="44" width="1112" height="632" rx="22" fill="#111D31" stroke="#24324A" stroke-width="2"/>
+  <rect x="88" y="88" width="660" height="420" rx="18" fill="#0A1322" stroke="#4A9EFF" stroke-width="2"/>
+  <rect x="790" y="88" width="278" height="130" rx="18" fill="#0A1322" stroke="#24324A" stroke-width="2"/>
+  <rect x="790" y="242" width="278" height="130" rx="18" fill="#0A1322" stroke="#24324A" stroke-width="2"/>
+  <rect x="790" y="396" width="278" height="112" rx="18" fill="#0A1322" stroke="#24324A" stroke-width="2"/>
+  <path d="M144 178H322V250H470V162H624" stroke="#D8B85D" stroke-width="8" stroke-linecap="round"/>
+  <path d="M210 340H430V412H622" stroke="#4A9EFF" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="322" cy="178" r="10" fill="#D8B85D"/>
+  <circle cx="470" cy="250" r="10" fill="#D8B85D"/>
+  <circle cx="430" cy="340" r="10" fill="#4A9EFF"/>
+  <rect x="178" y="150" width="86" height="58" rx="10" fill="#16243A" stroke="#85BCFF" stroke-width="2"/>
+  <rect x="448" y="132" width="102" height="80" rx="12" fill="#16243A" stroke="#D8B85D" stroke-width="2"/>
+  <rect x="520" y="314" width="106" height="82" rx="12" fill="#16243A" stroke="#85BCFF" stroke-width="2"/>
+  <text x="820" y="138" fill="#EEF2FF" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">Official Altium 365 Viewer</text>
+  <text x="820" y="174" fill="#A9B3C7" font-family="Inter, Arial, sans-serif" font-size="18">Paste your embed link or project token</text>
+  <text x="820" y="202" fill="#A9B3C7" font-family="Inter, Arial, sans-serif" font-size="18">into the config to activate this panel.</text>
+  <text x="820" y="292" fill="#D8B85D" font-family="JetBrains Mono, monospace" font-size="18">3D • PCB • Schematic • BOM</text>
+  <text x="820" y="330" fill="#A9B3C7" font-family="Inter, Arial, sans-serif" font-size="18">Responsive fallback image for when the</text>
+  <text x="820" y="358" fill="#A9B3C7" font-family="Inter, Arial, sans-serif" font-size="18">interactive iframe isn't configured yet.</text>
+  <rect x="820" y="430" width="190" height="44" rx="22" fill="#4A9EFF"/>
+  <text x="848" y="458" fill="#07111E" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Add embed source</text>
+  <text x="88" y="588" fill="#D8B85D" font-family="JetBrains Mono, monospace" font-size="18">Engineering portfolio fallback preview</text>
+  <text x="88" y="620" fill="#A9B3C7" font-family="Inter, Arial, sans-serif" font-size="18">Replace this image with a board render, schematic export, or a screenshot from Altium 365.</text>
+</svg>

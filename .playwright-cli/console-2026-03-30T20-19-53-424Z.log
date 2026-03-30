@@ -1,0 +1,24 @@
+[     511ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/favicon.ico:0
+[   73752ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75449ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75451ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75451ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75456ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75459ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75461ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75464ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75466ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75468ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75470ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75472ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75475ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75477ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75479ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75536ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75537ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75542ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   75858ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   76270ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0
+[   76408ms] [WARNING] WebGL: INVALID_ENUM: enable: invalid capability @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/graphite.js?1772735072342:0
+[   81664ms] [WARNING] WebGL: INVALID_ENUM: enable: invalid capability @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/graphite.js?1772735072342:0
+[   81849ms] [WARNING] Env does not provide licenseService, fallback to global variable for backward compatibility @ https://d3l9fju211jpzs.cloudfront.net/151/client/js/vendors.js?1772735072342:0

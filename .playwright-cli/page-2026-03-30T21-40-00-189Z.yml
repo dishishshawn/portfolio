@@ -1,0 +1,284 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "SA" [ref=e3] [cursor=pointer]:
+      - /url: "#top"
+    - generic [ref=e4]:
+      - link "Projects" [ref=e5] [cursor=pointer]:
+        - /url: "#projects"
+      - link "About" [ref=e6] [cursor=pointer]:
+        - /url: "#about"
+      - link "Experience" [ref=e7] [cursor=pointer]:
+        - /url: "#experience"
+      - link "Resume" [ref=e8] [cursor=pointer]:
+        - /url: "#resume"
+      - link "Contact" [ref=e9] [cursor=pointer]:
+        - /url: "#contact"
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - paragraph [ref=e13]: Electrical Engineer | PCB Designer | AI / ML Engineer
+        - heading "I build embedded hardware, intelligent systems, and research-driven technology." [level=1] [ref=e14]
+        - paragraph [ref=e15]: I'm an Electrical Engineering student at the University of Oklahoma with interests in robotics, embedded systems, machine learning, semiconductor devices, and applied physics.
+        - generic [ref=e16]:
+          - link "View Projects" [ref=e17] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Open Resume" [ref=e18] [cursor=pointer]:
+            - /url: Shawn_Agarwal_revised.docx.pdf
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - generic [ref=e21]: "5"
+            - text: Featured Builds
+          - generic [ref=e22]:
+            - generic [ref=e23]: "2"
+            - text: Research Centers
+          - generic [ref=e24]:
+            - generic [ref=e25]: "4.0"
+            - text: GPA
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29]: Theme Accent
+          - generic "Accent color switcher" [ref=e30]:
+            - button "Blue accent" [ref=e31] [cursor=pointer]
+            - button "Purple accent" [ref=e32] [cursor=pointer]
+            - button "Green accent" [ref=e33] [cursor=pointer]
+            - button "Orange accent" [ref=e34] [cursor=pointer]
+        - img [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e117]: CAN / CTRL BOARD
+            - generic [ref=e118]: STM32
+            - generic [ref=e119]: USB
+        - list [ref=e120]:
+          - listitem [ref=e121]: Robotics & embedded systems
+          - listitem [ref=e122]: PCB design and hardware bring-up
+          - listitem [ref=e123]: AI / ML projects with real-world applications
+    - generic [ref=e125]:
+      - paragraph [ref=e126]: Portfolio
+      - heading "Featured Projects" [level=2] [ref=e127]
+      - paragraph [ref=e128]: A selection of the boards, systems, and software projects that best represent my technical range.
+      - generic [ref=e129]:
+        - article [ref=e130] [cursor=pointer]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: Featured Build
+            - generic [ref=e133]: Open Source
+          - heading "ESP32Pet" [level=3] [ref=e134]
+          - paragraph [ref=e135]: Open-source Tamagotchi-style handheld built on an ESP32 with an ST7735 LCD, physical buttons, EEPROM-backed persistent stats, and a custom PCB/case workflow.
+          - generic [ref=e136]:
+            - generic [ref=e137]: ESP32
+            - generic [ref=e138]: ST7735 TFT
+            - generic [ref=e139]: C/C++
+            - generic [ref=e140]: KiCad
+          - link "Open case study ↗" [ref=e142]:
+            - /url: project.html?project=esp32pet
+        - article [ref=e143] [cursor=pointer]:
+          - generic [ref=e144]:
+            - generic [ref=e145]: Research + ML
+            - generic [ref=e146]: OU Project
+          - heading "Relevance Classification Model" [level=3] [ref=e147]
+          - paragraph [ref=e148]: Research project for OU that acts like a relevance-ranking engine for social media posts using active feedback, uncertainty sampling, and ML experimentation workflows.
+          - generic [ref=e149]:
+            - generic [ref=e150]: Python
+            - generic [ref=e151]: Active Learning
+            - generic [ref=e152]: BERT
+            - generic [ref=e153]: Data Systems
+          - link "Open case study ↗" [ref=e155]:
+            - /url: project.html?project=relevance-classification-model
+        - article [ref=e156] [cursor=pointer]:
+          - generic [ref=e157]:
+            - generic [ref=e158]: Robotics Hardware
+            - generic [ref=e159]: Most Complex Board
+          - heading "CANable, CAN-to-USB Converter" [level=3] [ref=e160]
+          - paragraph [ref=e161]: Compact STM32-based CAN-to-USB interface board that lets the onboard PC communicate with distributed robot electronics over the CAN bus for IGVC.
+          - generic [ref=e162]:
+            - generic [ref=e163]: STM32
+            - generic [ref=e164]: CAN Bus
+            - generic [ref=e165]: USB
+            - generic [ref=e166]: PCB Design
+          - link "Open case study ↗" [ref=e168]:
+            - /url: project.html?project=canable
+        - article [ref=e169] [cursor=pointer]:
+          - generic [ref=e170]:
+            - generic [ref=e171]: Embedded Vision
+            - generic [ref=e172]: IoT
+          - heading "Low-Cost Security Camera" [level=3] [ref=e173]
+          - paragraph [ref=e174]: Affordable home security camera system built around the ESP32-CAM AI-Thinker with Wi-Fi video streaming, motion detection, image capture, and remote viewing.
+          - generic [ref=e175]:
+            - generic [ref=e176]: ESP32-CAM
+            - generic [ref=e177]: Wi-Fi
+            - generic [ref=e178]: ESPAsyncWebServer
+            - generic [ref=e179]: IoT
+          - link "Open case study ↗" [ref=e181]:
+            - /url: project.html?project=low-cost-security-camera
+        - article [ref=e182] [cursor=pointer]:
+          - generic [ref=e183]:
+            - generic [ref=e184]: Competition Robotics
+            - generic [ref=e185]: STORM
+          - heading "STORM Control Board" [level=3] [ref=e186]
+          - paragraph [ref=e187]: Main control and interface board for the STORM robot, integrating subsystem I/O with onboard microcontroller logic for reliable robot control.
+          - generic [ref=e188]:
+            - generic [ref=e189]: Embedded Systems
+            - generic [ref=e190]: Controls
+            - generic [ref=e191]: Digital/Analog I/O
+            - generic [ref=e192]: PCB Design
+          - link "Open case study ↗" [ref=e194]:
+            - /url: project.html?project=storm-control-board
+      - generic [ref=e195]:
+        - heading "Additional Projects" [level=3] [ref=e196]
+        - paragraph [ref=e197]: Click any project to view a dedicated page with a fuller description, media placeholders, and repository links.
+      - generic [ref=e198]:
+        - article [ref=e199] [cursor=pointer]:
+          - heading "Sign-Language-AI" [level=4] [ref=e200]
+          - paragraph [ref=e201]: Gesture recognition app with a training pipeline, prediction script, and image-upload GUI.
+          - text: Python • YOLOv8 • OpenCV • Tkinter
+          - generic [ref=e202]: Open case study →
+        - article [ref=e203] [cursor=pointer]:
+          - heading "Gold.fish" [level=4] [ref=e204]
+          - paragraph [ref=e205]: Financial tracking web app that visualizes spending through the growth of a digital fish tank.
+          - text: React • Node.js • Express • Data Viz
+          - generic [ref=e206]: Open case study →
+        - article [ref=e207] [cursor=pointer]:
+          - heading "Maze Generator Solver" [level=4] [ref=e208]
+          - paragraph [ref=e209]: GUI-based maze builder and solver with adjustable size and multiple frontier strategies.
+          - text: Python • Tkinter • Algorithms
+          - generic [ref=e210]: Open case study →
+        - article [ref=e211] [cursor=pointer]:
+          - heading "Diet Tracker" [level=4] [ref=e212]
+          - paragraph [ref=e213]: Local desktop app for tracking meals, workouts, calories, and fitness data visualization.
+          - text: Python • SQLAlchemy • Matplotlib
+          - generic [ref=e214]: Open case study →
+        - article [ref=e215] [cursor=pointer]:
+          - heading "ESP32 WiFi Upload to Screen" [level=4] [ref=e216]
+          - paragraph [ref=e217]: ESP32 project that hosts a server for uploading JPG images and displaying them on an ST7735 screen.
+          - text: ESP32 • C++ • PlatformIO • Web Server
+          - generic [ref=e218]: Open case study →
+        - article [ref=e219] [cursor=pointer]:
+          - heading "KiCad ST7735S TFT Library" [level=4] [ref=e220]
+          - paragraph [ref=e221]: Custom symbol and footprint library for a 1.8-inch ST7735S display board.
+          - text: KiCad • Library Design • Footprints
+          - generic [ref=e222]: Open case study →
+        - article [ref=e223] [cursor=pointer]:
+          - heading "5V Buck Converter" [level=4] [ref=e224]
+          - paragraph [ref=e225]: Custom power board for the STORM robot, stepping down voltage efficiently for onboard electronics.
+          - text: Power Electronics • Regulation • PCB
+          - generic [ref=e226]: Open case study →
+        - article [ref=e227] [cursor=pointer]:
+          - heading "Infrared Sensor Board" [level=4] [ref=e228]
+          - paragraph [ref=e229]: Raspberry Pi Pico-based IR sensing board for real-time detection, decoding, and transmission in STORM.
+          - text: Raspberry Pi Pico • Embedded C/C++ • IR
+          - generic [ref=e230]: Open case study →
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - paragraph [ref=e234]: About Me
+        - heading "Engineering with technical depth and real-world intent." [level=2] [ref=e235]
+        - paragraph [ref=e236]: I’m Shawn Agarwal, an Electrical Engineering student at the University of Oklahoma with a strong interest in robotics, embedded systems, machine learning, semiconductor devices, and applied physics. I enjoy building projects that connect theory to real hardware, whether that means designing circuits, training intelligent systems, or leading technical teams through the full design process.
+        - paragraph [ref=e237]: My experience spans undergraduate research, machine learning, robotics, and electronics. I’ve worked on thin-film materials and device-related research, AI-based data projects, and student engineering systems that combine hardware, software, and problem-solving.
+        - paragraph [ref=e238]: I’m driven by curiosity, technical depth, and the challenge of turning complex ideas into real, working systems. Long term, I hope to continue into graduate study and contribute to advanced research in electronics, quantum materials, or robotics.
+      - generic [ref=e239]:
+        - generic [ref=e240]:
+          - heading "Current Focus" [level=3] [ref=e241]
+          - list [ref=e242]:
+            - listitem [ref=e243]: Embedded systems and robotics
+            - listitem [ref=e244]: Semiconductor devices and applied physics
+            - listitem [ref=e245]: Research-oriented AI / ML workflows
+        - code [ref=e248]: // core interests const focusAreas = [ "robotics", "embedded systems", "semiconductor devices", "applied physics" ];
+    - generic [ref=e250]:
+      - paragraph [ref=e251]: Technical Stack
+      - heading "Skills" [level=2] [ref=e252]
+      - generic [ref=e253]:
+        - generic [ref=e254]:
+          - heading "Design Tools" [level=3] [ref=e255]
+          - generic [ref=e256]:
+            - generic [ref=e257]: KiCad
+            - generic [ref=e258]: Altium
+            - generic [ref=e259]: Multisim
+            - generic [ref=e260]: MATLAB
+            - generic [ref=e261]: Schematic Capture
+            - generic [ref=e262]: PCB Layout
+        - generic [ref=e263]:
+          - heading "Programming" [level=3] [ref=e264]
+          - generic [ref=e265]:
+            - generic [ref=e266]: C++
+            - generic [ref=e267]: C
+            - generic [ref=e268]: Python
+            - generic [ref=e269]: SQL
+            - generic [ref=e270]: Embedded C/C++
+            - generic [ref=e271]: Data Analysis
+        - generic [ref=e272]:
+          - heading "Embedded + Hardware" [level=3] [ref=e273]
+          - generic [ref=e274]:
+            - generic [ref=e275]: PCB Design
+            - generic [ref=e276]: STM32 Systems
+            - generic [ref=e277]: ESP32
+            - generic [ref=e278]: Embedded Software Development
+            - generic [ref=e279]: CAN Bus
+            - generic [ref=e280]: Circuit Bring-up
+            - generic [ref=e281]: Sensors & Instrumentation
+        - generic [ref=e282]:
+          - heading "Electrical Engineering Depth" [level=3] [ref=e283]
+          - generic [ref=e284]:
+            - generic [ref=e285]: Signal Integrity
+            - generic [ref=e286]: Power Electronics
+            - generic [ref=e287]: Control Systems
+            - generic [ref=e288]: Robotics
+            - generic [ref=e289]: Machine Learning
+            - generic [ref=e290]: Semiconductor Devices
+            - generic [ref=e291]: Applied Physics
+    - generic [ref=e293]:
+      - paragraph [ref=e294]: Experience
+      - heading "Research, teaching, and robotics leadership" [level=2] [ref=e295]
+      - generic [ref=e296]:
+        - article [ref=e297]:
+          - generic [ref=e298]: Current
+          - generic [ref=e299]:
+            - heading "Research Assistant — CQRT (Center for Quantum Research and Technology)" [level=3] [ref=e300]
+            - paragraph [ref=e301]: Currently working under Dr. Paik on quantum-related research involving thin films, device-oriented experiments, and hands-on engineering analysis.
+        - article [ref=e302]:
+          - generic [ref=e303]: DISC
+          - generic [ref=e304]:
+            - heading "Research Assistant — DISC (Data Institute for Societal Challenges)" [level=3] [ref=e305]
+            - paragraph [ref=e306]: Worked under Dr. Wolfgang on data-driven engineering and machine learning projects focused on intelligent systems and research-based technical problem solving.
+        - article [ref=e307]:
+          - generic [ref=e308]: OU
+          - generic [ref=e309]:
+            - heading "Student Tutor — OU Math Center" [level=3] [ref=e310]
+            - paragraph [ref=e311]: Helped students solve technical math problems and communicate quantitative ideas clearly and effectively.
+        - article [ref=e312]:
+          - generic [ref=e313]: 2024–25
+          - generic [ref=e314]:
+            - heading "Electrical Member — STORM, Sooner Competitive Robotics" [level=3] [ref=e315]
+            - paragraph [ref=e316]: Designed and supported electronics, sensing, power, and control boards used in team robotics systems.
+        - article [ref=e317]:
+          - generic [ref=e318]: 2025–26
+          - generic [ref=e319]:
+            - heading "Electrical Member — IGVC, Sooner Competitive Robotics" [level=3] [ref=e320]
+            - paragraph [ref=e321]: Built distributed robot electronics and CAN-connected subsystems for autonomous ground vehicle development.
+    - generic [ref=e324]:
+      - generic [ref=e325]:
+        - paragraph [ref=e326]: Resume
+        - heading "Want the full background?" [level=2] [ref=e327]
+        - paragraph [ref=e328]: Open my resume for coursework, research, technical experience, and leadership details.
+      - link "Download Resume" [ref=e329] [cursor=pointer]:
+        - /url: Shawn_Agarwal_revised.docx.pdf
+    - generic [ref=e331]:
+      - paragraph [ref=e332]: Contact
+      - heading "Get in touch" [level=2] [ref=e333]
+      - paragraph [ref=e334]: Open to opportunities in embedded systems, robotics, research, and technically challenging engineering work.
+      - generic [ref=e335]:
+        - link "✉ Email shawnagarwal0@gmail.com" [ref=e336] [cursor=pointer]:
+          - /url: mailto:shawnagarwal0@gmail.com
+          - generic [ref=e337]: ✉
+          - heading "Email" [level=3] [ref=e338]
+          - paragraph [ref=e339]: shawnagarwal0@gmail.com
+        - link "GitHub github.com/dishishshawn" [ref=e340] [cursor=pointer]:
+          - /url: https://github.com/dishishshawn
+          - img [ref=e342]
+          - heading "GitHub" [level=3] [ref=e344]
+          - paragraph [ref=e345]: github.com/dishishshawn
+        - link "in LinkedIn linkedin.com/in/shawnagarwal" [ref=e346] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/shawnagarwal/
+          - generic [ref=e347]: in
+          - heading "LinkedIn" [level=3] [ref=e348]
+          - paragraph [ref=e349]: linkedin.com/in/shawnagarwal
+  - contentinfo [ref=e350]:
+    - generic [ref=e351]:
+      - paragraph [ref=e352]: Built to showcase hardware, research, and intelligent systems work.
+      - paragraph [ref=e353]: Shawn Agarwal — Electrical Engineer | PCB Designer | AI / ML Engineer

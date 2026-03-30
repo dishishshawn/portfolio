@@ -1,0 +1,114 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - link "SA" [ref=e3] [cursor=pointer]:
+      - /url: index.html#top
+    - generic [ref=e4]:
+      - link "Projects" [ref=e5] [cursor=pointer]:
+        - /url: index.html#projects
+      - link "Experience" [ref=e6] [cursor=pointer]:
+        - /url: index.html#experience
+      - link "About" [ref=e7] [cursor=pointer]:
+        - /url: index.html#about
+      - link "Contact" [ref=e8] [cursor=pointer]:
+        - /url: index.html#contact
+      - link "Resume" [ref=e9] [cursor=pointer]:
+        - /url: index.html#resume
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - link "← Back to portfolio" [ref=e12] [cursor=pointer]:
+        - /url: index.html#projects
+      - generic [ref=e13]:
+        - generic [ref=e14]: Theme Accent
+        - generic "Accent color switcher" [ref=e15]:
+          - button "Blue accent" [ref=e16] [cursor=pointer]
+          - button "Purple accent" [ref=e17] [cursor=pointer]
+          - button "Green accent" [ref=e18] [cursor=pointer]
+          - button "Orange accent" [ref=e19] [cursor=pointer]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - generic [ref=e23]: Featured Build
+            - generic [ref=e24]: Open Source
+          - heading "ESP32Pet" [level=1] [ref=e25]
+          - paragraph [ref=e26]: Open-source Tamagotchi-style handheld built on an ESP32 with an ST7735 LCD, physical buttons, EEPROM-backed persistent stats, and a custom PCB/case workflow.
+          - generic [ref=e27]:
+            - generic [ref=e28]: ESP32
+            - generic [ref=e29]: ST7735 TFT LCD
+            - generic [ref=e30]: C/C++
+            - generic [ref=e31]: PlatformIO / Arduino IDE
+            - generic [ref=e32]: KiCad
+            - generic [ref=e33]: EEPROM
+            - generic [ref=e34]: LiPo Battery
+            - generic [ref=e35]: MCP1700 LDO
+          - generic [ref=e36]:
+            - link "View GitHub Repo" [ref=e37] [cursor=pointer]:
+              - /url: https://github.com/dishishshawn/ESP32Pet
+            - link "Contact Me" [ref=e38] [cursor=pointer]:
+              - /url: index.html#contact
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]:
+              - heading "Overview" [level=2] [ref=e42]
+              - paragraph [ref=e43]: This project combines embedded firmware, custom PCB design, and product-style iteration into a handheld virtual pet platform. It reflects both hardware and software ownership, from system design and power considerations to the user-facing gameplay loop.
+            - generic [ref=e44]:
+              - generic [ref=e45]:
+                - generic [ref=e46]:
+                  - paragraph [ref=e47]: Embedded 3D PCB Viewer
+                  - heading "ESP32Pet Interactive Board" [level=2] [ref=e48]
+                  - paragraph [ref=e49]: Inspect the ESP32Pet handheld directly in 3D, with the PCB and schematic views available from the same embedded panel.
+                  - generic "Available PCB views" [ref=e50]:
+                    - generic [ref=e51]: 3D
+                    - generic [ref=e52]: PCB
+                    - generic [ref=e53]: Schematic
+                - link "Open board source" [ref=e55] [cursor=pointer]:
+                  - /url: https://github.com/dishishshawn/ESP32Pet/tree/master/ESP32Pet%20PCB
+              - generic [ref=e57]:
+                - img "ESP32Pet Interactive Board fallback preview" [ref=e58]
+                - generic [ref=e59]:
+                  - strong [ref=e60]: Deploy the site to test the live 3D viewer
+                  - paragraph [ref=e61]: This board now uses a trimmed ZIP bundled with the portfolio, which fixes the production render. Altium cannot fetch localhost files, so local development falls back to the preview image until the site is hosted publicly.
+              - paragraph [ref=e62]: This board now uses a trimmed ZIP bundled with the portfolio, which fixes the production render. Altium cannot fetch localhost files, so local development falls back to the preview image until the site is hosted publicly.
+            - generic [ref=e63]:
+              - heading "Technical Highlights" [level=2] [ref=e64]
+              - list [ref=e65]:
+                - listitem [ref=e66]: Designed around a custom PCB and enclosure workflow instead of a dev-board-only prototype.
+                - listitem [ref=e67]: Implemented persistent gameplay stats using EEPROM-backed storage.
+                - listitem [ref=e68]: Integrated display control, button handling, and low-power embedded considerations.
+            - generic [ref=e69]:
+              - heading "Media + Documentation" [level=2] [ref=e70]
+              - generic [ref=e71]:
+                - article [ref=e72]:
+                  - generic [ref=e73]: Schematic Preview
+                  - generic [ref=e74]:
+                    - heading "Schematic Export" [level=3] [ref=e75]
+                    - paragraph [ref=e76]: Add a KiCad schematic screenshot or PDF export showing the ESP32, display, power, and button circuitry.
+                - article [ref=e77]:
+                  - generic [ref=e78]: 3D Board Model
+                  - generic [ref=e79]:
+                    - heading "3D PCB Render" [level=3] [ref=e80]
+                    - paragraph [ref=e81]: Drop in a 3D render of the PCB and enclosure to highlight the physical design work.
+                - article [ref=e82]:
+                  - generic [ref=e83]: Gameplay Demo
+                  - generic [ref=e84]:
+                    - heading "Demo Photo / Video" [level=3] [ref=e85]
+                    - paragraph [ref=e86]: Show the assembled device running the pet UI, animations, or button interactions.
+          - complementary [ref=e87]:
+            - generic [ref=e88]:
+              - heading "Project Snapshot" [level=3] [ref=e89]
+              - generic [ref=e90]:
+                - generic [ref=e91]:
+                  - generic [ref=e92]: Type
+                  - generic [ref=e93]: Embedded Hardware
+                - generic [ref=e94]:
+                  - generic [ref=e95]: Visibility
+                  - generic [ref=e96]: Public repository
+                - generic [ref=e97]:
+                  - generic [ref=e98]: Best For
+                  - generic [ref=e99]: Schematics, 3D PCB renders, UI screenshots, or short demos
+            - generic [ref=e100]:
+              - heading "Add Media Later" [level=3] [ref=e101]
+              - paragraph [ref=e102]: This page is ready for your schematics, board renders, demo videos, or screenshots. As you collect assets, these cards can be replaced with real visuals.
+  - contentinfo [ref=e103]:
+    - generic [ref=e104]:
+      - paragraph [ref=e105]: Case study view for Shawn Agarwal’s projects.
+      - paragraph [ref=e106]: Electrical Engineer | PCB Designer | AI / ML Engineer

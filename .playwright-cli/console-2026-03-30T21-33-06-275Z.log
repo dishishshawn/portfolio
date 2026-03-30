@@ -1,0 +1,6 @@
+[      90ms] [ERROR] Failed to load resource: net::ERR_EMPTY_RESPONSE @ http://127.0.0.1:4173/styles.css:0
+[      91ms] [ERROR] Failed to load resource: net::ERR_EMPTY_RESPONSE @ http://127.0.0.1:4173/project-data.js:0
+[      92ms] [ERROR] Failed to load resource: net::ERR_EMPTY_RESPONSE @ http://127.0.0.1:4173/script.js:0
+[      93ms] [ERROR] Failed to load resource: net::ERR_EMPTY_RESPONSE @ http://127.0.0.1:4173/altium-viewer.js:0
+[      94ms] [ERROR] Failed to load resource: net::ERR_EMPTY_RESPONSE @ http://127.0.0.1:4173/project-detail.js:0
+[     342ms] [ERROR] Failed to load resource: net::ERR_EMPTY_RESPONSE @ http://127.0.0.1:4173/favicon.ico:0

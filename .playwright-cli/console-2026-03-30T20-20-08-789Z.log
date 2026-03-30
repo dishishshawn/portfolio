@@ -1,0 +1,5 @@
+Total messages: 3 (Errors: 1, Warnings: 0)
+
+[LOG] %cShawn Agarwal Portfolio color: #4a9eff; font-size: 18px; font-weight: bold; @ http://127.0.0.1:4173/script.js:91
+[LOG] %cEmbedded systems • PCB design • AI / ML engineering color: #d8b85d; font-size: 12px; @ http://127.0.0.1:4173/script.js:92
+[ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4173/favicon.ico:0
