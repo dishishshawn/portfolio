@@ -136,7 +136,6 @@ svg {
 .timeline-year,
 .pcb-shot-label,
 .pcb-shot-note,
-.viewer-view,
 .skill,
 .tag {
     font-family: var(--font-mono);
@@ -732,33 +731,6 @@ svg {
 
 .viewer-header h2 {
     margin-bottom: 0;
-}
-
-.viewer-view-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-}
-
-.viewer-view {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.38rem 0.72rem;
-    border-radius: 999px;
-    border: 1px solid rgba(133, 188, 255, 0.18);
-    background: rgba(255, 255, 255, 0.03);
-    color: var(--text-secondary);
-    font-size: 0.74rem;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
-.viewer-view.is-active {
-    border-color: rgba(133, 188, 255, 0.45);
-    background: var(--accent-soft);
-    color: var(--accent-strong);
 }
 
 .viewer-actions {

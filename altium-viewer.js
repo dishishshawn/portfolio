@@ -5,13 +5,6 @@ window.ProjectPcbViewer = (() => {
     const DEFAULT_HEIGHT = 560;
     const LOAD_TIMEOUT_MS = 12000;
 
-    const VIEW_LABELS = {
-        '3d': '3D',
-        'pcb': 'PCB',
-        'sch': 'Schematic',
-        'bom': 'BOM'
-    };
-
     const escapeHtml = (value = '') => String(value)
         .replaceAll('&', '&amp;')
         .replaceAll('<', '&lt;')
@@ -91,10 +84,6 @@ window.ProjectPcbViewer = (() => {
         return 'fallback';
     };
 
-    const renderViewPills = (enabledViews, activeView) => enabledViews.map((view) => `
-        <span class="viewer-view ${view === activeView ? 'is-active' : ''}">${VIEW_LABELS[view] || view.toUpperCase()}</span>
-    `).join('');
-
     const renderAction = (viewer, mode) => {
         if (viewer.openUrl) {
             return `
@@ -165,9 +154,6 @@ window.ProjectPcbViewer = (() => {
         const mode = getViewerMode(viewer);
         const localFallback = needsPublicHost(viewer);
         const title = escapeHtml(viewer.title || 'Interactive PCB Viewer');
-        const caption = escapeHtml(
-            viewer.caption || 'Rotate the board directly on this page with a 3D-first Altium viewer.'
-        );
         const fallbackImage = escapeHtml(viewer.fallbackImage || DEFAULT_FALLBACK);
         const enabledViews = normalizeViews(viewer.enabledViews);
         const activeView = normalizeActiveView(viewer.activeView, enabledViews);
@@ -192,10 +178,6 @@ window.ProjectPcbViewer = (() => {
                     <div class="viewer-copy">
                         <p class="section-kicker viewer-kicker">Embedded 3D PCB Viewer</p>
                         <h2>${title}</h2>
-                        <p>${caption}</p>
-                        <div class="viewer-view-list" aria-label="Available PCB views">
-                            ${renderViewPills(enabledViews, activeView)}
-                        </div>
                     </div>
                     <div class="viewer-actions">
                         ${renderAction(viewer, mode)}
