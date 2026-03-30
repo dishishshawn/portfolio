@@ -9,37 +9,28 @@ const getRenderableMedia = (items = []) => items.filter((item) => item.image);
 const getMediaGridClass = (items = []) => items.length === 1 ? 'media-grid media-grid-single' : 'media-grid';
 const getMediaCardClass = (items = []) => items.length === 1 ? 'media-card media-card-feature' : 'media-card';
 
-const renderMediaVisual = (item) => {
-    if (item.image) {
-        return `
-            <img
-                src="${item.image}"
-                alt="${item.alt || item.title}"
-                class="media-image"
-                loading="lazy"
-            >
-        `;
-    }
-
-    return `<div class="media-placeholder">${item.placeholder}</div>`;
-};
-
 const renderMedia = (items = []) => items.map((item) => `
     <article class="${getMediaCardClass(items)}">
-        ${renderMediaVisual(item)}
+        <img
+            src="${item.image}"
+            alt="${item.alt || item.title}"
+            class="media-image"
+            loading="lazy"
+        >
         <div class="media-copy">
             <h3>${item.title}</h3>
             <p>${item.text}</p>
         </div>
     </article>
 `).join('');
+
 const renderViewer = (viewer) => window.ProjectPcbViewer ? window.ProjectPcbViewer.render(viewer) : '';
 
 if (!project) {
     projectRoot.innerHTML = `
         <div class="detail-hero-card empty-state is-visible">
             <p class="section-kicker">Project Not Found</p>
-            <h1 class="section-title">This case study isn’t available yet.</h1>
+            <h1 class="section-title">This case study isn't available yet.</h1>
             <p>Return to the portfolio to choose a project from the main list.</p>
             <a href="index.html#projects" class="cta-button">Back to Projects</a>
         </div>
@@ -63,7 +54,6 @@ if (!project) {
             <div class="project-tags">${renderTags(project.stack)}</div>
             <div class="detail-actions">
                 ${githubAction}
-                <a href="index.html#contact" class="secondary-button">Contact Me</a>
             </div>
         </section>
 
@@ -95,10 +85,6 @@ if (!project) {
                         <div class="meta-row">
                             <span class="meta-label">Visibility</span>
                             <span class="meta-value">${project.visibility}</span>
-                        </div>
-                        <div class="meta-row">
-                            <span class="meta-label">Best For</span>
-                            <span class="meta-value">Schematics, 3D PCB renders, UI screenshots, or short demos</span>
                         </div>
                     </div>
                 </section>

@@ -1,8 +1,6 @@
-const body = document.body;
 const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll('section[id]');
 const revealItems = document.querySelectorAll('.reveal');
-const themeButtons = document.querySelectorAll('.theme-dot');
 const projectTiles = document.querySelectorAll('[data-project]');
 
 navLinks.forEach((anchor) => {
@@ -40,21 +38,6 @@ const setActiveLink = () => {
 window.addEventListener('scroll', setActiveLink);
 window.addEventListener('load', setActiveLink);
 
-const applyAccent = (accent) => {
-    body.dataset.accent = accent;
-    themeButtons.forEach((button) => {
-        button.classList.toggle('active', button.dataset.accent === accent);
-    });
-    localStorage.setItem('portfolio-accent', accent);
-};
-
-const savedAccent = localStorage.getItem('portfolio-accent') || body.dataset.accent || 'blue';
-applyAccent(savedAccent);
-
-themeButtons.forEach((button) => {
-    button.addEventListener('click', () => applyAccent(button.dataset.accent));
-});
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -88,6 +71,3 @@ projectTiles.forEach((tile) => {
         }
     });
 });
-
-console.log('%cShawn Agarwal Portfolio', 'color: #4a9eff; font-size: 18px; font-weight: bold;');
-console.log('%cEmbedded systems • PCB design • AI / ML engineering', 'color: #d8b85d; font-size: 12px;');
