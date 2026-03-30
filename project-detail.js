@@ -5,9 +5,28 @@ const project = (window.PROJECT_DATA && slug) ? window.PROJECT_DATA[slug] : null
 
 const renderTags = (items = []) => items.map((item) => `<span class="tag">${item}</span>`).join('');
 const renderList = (items = []) => items.map((item) => `<li>${item}</li>`).join('');
+const getRenderableMedia = (items = []) => items.filter((item) => item.image);
+const getMediaGridClass = (items = []) => items.length === 1 ? 'media-grid media-grid-single' : 'media-grid';
+const getMediaCardClass = (items = []) => items.length === 1 ? 'media-card media-card-feature' : 'media-card';
+
+const renderMediaVisual = (item) => {
+    if (item.image) {
+        return `
+            <img
+                src="${item.image}"
+                alt="${item.alt || item.title}"
+                class="media-image"
+                loading="lazy"
+            >
+        `;
+    }
+
+    return `<div class="media-placeholder">${item.placeholder}</div>`;
+};
+
 const renderMedia = (items = []) => items.map((item) => `
-    <article class="media-card">
-        <div class="media-placeholder">${item.placeholder}</div>
+    <article class="${getMediaCardClass(items)}">
+        ${renderMediaVisual(item)}
         <div class="media-copy">
             <h3>${item.title}</h3>
             <p>${item.text}</p>
@@ -27,6 +46,7 @@ if (!project) {
     `;
 } else {
     document.title = `${project.title} | Shawn Agarwal`;
+    const mediaItems = getRenderableMedia(project.media);
 
     const githubAction = project.github
         ? `<a href="${project.github}" target="_blank" rel="noreferrer" class="cta-button">View GitHub Repo</a>`
@@ -62,13 +82,6 @@ if (!project) {
                         ${renderList(project.highlights)}
                     </ul>
                 </section>
-
-                <section class="detail-section">
-                    <h2>Media + Documentation</h2>
-                    <div class="media-grid">
-                        ${renderMedia(project.media)}
-                    </div>
-                </section>
             </div>
 
             <aside class="detail-side">
@@ -89,13 +102,17 @@ if (!project) {
                         </div>
                     </div>
                 </section>
-
-                <section class="asset-tip">
-                    <h3>Add Media Later</h3>
-                    <p>This page is ready for your schematics, board renders, demo videos, or screenshots. As you collect assets, these cards can be replaced with real visuals.</p>
-                </section>
             </aside>
         </div>
+
+        ${mediaItems.length ? `
+            <section class="detail-section detail-section-wide">
+                <h2>Media + Documentation</h2>
+                <div class="${getMediaGridClass(mediaItems)}">
+                    ${renderMedia(mediaItems)}
+                </div>
+            </section>
+        ` : ''}
     `;
 
     if (window.ProjectPcbViewer) {

@@ -30,14 +30,14 @@ const ALTIUM_VIEWERS = {
     },
     canable: {
         ...DEFAULT_ALTIUM_VIEWER,
-        title: 'CANable Interactive Board',
-        caption: 'Inspect the CAN-to-USB robotics board directly on the page with PCB, 3D, and schematic views from the public GitHub source archive.',
+        title: 'OpenCAN Interactive Board',
+        caption: 'Inspect the OpenCAN robotics board directly on the page with PCB, 3D, and schematic views from the public GitHub source archive.',
         projectSrc: 'https://codeload.github.com/dishishshawn/OpenCAN/zip/refs/heads/main',
         openUrl: 'https://github.com/dishishshawn/OpenCAN',
         openLabel: 'Open board source',
         enabledViews: '3d,pcb,sch',
         activeView: '3d',
-        note: 'This viewer uses the public GitHub archive for the CANable board, so the 3D board can load directly inside the case study.'
+        note: 'This viewer uses the public GitHub archive for OpenCAN, so the 3D board can load directly inside the case study.'
     },
     stormControlBoard: {
         ...DEFAULT_ALTIUM_VIEWER,
@@ -108,14 +108,14 @@ window.PROJECT_DATA = {
         ]
     },
     'canable': {
-        title: 'CANable, CAN-to-USB Converter',
+        title: 'OpenCAN',
         eyebrow: 'Robotics Hardware',
         status: 'Most Complex Board',
         type: 'STM32 + CAN Board',
         visibility: 'Public repository',
         github: 'https://github.com/dishishshawn/OpenCAN',
         summary: 'Compact STM32-based CAN-to-USB interface board that lets the onboard PC communicate with distributed robot electronics over the CAN bus for IGVC.',
-        description: 'This board represents some of my most technically challenging PCB work to date. It sits at the center of distributed robot communication, bridging the onboard PC and embedded subsystems over CAN while balancing firmware, hardware reliability, and board-level integration.',
+        description: 'OpenCAN represents some of my most technically challenging PCB work to date. It sits at the center of distributed robot communication, bridging the onboard PC and embedded subsystems over CAN while balancing firmware, hardware reliability, and board-level integration.',
         altiumViewer: ALTIUM_VIEWERS.canable,
         stack: ['STM32', 'CAN Bus', 'USB', 'Embedded Firmware', 'PCB Design', 'Robot Electronics'],
         highlights: [
@@ -124,7 +124,12 @@ window.PROJECT_DATA = {
             'Designed for use in a real robotics environment rather than as a lab-only concept.'
         ],
         media: [
-            { title: 'Schematic Export', placeholder: 'CAN / USB Schematic', text: 'Add the schematic showing the STM32, transceiver, USB path, and power routing.' },
+            {
+                title: 'Real OpenCAN Build',
+                image: 'assets/opencan-real-life-close.jpg',
+                alt: 'OpenCAN PCB held in hand outdoors',
+                text: 'Real-life photo of the fabricated OpenCAN board, showing the compact footprint and finished PCB in hand.'
+            },
             { title: '3D Board Render', placeholder: '3D PCB View', text: 'Show the 3D PCB model or routing screenshots to highlight board complexity.' },
             { title: 'Robot Integration Photo', placeholder: 'System Integration', text: 'Include a photo of the board installed on the robot or connected during bring-up.' }
         ]
