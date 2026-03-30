@@ -19,7 +19,7 @@ const ALTIUM_VIEWERS = {
         ...DEFAULT_ALTIUM_VIEWER,
         title: 'ESP32Pet Interactive Board',
         caption: 'Inspect the ESP32Pet handheld directly in 3D, with the PCB and schematic views available from the same embedded panel.',
-        projectSrc: 'assets/esp32pet-kicad-viewer.zip',
+        projectSrc: 'assets/esp32pet-kicad-viewer-20260330.zip',
         openUrl: 'https://github.com/dishishshawn/ESP32Pet/tree/master/ESP32Pet%20PCB',
         openLabel: 'Open board source',
         enabledViews: '3d,pcb,sch',
