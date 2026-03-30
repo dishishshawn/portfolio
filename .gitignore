@@ -50,3 +50,6 @@ env/
 *.tmp
 *.bak
 .#*
+
+# Local browser automation artifacts
+.playwright-cli/
