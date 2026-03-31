@@ -7,7 +7,7 @@
     --accent: #2f5a4b;
     --accent-strong: #234438;
     --accent-soft: rgba(47, 90, 75, 0.1);
-    --font-serif: 'Source Serif 4', Georgia, serif;
+    --font-serif: 'Datatype', 'Helvetica Neue', Arial, sans-serif;
     --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
     --shadow-soft: 0 22px 40px rgba(62, 52, 38, 0.08);
 }

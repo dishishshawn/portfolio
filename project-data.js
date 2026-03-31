@@ -67,13 +67,12 @@ window.PROJECT_DATA = {
     'esp32pet': {
         title: 'ESP32Pet',
         eyebrow: 'Featured Build',
-        status: 'Open Source',
-        type: 'Embedded Hardware',
-        visibility: 'Public repository',
+        status: 'Hardware + Firmware',
+        type: 'ESP32',
+        
         github: 'https://github.com/dishishshawn/ESP32Pet',
-        summary: 'Open-source Tamagotchi-style handheld built on an ESP32 with an ST7735 LCD, physical buttons, EEPROM-backed persistent stats, and a custom PCB/case workflow.',
+        summary: 'Tamagotchi-style handheld built on an ESP32 with an ST7735 LCD, physical buttons, EEPROM-backed persistent stats, and a custom PCB/case workflow.',
         description: 'This project combines embedded firmware, custom PCB design, and product-style iteration into a handheld virtual pet platform. It reflects both hardware and software ownership, from system design and power considerations to the user-facing gameplay loop.',
-        altiumViewer: ALTIUM_VIEWERS.esp32pet,
         stack: ['ESP32', 'ST7735 TFT LCD', 'C/C++', 'PlatformIO / Arduino IDE', 'KiCad', 'EEPROM', 'LiPo Battery', 'MCP1700 LDO'],
         highlights: [
             'Designed around a custom PCB and enclosure workflow instead of a dev-board-only prototype.',
@@ -81,9 +80,14 @@ window.PROJECT_DATA = {
             'Integrated display control, button handling, and low-power embedded considerations.'
         ],
         media: [
-            { title: 'Schematic Export', placeholder: 'Schematic Preview', text: 'Add a KiCad schematic screenshot or PDF export showing the ESP32, display, power, and button circuitry.' },
-            { title: '3D PCB Render', placeholder: '3D Board Model', text: 'Drop in a 3D render of the PCB and enclosure to highlight the physical design work.' },
-            { title: 'Demo Photo / Video', placeholder: 'Gameplay Demo', text: 'Show the assembled device running the pet UI, animations, or button interactions.' }
+            {
+                image: 'assets/ESP32Pet Front.png',
+                alt: 'Front view of the ESP32Pet PCB'
+            },
+            {
+                image: 'assets/ESP32Pet Back.png',
+                alt: 'Back view of the ESP32Pet PCB'
+            }
         ]
     },
     'relevance-classification-model': {
@@ -91,28 +95,30 @@ window.PROJECT_DATA = {
         eyebrow: 'Research + ML',
         status: 'OU Project',
         type: 'Machine Learning / Research Software',
-        visibility: 'Public repository',
+        
         github: 'https://github.com/dishishshawn/Relevance-Classification-Model',
         summary: 'Research project for OU that acts like a relevance-ranking engine for social media posts using active feedback, uncertainty sampling, and ML experimentation workflows.',
         description: 'Built as a research-oriented machine learning system, this project explores how relevance ranking can be improved through active learning and uncertainty-driven feedback loops. It reflects my interest in ML systems that connect experimentation with practical decision-making.',
-        stack: ['Python', 'Active Learning', 'Uncertainty Sampling', 'BERT-based Training', 'Bag-of-Words Models', 'ML Experimentation'],
+        stack: ['Python', 'Active Learning', 'Uncertainty Sampling', 'BERT', 'ML Experimentation'],
         highlights: [
             'Explored relevance ranking strategies for noisy social media-style data.',
             'Used feedback-driven learning ideas to improve data selection and training efficiency.',
             'Compared different model approaches within an experimentation-focused workflow.'
         ],
         media: [
-            { title: 'Pipeline Diagram', placeholder: 'Model Workflow', text: 'Add a visual of the training / ranking pipeline or feedback loop used in the project.' },
-            { title: 'Results Snapshot', placeholder: 'Metrics / Output', text: 'Include training curves, ranking output examples, or evaluation metrics.' },
-            { title: 'Demo / Notebook View', placeholder: 'Research Demo', text: 'Show a notebook, script output, or interface demonstrating how the model is used.' }
+            {
+                title: 'FYRE Poster',
+                image: 'assets/FYRE Poster v3 v2.png',
+                alt: 'FYRE poster for the DISC relevance classification research project',
+                text: 'Research poster summarizing the DISC project work on relevance classification, active learning, and model experimentation.'
+            }
         ]
     },
     'canable': {
         title: 'OpenCAN',
         eyebrow: 'Robotics Hardware',
-        status: 'Most Complex Board',
-        type: 'STM32 + CAN Board',
-        visibility: 'Public repository',
+        type: 'STM32',
+        
         github: 'https://github.com/dishishshawn/OpenCAN',
         summary: 'Compact STM32-based CAN-to-USB interface board that lets the onboard PC communicate with distributed robot electronics over the CAN bus for IGVC.',
         description: 'OpenCAN represents some of my most technically challenging PCB work to date. It sits at the center of distributed robot communication, bridging the onboard PC and embedded subsystems over CAN while balancing firmware, hardware reliability, and board-level integration.',
@@ -121,7 +127,7 @@ window.PROJECT_DATA = {
         highlights: [
             'Created a robust hardware bridge between the onboard computer and distributed CAN nodes.',
             'Worked through the practical constraints of USB, CAN transceivers, and embedded board integration.',
-            'Designed for use in a real robotics environment rather than as a lab-only concept.'
+            'Designed for use in a real robotics environment.'
         ],
         media: [
             {
@@ -139,7 +145,7 @@ window.PROJECT_DATA = {
         eyebrow: 'Embedded Vision',
         status: 'IoT',
         type: 'ESP32-CAM Project',
-        visibility: 'Public repository',
+        
         github: 'https://github.com/dishishshawn/Low-Cost-Security-Camera',
         summary: 'Affordable home security camera system built around the ESP32-CAM AI-Thinker with Wi-Fi video streaming, motion detection, image capture, and remote viewing.',
         description: 'This project focused on building a practical low-cost embedded vision system around the ESP32-CAM ecosystem. It ties together camera streaming, networking, and lightweight remote monitoring features in an accessible hardware platform.',
@@ -160,7 +166,7 @@ window.PROJECT_DATA = {
         eyebrow: 'Competition Robotics',
         status: 'STORM',
         type: 'Robot Control Electronics',
-        visibility: 'Public repository',
+        
         github: 'https://github.com/dishishshawn/STORM_Control_Board',
         summary: 'Main control and interface board for the STORM robot, integrating subsystem inputs and outputs with onboard microcontroller logic for reliable robot control.',
         description: 'The STORM Control Board was developed to serve as a core interface layer between robot subsystems. The design emphasized reliable I/O handling, clean control integration, and practical embedded deployment under robotics constraints.',
@@ -180,9 +186,9 @@ window.PROJECT_DATA = {
     'sign-language-ai': {
         title: 'Sign-Language-AI',
         eyebrow: 'Computer Vision',
-        status: 'Public Repo',
+        status: 'Vision App',
         type: 'AI Application',
-        visibility: 'Public repository',
+        
         github: 'https://github.com/dishishshawn/Sign-Language-AI',
         summary: 'Sign-language gesture recognition app with a training pipeline, prediction script, and GUI for uploading images and viewing results.',
         description: 'This project focuses on accessible computer vision and applied ML. It combines model training, prediction tooling, and a simple GUI workflow to make sign-language recognition more interactive and interpretable.',
@@ -201,9 +207,9 @@ window.PROJECT_DATA = {
     'gold-fish': {
         title: 'Gold.fish',
         eyebrow: 'Full-Stack Web App',
-        status: 'Public Repo',
+        status: 'Finance App',
         type: 'Finance Visualization App',
-        visibility: 'Public repository',
+        
         github: 'https://github.com/dishishshawn/Gold.fish',
         summary: 'Financial tracking web app that visualizes income and expenses through the growth of a digital fish tank, turning personal finance into a game-like experience.',
         description: 'Gold.fish turns personal finance into a more engaging visual system by tying spending behavior to a digital fish-tank metaphor. It blends frontend design, backend logic, and a playful feedback loop into one app concept.',
@@ -222,9 +228,9 @@ window.PROJECT_DATA = {
     'maze-generator-solver': {
         title: 'Maze Generator Solver',
         eyebrow: 'Algorithms + GUI',
-        status: 'Public Repo',
+        status: 'Visualizer',
         type: 'Python Desktop App',
-        visibility: 'Public repository',
+        
         github: 'https://github.com/dishishshawn/Maze-Generator-Solver-Python',
         summary: 'GUI-based maze generator and solver that creates random mazes, supports customizable size, and uses different frontier strategies for solving.',
         description: 'This project combines algorithmic thinking with a visual desktop interface. It explores how different search strategies behave in practice while presenting the output in an interactive Tkinter-based GUI.',
@@ -243,9 +249,9 @@ window.PROJECT_DATA = {
     'diet-tracker': {
         title: 'Diet Tracker',
         eyebrow: 'Desktop App',
-        status: 'Public Repo',
+        status: 'Personal Analytics',
         type: 'Health Tracking Software',
-        visibility: 'Public repository',
+        
         github: 'https://github.com/dishishshawn/diet-tracker',
         summary: 'Local desktop app for tracking meals, workouts, calories, and logged fitness data with built-in visualization.',
         description: 'Diet Tracker focuses on practical data logging and simple desktop visualization. It combines local persistence, plotting, and a task-oriented GUI into a useful personal analytics workflow.',
@@ -264,9 +270,9 @@ window.PROJECT_DATA = {
     'esp32-wifi-upload-to-screen': {
         title: 'ESP32 WiFi Upload to Screen',
         eyebrow: 'Embedded Display Project',
-        status: 'Public Repo',
+        status: 'Display + Web',
         type: 'ESP32 + Web Server',
-        visibility: 'Public repository',
+        
         github: 'https://github.com/dishishshawn/ESP32-WIFI-Upload-to-Screen',
         summary: 'Embedded ESP32 project that hosts a server for uploading JPG images and displaying them on an ST7735 screen.',
         description: 'This project blends embedded networking with a physical display interface. It allowed image upload over Wi-Fi and immediate rendering on a small screen, tying together web interaction and embedded device control.',
@@ -285,9 +291,9 @@ window.PROJECT_DATA = {
     'kicad-st7735s-tft': {
         title: 'KiCad ST7735S 1.8in TFT Library',
         eyebrow: 'PCB Library Work',
-        status: 'Public Repo',
+        status: 'CAD Library',
         type: 'KiCad Library Design',
-        visibility: 'Public repository',
+        
         github: 'https://github.com/dishishshawn/kicad-st7735s-1.8in-tft',
         summary: 'Custom KiCad symbol and footprint library for a 1.8-inch ST7735S TFT display board.',
         description: 'This library package supports custom PCB workflows by providing reusable symbol and footprint assets for a specific TFT display board. It reflects the kind of support tooling that makes future hardware iteration faster and cleaner.',
@@ -329,7 +335,7 @@ window.PROJECT_DATA = {
         eyebrow: 'Sensing + Embedded',
         status: 'STORM',
         type: 'Pico-based Sensor Board',
-        visibility: 'Public repository',
+        
         github: 'https://github.com/dishishshawn/InfaredPCB',
         summary: 'Raspberry Pi Pico-based infrared sensing board using TSOP receivers to detect, decode, and transmit IR signals back to the main PC in real time for STORM.',
         description: 'The infrared sensing board was designed for real-time signal capture and communication inside the STORM robot system. It brought together embedded firmware, sensor interfacing, and system-level data handoff to the main computer.',

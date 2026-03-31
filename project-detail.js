@@ -17,10 +17,11 @@ const renderMedia = (items = []) => items.map((item) => `
             class="media-image"
             loading="lazy"
         >
+        ${item.title || item.text ? `
         <div class="media-copy">
             <h3>${item.title}</h3>
             <p>${item.text}</p>
-        </div>
+        </div>` : ''}
     </article>
 `).join('');
 
@@ -82,10 +83,11 @@ if (!project) {
                             <span class="meta-label">Type</span>
                             <span class="meta-value">${project.type}</span>
                         </div>
+                        ${project.visibility && project.visibility !== 'Public repository' ? `
                         <div class="meta-row">
                             <span class="meta-label">Visibility</span>
                             <span class="meta-value">${project.visibility}</span>
-                        </div>
+                        </div>` : ''}
                     </div>
                 </section>
             </aside>
