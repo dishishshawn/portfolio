@@ -1,3 +1,5 @@
+document.documentElement.classList.add('has-js');
+
 const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll('section[id]');
 const revealItems = document.querySelectorAll('.reveal');

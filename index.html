@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="nav">
-        <a href="#top" class="nav-brand">SA</a>
+        <a href="#top" class="nav-brand">Shawn Agarwal</a>
         <div class="nav-links">
-            <a href="#projects">Projects</a>
+            <a href="#projects">Selected Work</a>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
@@ -24,185 +24,161 @@
 
     <main id="top">
         <section class="hero">
-            <div class="hero-content reveal">
-                <p class="hero-subtitle">PCB Design | Embedded Systems | Research</p>
-                <h1 class="hero-title">
-                    I build <span class="highlight">embedded hardware</span>, intelligent systems, and research-driven technology.
-                </h1>
-                <p class="hero-desc">
-                    Electrical engineering student at the University of Oklahoma building PCB-based embedded systems, robotics electronics, and research-driven ML tools.
-                </p>
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <p class="hero-kicker">Electrical engineering student at the University of Oklahoma</p>
+                    <h1 class="hero-title">Shawn Agarwal</h1>
+                    <p class="hero-deck">Embedded hardware, PCB design, and research-driven engineering.</p>
+                    <p class="hero-desc">
+                        I design boards, build firmware, and work on robotics and ML projects where reliability, integration, and practical constraints matter as much as the prototype.
+                    </p>
 
-                <div class="hero-actions">
-                    <a href="#projects" class="cta-button">View Projects</a>
-                    <a href="Shawn_Agarwal_revised.docx.pdf" target="_blank" class="secondary-button">Open Resume</a>
-                </div>
-            </div>
-
-            <div class="hero-visual reveal">
-                <div class="hero-panel pcb-preview">
-                    <div class="panel-header">
-                        <span class="panel-label">Featured Board</span>
+                    <div class="hero-actions">
+                        <a href="#projects" class="cta-button">View selected work</a>
+                        <a href="Shawn_Agarwal_revised.docx.pdf" target="_blank" rel="noreferrer" class="secondary-button">Open resume</a>
                     </div>
+                </div>
 
-                    <figure class="pcb-hero-shot">
-                        <img
-                            src="assets/opencan-real-life.jpg"
-                            alt="Fabricated OpenCAN board shown in hand"
-                            class="pcb-preview-image"
-                        >
-                        <figcaption class="pcb-shot-caption">
-                            <span class="pcb-shot-label">OpenCAN</span>
-                            <span class="pcb-shot-note">STM32 CAN-to-USB board built for IGVC robotics</span>
-                        </figcaption>
-                    </figure>
+                <figure class="hero-figure reveal">
+                    <img
+                        src="assets/opencan-real-life.jpg"
+                        alt="Fabricated OpenCAN board shown in hand"
+                        class="hero-image"
+                    >
+                    <figcaption class="hero-caption">
+                        <span class="pcb-shot-label">OpenCAN</span>
+                        <span class="pcb-shot-note">Compact STM32 CAN-to-USB board built for IGVC robotics.</span>
+                    </figcaption>
+                </figure>
 
-                    <ul class="focus-list">
-                        <li>PCB design, layout, and bring-up</li>
-                        <li>Robot electronics and CAN-connected systems</li>
-                        <li>Research projects that bridge hardware and software</li>
-                    </ul>
+                <div class="hero-facts reveal" aria-label="Portfolio summary">
+                    <div class="fact-item">
+                        <p class="fact-label">Focus</p>
+                        <p class="fact-copy">PCB layout, embedded systems, robot electronics, and hardware bring-up.</p>
+                    </div>
+                    <div class="fact-item">
+                        <p class="fact-label">Current Work</p>
+                        <p class="fact-copy">Research at CQRT alongside robotics, firmware, and ML projects.</p>
+                    </div>
+                    <div class="fact-item">
+                        <p class="fact-label">Open To</p>
+                        <p class="fact-copy">Internships, research roles, and engineering work in embedded systems.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="projects">
             <div class="container">
-                <p class="section-kicker">Portfolio</p>
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">The work that best represents my embedded hardware, robotics, and research background.</p>
+                <div class="section-intro reveal">
+                    <p class="section-kicker">Selected Work</p>
+                    <h2 class="section-title">Projects that best represent how I build.</h2>
+                    <p class="section-subtitle">A small set of case studies across embedded hardware, robotics, and research software.</p>
+                </div>
 
-                <div class="projects-grid featured-grid">
-                    <article class="project-card reveal" data-project="esp32pet" tabindex="0">
-                        <div class="project-top">
-                            <span class="project-type">Featured Build</span>
-                            <span class="project-status">Open Source</span>
+                <div class="project-list">
+                    <article class="project-row reveal" data-project="esp32pet" tabindex="0">
+                        <p class="project-number">01</p>
+                        <div class="project-main">
+                            <p class="project-topline">Featured Build / Open Source</p>
+                            <h3>ESP32Pet</h3>
+                            <p class="project-desc">Open-source Tamagotchi-style handheld built on an ESP32 with an ST7735 LCD, physical buttons, EEPROM-backed persistent stats, and a custom PCB/case workflow.</p>
+                            <p class="project-stack">ESP32 / ST7735 TFT / C/C++ / KiCad</p>
                         </div>
-                        <h3>ESP32Pet</h3>
-                        <p class="project-desc">Open-source Tamagotchi-style handheld built on an ESP32 with an ST7735 LCD, physical buttons, EEPROM-backed persistent stats, and a custom PCB/case workflow.</p>
-                        <div class="project-tags">
-                            <span class="tag">ESP32</span>
-                            <span class="tag">ST7735 TFT</span>
-                            <span class="tag">C/C++</span>
-                            <span class="tag">KiCad</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="project.html?project=esp32pet" class="text-link">Open case study -&gt;</a>
-                        </div>
+                        <a href="project.html?project=esp32pet" class="project-link">Open case study</a>
                     </article>
 
-                    <article class="project-card reveal" data-project="relevance-classification-model" tabindex="0">
-                        <div class="project-top">
-                            <span class="project-type">Research + ML</span>
-                            <span class="project-status">OU Project</span>
+                    <article class="project-row reveal" data-project="relevance-classification-model" tabindex="0">
+                        <p class="project-number">02</p>
+                        <div class="project-main">
+                            <p class="project-topline">Research + ML / OU Project</p>
+                            <h3>Relevance Classification Model</h3>
+                            <p class="project-desc">Research project for OU that acts like a relevance-ranking engine for social media posts using active feedback, uncertainty sampling, and ML experimentation workflows.</p>
+                            <p class="project-stack">Python / Active Learning / BERT / Data Systems</p>
                         </div>
-                        <h3>Relevance Classification Model</h3>
-                        <p class="project-desc">Research project for OU that acts like a relevance-ranking engine for social media posts using active feedback, uncertainty sampling, and ML experimentation workflows.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Active Learning</span>
-                            <span class="tag">BERT</span>
-                            <span class="tag">Data Systems</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="project.html?project=relevance-classification-model" class="text-link">Open case study -&gt;</a>
-                        </div>
+                        <a href="project.html?project=relevance-classification-model" class="project-link">Open case study</a>
                     </article>
 
-                    <article class="project-card reveal" data-project="canable" tabindex="0">
-                        <div class="project-top">
-                            <span class="project-type">Robotics Hardware</span>
-                            <span class="project-status">Most Complex Board</span>
+                    <article class="project-row reveal" data-project="canable" tabindex="0">
+                        <p class="project-number">03</p>
+                        <div class="project-main">
+                            <p class="project-topline">Robotics Hardware / Most Complex Board</p>
+                            <h3>OpenCAN</h3>
+                            <p class="project-desc">Compact STM32-based CAN-to-USB interface board that lets the onboard PC communicate with distributed robot electronics over the CAN bus for IGVC.</p>
+                            <p class="project-stack">STM32 / CAN Bus / USB / PCB Design</p>
                         </div>
-                        <h3>OpenCAN</h3>
-                        <p class="project-desc">Compact STM32-based CAN-to-USB interface board that lets the onboard PC communicate with distributed robot electronics over the CAN bus for IGVC.</p>
-                        <div class="project-tags">
-                            <span class="tag">STM32</span>
-                            <span class="tag">CAN Bus</span>
-                            <span class="tag">USB</span>
-                            <span class="tag">PCB Design</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="project.html?project=canable" class="text-link">Open case study -&gt;</a>
-                        </div>
+                        <a href="project.html?project=canable" class="project-link">Open case study</a>
                     </article>
 
-                    <article class="project-card reveal" data-project="low-cost-security-camera" tabindex="0">
-                        <div class="project-top">
-                            <span class="project-type">Embedded Vision</span>
-                            <span class="project-status">IoT</span>
+                    <article class="project-row reveal" data-project="low-cost-security-camera" tabindex="0">
+                        <p class="project-number">04</p>
+                        <div class="project-main">
+                            <p class="project-topline">Embedded Vision / IoT</p>
+                            <h3>Low-Cost Security Camera</h3>
+                            <p class="project-desc">Affordable home security camera system built around the ESP32-CAM AI-Thinker with Wi-Fi video streaming, motion detection, image capture, and remote viewing.</p>
+                            <p class="project-stack">ESP32-CAM / Wi-Fi / ESPAsyncWebServer / IoT</p>
                         </div>
-                        <h3>Low-Cost Security Camera</h3>
-                        <p class="project-desc">Affordable home security camera system built around the ESP32-CAM AI-Thinker with Wi-Fi video streaming, motion detection, image capture, and remote viewing.</p>
-                        <div class="project-tags">
-                            <span class="tag">ESP32-CAM</span>
-                            <span class="tag">Wi-Fi</span>
-                            <span class="tag">ESPAsyncWebServer</span>
-                            <span class="tag">IoT</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="project.html?project=low-cost-security-camera" class="text-link">Open case study -&gt;</a>
-                        </div>
+                        <a href="project.html?project=low-cost-security-camera" class="project-link">Open case study</a>
                     </article>
 
-                    <article class="project-card reveal" data-project="storm-control-board" tabindex="0">
-                        <div class="project-top">
-                            <span class="project-type">Competition Robotics</span>
-                            <span class="project-status">STORM</span>
+                    <article class="project-row reveal" data-project="storm-control-board" tabindex="0">
+                        <p class="project-number">05</p>
+                        <div class="project-main">
+                            <p class="project-topline">Competition Robotics / STORM</p>
+                            <h3>STORM Control Board</h3>
+                            <p class="project-desc">Main control and interface board for the STORM robot, integrating subsystem I/O with onboard microcontroller logic for reliable robot control.</p>
+                            <p class="project-stack">Embedded Systems / Controls / Digital/Analog I/O / PCB Design</p>
                         </div>
-                        <h3>STORM Control Board</h3>
-                        <p class="project-desc">Main control and interface board for the STORM robot, integrating subsystem I/O with onboard microcontroller logic for reliable robot control.</p>
-                        <div class="project-tags">
-                            <span class="tag">Embedded Systems</span>
-                            <span class="tag">Controls</span>
-                            <span class="tag">Digital/Analog I/O</span>
-                            <span class="tag">PCB Design</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="project.html?project=storm-control-board" class="text-link">Open case study -&gt;</a>
-                        </div>
+                        <a href="project.html?project=storm-control-board" class="project-link">Open case study</a>
                     </article>
                 </div>
 
-                <div class="subsection-header">
+                <div class="subsection-header reveal">
                     <h3>Additional Projects</h3>
-                    <p>Smaller projects and supporting builds that add range without being the centerpiece of the portfolio.</p>
+                    <p>Supporting work that adds range without competing with the main case studies.</p>
                 </div>
 
-                <div class="projects-grid compact-grid">
+                <div class="mini-project-list">
                     <article class="mini-project reveal" data-project="sign-language-ai" tabindex="0">
-                        <h4>Sign-Language-AI</h4>
-                        <p>Gesture recognition app with a training pipeline, prediction script, and image-upload GUI.</p>
-                        <span>Python | YOLOv8 | OpenCV | Tkinter</span>
-                        <div class="mini-project-link">Open case study</div>
+                        <div>
+                            <h4>Sign-Language-AI</h4>
+                            <p>Gesture recognition app with training, inference, and image-upload tooling.</p>
+                        </div>
+                        <span>Python / YOLOv8 / OpenCV / Tkinter</span>
                     </article>
+
                     <article class="mini-project reveal" data-project="gold-fish" tabindex="0">
-                        <h4>Gold.fish</h4>
-                        <p>Financial tracking web app that visualizes spending through the growth of a digital fish tank.</p>
-                        <span>React | Node.js | Express | Data Viz</span>
-                        <div class="mini-project-link">Open case study</div>
+                        <div>
+                            <h4>Gold.fish</h4>
+                            <p>Financial tracking web app that turns spending into a living fish tank visualization.</p>
+                        </div>
+                        <span>React / Node.js / Express / Data Visualization</span>
                     </article>
+
                     <article class="mini-project reveal" data-project="esp32-wifi-upload-to-screen" tabindex="0">
-                        <h4>ESP32 WiFi Upload to Screen</h4>
-                        <p>ESP32 project that hosts a server for uploading JPG images and displaying them on an ST7735 screen.</p>
-                        <span>ESP32 | C++ | PlatformIO | Web Server</span>
-                        <div class="mini-project-link">Open case study</div>
+                        <div>
+                            <h4>ESP32 WiFi Upload to Screen</h4>
+                            <p>ESP32 project for uploading JPG images over Wi-Fi and displaying them on an ST7735 screen.</p>
+                        </div>
+                        <span>ESP32 / C++ / PlatformIO / Web Server</span>
                     </article>
+
                     <article class="mini-project reveal" data-project="infrared-sensor-board" tabindex="0">
-                        <h4>Infrared Sensor Board</h4>
-                        <p>Raspberry Pi Pico-based IR sensing board for real-time detection, decoding, and transmission in STORM.</p>
-                        <span>Raspberry Pi Pico | Embedded C/C++ | IR</span>
-                        <div class="mini-project-link">Open case study</div>
+                        <div>
+                            <h4>Infrared Sensor Board</h4>
+                            <p>Raspberry Pi Pico-based IR sensing board for real-time detection, decoding, and transmission in STORM.</p>
+                        </div>
+                        <span>Raspberry Pi Pico / Embedded C/C++ / IR</span>
                     </article>
                 </div>
             </div>
         </section>
 
         <section id="about" class="about">
-            <div class="container about-grid">
-                <div class="about-content reveal">
-                    <p class="section-kicker">About Me</p>
-                    <h2 class="section-title section-title-left">Engineering with technical depth and real-world intent.</h2>
+            <div class="container split-grid">
+                <div class="section-copy reveal">
+                    <p class="section-kicker">About</p>
+                    <h2 class="section-title">Engineering work that holds up outside the lab.</h2>
                     <p class="about-text">
                         I&apos;m Shawn Agarwal, an Electrical Engineering student at the University of Oklahoma focused on embedded hardware, PCB design, and robotics systems that have to work outside the lab. I like projects where board-level decisions, firmware, and system integration all matter.
                     </p>
@@ -211,19 +187,14 @@
                     </p>
                 </div>
 
-                <div class="about-side reveal">
-                    <div class="info-card">
+                <div class="section-notes reveal">
+                    <div class="note-block">
                         <h3>Core Tools</h3>
-                        <div class="skill-tags">
-                            <span class="skill">KiCad</span>
-                            <span class="skill">Altium</span>
-                            <span class="skill">STM32</span>
-                            <span class="skill">ESP32</span>
-                            <span class="skill">CAN Bus</span>
-                            <span class="skill">C/C++</span>
-                            <span class="skill">Python</span>
-                            <span class="skill">MATLAB</span>
-                        </div>
+                        <p>KiCad, Altium, STM32, ESP32, CAN bus, C/C++, Python, and MATLAB.</p>
+                    </div>
+                    <div class="note-block">
+                        <h3>Working Style</h3>
+                        <p>I gravitate toward projects where hardware, firmware, integration, and testing all have to come together cleanly.</p>
                     </div>
                 </div>
             </div>
@@ -231,8 +202,12 @@
 
         <section id="experience" class="experience">
             <div class="container">
-                <p class="section-kicker">Experience</p>
-                <h2 class="section-title">Research, teaching, and robotics leadership</h2>
+                <div class="section-intro reveal">
+                    <p class="section-kicker">Experience</p>
+                    <h2 class="section-title">Research, teaching, and robotics work.</h2>
+                    <p class="section-subtitle">A mix of research support, technical mentoring, and team-based robotics engineering.</p>
+                </div>
+
                 <div class="timeline">
                     <article class="timeline-item reveal">
                         <span class="timeline-year">Current</span>
@@ -275,28 +250,31 @@
 
         <section id="contact" class="contact">
             <div class="container">
-                <p class="section-kicker">Contact</p>
-                <h2 class="section-title">Get in touch</h2>
-                <p class="section-subtitle">Open to internships, research roles, and engineering work in embedded systems and robotics.</p>
+                <div class="contact-shell reveal">
+                    <div>
+                        <p class="section-kicker">Contact</p>
+                        <h2 class="section-title">Find me</h2>
+                        <p class="section-subtitle">Open to internships, research roles, and engineering work in embedded systems and robotics.</p>
+                    </div>
 
-                <div class="contact-grid">
-                    <a href="mailto:shawnagarwal0@gmail.com" class="contact-card reveal">
-                        <div class="contact-icon">@</div>
-                        <h3>Email</h3>
-                        <p>shawnagarwal0@gmail.com</p>
-                    </a>
-                    <a href="https://github.com/dishishshawn" target="_blank" rel="noreferrer" class="contact-card reveal">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
-                        </div>
-                        <h3>GitHub</h3>
-                        <p>github.com/dishishshawn</p>
-                    </a>
-                    <a href="https://www.linkedin.com/in/shawnagarwal/" target="_blank" rel="noreferrer" class="contact-card reveal">
-                        <div class="contact-icon">in</div>
-                        <h3>LinkedIn</h3>
-                        <p>linkedin.com/in/shawnagarwal</p>
-                    </a>
+                    <div class="contact-list">
+                        <a href="mailto:shawnagarwal0@gmail.com" class="contact-link">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">shawnagarwal0@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/dishishshawn" target="_blank" rel="noreferrer" class="contact-link">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">github.com/dishishshawn</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shawnagarwal/" target="_blank" rel="noreferrer" class="contact-link">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">linkedin.com/in/shawnagarwal</span>
+                        </a>
+                        <a href="Shawn_Agarwal_revised.docx.pdf" target="_blank" rel="noreferrer" class="contact-link">
+                            <span class="contact-label">Resume</span>
+                            <span class="contact-value">Open PDF</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -304,7 +282,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>Focused portfolio for embedded hardware, robotics, and research work.</p>
+            <p>Selected work in embedded hardware, robotics, and research-oriented engineering.</p>
         </div>
     </footer>
 
