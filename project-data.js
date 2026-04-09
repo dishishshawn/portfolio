@@ -330,6 +330,24 @@ window.PROJECT_DATA = {
             { title: 'System Integration', placeholder: 'Installed Power Board', text: 'Include a photo of the board connected within the robot power system.' }
         ]
     },
+    'elab-robotics': {
+        title: 'ELAB Robotics Project',
+        eyebrow: 'Robotics + Embedded',
+        status: 'In Progress',
+        type: 'Robotics Platform',
+        github: '',
+        summary: 'Robotics project currently in development at the OU Electronics Lab (ELAB), focused on hands-on embedded systems and robot hardware integration.',
+        description: 'This ongoing project is being developed in the OU Electronics Lab (ELAB), combining embedded hardware, firmware, and robotics system work in a lab environment. It reflects continued growth in practical robotics engineering, board-level design, and integrated system development.',
+        stack: ['Embedded Systems', 'Robotics', 'PCB Design', 'Firmware'],
+        highlights: [
+            'Developing robotics hardware and firmware in the OU ELAB environment.',
+            'Gaining hands-on experience with integrated robot system design and testing.',
+            'Building on embedded and PCB skills from prior competition and personal projects.'
+        ],
+        media: [
+            { title: 'Project Photo', placeholder: 'ELAB Build', text: 'Add a photo of the project in the lab environment.' }
+        ]
+    },
     'infrared-sensor-board': {
         title: 'Infrared Sensor Board',
         eyebrow: 'Sensing + Embedded',
