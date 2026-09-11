@@ -1,294 +1,907 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shawn Agarwal | Electrical Engineer, PCB Designer &amp; ML Engineer</title>
-    <meta name="description" content="Portfolio of Shawn Agarwal - electrical engineering student focused on PCB design, embedded systems, robotics, research, and ML engineering.">
-    <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shawn Agarwal — Quantum Materials &amp; Hardware</title>
+    <meta
+      name="description"
+      content="Shawn Agarwal, electrical engineering senior at the University of Oklahoma. Epitaxial oxide and nitride thin-film growth, high-resolution X-ray diffraction, and the instrumentation and analysis software around quantum materials research."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip">Skip to content</a>
+
     <nav class="nav">
+      <div class="shell nav-in">
         <a href="#top" class="nav-brand">Shawn Agarwal</a>
         <div class="nav-links">
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+          <a href="#research">Research</a>
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
         </div>
+        <a
+          href="assets/Shawn_Agarwal_Resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          class="nav-cta"
+          >Résumé</a
+        >
+      </div>
     </nav>
 
-    <main id="top">
-        <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content reveal">
-                    <p class="hero-kicker">Electrical engineering student at the University of Oklahoma</p>
-                    <h1 class="hero-title">Shawn Agarwal</h1>
-                    <p class="hero-deck">Embedded hardware, PCB design, and research-driven engineering.</p>
-                    <p class="hero-desc">
-                        I design boards, build firmware, and work on robotics and ML projects where reliability, integration, and practical constraints matter as much as the prototype.
-                    </p>
+    <main id="main">
+      <!-- ============================ HERO ============================ -->
+      <section class="hero shell" id="top">
+        <p class="label">
+          Electrical Engineering &middot; University of Oklahoma
+        </p>
 
-                    <div class="hero-actions">
-                        <a href="#projects" class="cta-button">View selected work</a>
-                        <a href="Shawn_Agarwal_revised.docx.pdf" target="_blank" rel="noreferrer" class="secondary-button">Open resume</a>
-                    </div>
-                </div>
+        <h1 class="hero-title">
+          Quantum hardware, at the <em>materials</em> end.
+        </h1>
 
-                <figure class="hero-figure reveal">
-                    <img
-                        src="assets/opencan-real-life.jpg"
-                        alt="Fabricated OpenCAN board shown in hand"
-                        class="hero-image"
-                    >
-                    <figcaption class="hero-caption">
-                        <span class="pcb-shot-label">OpenCAN</span>
-                        <span class="pcb-shot-note">Compact STM32 CAN-to-USB board built for IGVC robotics.</span>
-                    </figcaption>
-                </figure>
-
-                <div class="hero-facts reveal" aria-label="Portfolio summary">
-                    <div class="fact-item">
-                        <p class="fact-label">Focus</p>
-                        <p class="fact-copy">PCB layout, embedded systems, robot electronics, and hardware bring-up.</p>
-                    </div>
-                    <div class="fact-item">
-                        <p class="fact-label">Current Work</p>
-                        <p class="fact-copy">Research at CQRT alongside robotics, firmware, and ML projects.</p>
-                    </div>
-                    <div class="fact-item">
-                        <p class="fact-label">Open To</p>
-                        <p class="fact-copy">Internships, research roles, and engineering work in embedded systems.</p>
-                    </div>
-                </div>
+        <div class="hero-body">
+          <div>
+            <p class="lede">
+              I grow epitaxial oxide and nitride thin films, characterize them
+              with high-resolution X-ray diffraction, transport, and optical
+              measurement, and build the instrumentation and analysis software
+              around that work.
+            </p>
+            <div class="hero-actions">
+              <a href="#research" class="btn btn-solid">See the research</a>
+              <a href="project.html?project=xrdc" class="btn btn-quiet">XRDC</a>
+              <a href="mailto:shawn.a.agarwal-1@ou.edu" class="btn btn-ghost"
+                >Email</a
+              >
             </div>
-        </section>
+          </div>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <div class="section-intro reveal">
-                    <p class="section-kicker">Selected Work</p>
-                    <h2 class="section-title">Projects that best represent how I build.</h2>
-                    <p class="section-subtitle">A small set of case studies across embedded hardware, robotics, and research software.</p>
-                </div>
+          <figure class="figure">
+            <img
+              src="assets/research/rsm.png"
+              alt="Reciprocal-space map measured on a BaTiO3/SrTiO3/Si heterostructure"
+              data-optional
+              loading="eager"
+            />
+            <figcaption>
+              Reciprocal-space map &mdash;
+              BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si
+            </figcaption>
+          </figure>
+        </div>
 
-                <div class="project-list">
-                    <article class="project-row reveal" data-project="esp32pet" tabindex="0">
-                        <p class="project-number">01</p>
-                        <div class="project-main">
-                            <p class="project-topline">Hardware + Firmware</p>
-                            <h3>ESP32Pet</h3>
-                            <p class="project-desc">Tamagotchi-style handheld built on an ESP32 with an ST7735 LCD, physical buttons, EEPROM-backed persistent stats, and a custom PCB/case workflow.</p>
-                            <p class="project-stack">ESP32 / C/C++ / KiCad</p>
-                        </div>
-                        <a href="project.html?project=esp32pet" class="project-link">Open case study</a>
-                    </article>
+        <p class="hero-vitals">
+          <span>Senior</span>
+          <span>4.00 / 4.00 GPA</span>
+          <span>122 credit hours</span>
+          <span>Graduating May 2027</span>
+          <span>Yukon, OK</span>
+        </p>
+      </section>
 
-                    <article class="project-row reveal" data-project="relevance-classification-model" tabindex="0">
-                        <p class="project-number">02</p>
-                        <div class="project-main">
-                            <p class="project-topline">Research + ML</p>
-                            <h3>Relevance Classification Model</h3>
-                            <p class="project-desc">Research project for OU that acts like a relevance-ranking engine for social media posts using active feedback, uncertainty sampling, and ML experimentation workflows.</p>
-                            <p class="project-stack">Python / Active Learning / BERT / Data Systems</p>
-                        </div>
-                        <a href="project.html?project=relevance-classification-model" class="project-link">Open case study</a>
-                    </article>
+      <!-- ============================ NOW ============================= -->
+      <section class="now shell">
+        <div class="now-grid">
+          <div class="now-item">
+            <p class="label label-dim">Research</p>
+            <h3>Center for Quantum Research &amp; Technology</h3>
+            <p>
+              Undergraduate researcher and Engineering Pathways Fellow in Dr.
+              Hanjong Paik&rsquo;s group. Epitaxial oxide and nitride films.
+            </p>
+          </div>
+          <div class="now-item">
+            <p class="label label-dim">Building</p>
+            <h3>Heading Software</h3>
+            <p>
+              Founded January 2026. AI document intelligence for oil and gas
+              land services.
+            </p>
+          </div>
+          <div class="now-item">
+            <p class="label label-dim">Most recently</p>
+            <h3>Amazon &mdash; OKC1</h3>
+            <p>
+              Operations intern in a robotics-driven fulfillment center, summer
+              2026.
+            </p>
+          </div>
+        </div>
+      </section>
 
-                    <article class="project-row reveal" data-project="canable" tabindex="0">
-                        <p class="project-number">03</p>
-                        <div class="project-main">
-                            <p class="project-topline">Robotics Hardware</p>
-                            <h3>OpenCAN</h3>
-                            <p class="project-desc">Compact STM32-based CAN-to-USB interface board that lets the onboard PC communicate with distributed robot electronics over the CAN bus for IGVC.</p>
-                            <p class="project-stack">STM32 / CAN Bus / USB / PCB Design</p>
-                        </div>
-                        <a href="project.html?project=canable" class="project-link">Open case study</a>
-                    </article>
+      <!-- ========================== RESEARCH ========================== -->
+      <section class="bay shell" id="research">
+        <div class="bay-head">
+          <div>
+            <p class="slug">/research</p>
+            <h2 class="statement statement-wide">
+              Epitaxial oxides, and whether the interface is any good.
+            </h2>
+          </div>
+        </div>
 
-                    <article class="project-row reveal" data-project="low-cost-security-camera" tabindex="0">
-                        <p class="project-number">04</p>
-                        <div class="project-main">
-                            <p class="project-topline">Embedded Computer Vision / IoT</p>
-                            <h3>Low-Cost Security Camera</h3>
-                            <p class="project-desc">Affordable home security camera system built around the ESP32-CAM AI-Thinker with Wi-Fi video streaming, motion detection, image capture, and remote viewing.</p>
-                            <p class="project-stack">ESP32-CAM / Wi-Fi / ESPAsyncWebServer / IoT</p>
-                        </div>
-                        <a href="project.html?project=low-cost-security-camera" class="project-link">Open case study</a>
-                    </article>
+        <div class="research-split">
+          <div class="prose reveal">
+            <p>
+              Since January 2026 I have worked in
+              <strong>Dr. Hanjong Paik&rsquo;s group</strong> at OU&rsquo;s
+              Center for Quantum Research &amp; Technology, where I grow
+              epitaxial oxide and nitride thin films and heterostructures and
+              run the vacuum deposition and measurement hardware that produces
+              them.
+            </p>
+            <p>
+              My main project is
+              <strong>BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si</strong>. I compare
+              high-resolution X-ray diffraction against transport and optical
+              measurements to assess crystalline quality, strain state, and
+              interface behavior &mdash; the same sample read by more than one
+              instrument, so a claim about film quality has more than one line
+              of evidence behind it.
+            </p>
+            <p>
+              Analysis was the bottleneck. The group fit peaks by hand, which
+              made film-quality numbers slow to produce and hard to compare
+              between people. I wrote
+              <strong>XRDC</strong>, a MATLAB toolkit with rocking-curve and
+              reciprocal-space-map workflows, to make that step reproducible and
+              to standardize how we report it.
+            </p>
+          </div>
 
-                    <article class="project-row reveal" data-project="storm-control-board" tabindex="0">
-                        <p class="project-number">05</p>
-                        <div class="project-main">
-                            <p class="project-topline">Competition Robotics</p>
-                            <h3>STORM Control Board</h3>
-                            <p class="project-desc">Main control and interface board for the STORM robot, integrating subsystem I/O with onboard microcontroller logic for reliable robot control.</p>
-                            <p class="project-stack">Digital/Analog I/O / PCB Design</p>
-                        </div>
-                        <a href="project.html?project=storm-control-board" class="project-link">Open case study</a>
-                    </article>
-                </div>
-
-                <div class="subsection-header reveal">
-                    <h3>Additional Projects</h3>
-                    <p>Supporting work that adds range without competing with the main case studies.</p>
-                </div>
-
-                <div class="mini-project-list">
-                    <article class="mini-project reveal" data-project="sign-language-ai" tabindex="0">
-                        <div>
-                            <h4>Sign-Language-AI</h4>
-                            <p>Gesture recognition app with training, inference, and image-upload tooling.</p>
-                        </div>
-                        <span>Python / YOLOv8 / OpenCV / Tkinter</span>
-                    </article>
-
-                    <article class="mini-project reveal" data-project="gold-fish" tabindex="0">
-                        <div>
-                            <h4>Gold.fish</h4>
-                            <p>Financial tracking web app that turns spending into a living fish tank visualization.</p>
-                        </div>
-                        <span>React / Node.js / Data Visualization</span>
-                    </article>
-
-                    <article class="mini-project reveal" data-project="esp32-wifi-upload-to-screen" tabindex="0">
-                        <div>
-                            <h4>ESP32 WiFi Upload to Screen</h4>
-                            <p>ESP32 project for uploading JPG images over Wi-Fi and displaying them on an ST7735 screen.</p>
-                        </div>
-                        <span>ESP32 / C/C++ / Web Server</span>
-                    </article>
-
-                    <article class="mini-project reveal" data-project="infrared-sensor-board" tabindex="0">
-                        <div>
-                            <h4>Infrared Sensor Board</h4>
-                            <p>Raspberry Pi Pico-based IR sensing board for real-time detection, decoding, and transmission in STORM.</p>
-                        </div>
-                        <span>Raspberry Pi Pico / Embedded C/C++ / IR</span>
-                    </article>
-                </div>
+          <div class="panel reveal">
+            <h3>What I run</h3>
+            <div class="stack-row">
+              <span class="n">01 /</span>
+              <div>
+                <b>Growth</b>
+                <span
+                  >Vacuum deposition of epitaxial oxide and nitride films and
+                  heterostructures</span
+                >
+              </div>
             </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container split-grid">
-                <div class="section-copy reveal">
-                    <p class="section-kicker">About</p>
-                    <h2 class="section-title">Engineering work that holds up outside the lab.</h2>
-                    <p class="about-text">
-                        I&apos;m Shawn Agarwal, an Electrical Engineering student at the University of Oklahoma focused on embedded hardware, PCB design, and robotics systems. I like projects where board-level decisions, firmware, and system integration all matter.
-                    </p>
-                    <p class="about-text">
-                        My background spans competition robotics, undergraduate research, and applied ML work, with the strongest through-line being practical engineering under real constraints: sensing, communication, power, and reliable hardware bring-up.
-                    </p>
-                </div>
-
-                <div class="section-notes reveal">
-                    <div class="note-block">
-                        <h3>Core Tools</h3>
-                        <p>KiCad, Altium, C/C++, Python, and MATLAB.</p>
-                    </div>
-                    <!-- <div class="note-block">
-                        <h3>Working Style</h3>
-                        <p>I gravitate toward projects where hardware, firmware, integration, and testing all have to come together cleanly.</p>
-                    </div> -->
-                </div>
+            <div class="stack-row">
+              <span class="n">02 /</span>
+              <div>
+                <b>Structure</b>
+                <span
+                  >High-resolution XRD &mdash; rocking curves, reciprocal-space
+                  maps, &theta;&ndash;2&theta;, reflectivity</span
+                >
+              </div>
             </div>
-        </section>
-
-        <section id="experience" class="experience">
-            <div class="container">
-                <div class="section-intro reveal">
-                    <p class="section-kicker">Experience</p>
-                    <h2 class="section-title">Research, teaching, and robotics work.</h2>
-                    <!-- <p class="section-subtitle">A mix of research support, technical mentoring, and team-based robotics engineering.</p> -->
-                </div>
-
-                <div class="timeline">
-                    <article class="timeline-item reveal">
-                        <span class="timeline-year">Jan 2026 - Present</span>
-                        <div>
-                            <h3>Research Assistant - CQRT (Center for Quantum Research and Technology)</h3>
-                            <p>Currently working under Dr. Paik on quantum-related research involving thin films, device-oriented experiments, and hands-on engineering analysis.</p>
-                        </div>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <span class="timeline-year">Aug 2025 - Present</span>
-                        <div>
-                            <h3>Electrical Member - IGVC, Sooner Competitive Robotics</h3>
-                            <p>Built distributed robot electronics and CAN-connected subsystems for autonomous ground vehicle development.</p>
-                        </div>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <span class="timeline-year">Aug 2025 - Present</span>
-                        <div>
-                            <h3>Student Tutor - OU Math Center</h3>
-                            <p>Helped students solve technical math problems and communicate quantitative ideas clearly and effectively.</p>
-                        </div>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <span class="timeline-year">Sep 2024 - May 2025</span>
-                        <div>
-                            <h3>Research Assistant - DISC (Data Institute for Societal Challenges)</h3>
-                            <p>Worked under Dr. Wolfgang on data-driven engineering and machine learning projects focused on intelligent systems and research-based technical problem solving.</p>
-                        </div>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <span class="timeline-year">Aug 2024 - May 2025</span>
-                        <div>
-                            <h3>Electrical Member - STORM, Sooner Competitive Robotics</h3>
-                            <p>Designed and supported electronics, sensing, power, and control boards used in team robotics systems.</p>
-                        </div>
-                    </article>
-                </div>
+            <div class="stack-row">
+              <span class="n">03 /</span>
+              <div>
+                <b>Transport</b>
+                <span
+                  >Electrical transport measurement on finished
+                  heterostructures</span
+                >
+              </div>
             </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="contact-shell reveal">
-                    <div>
-                        <p class="section-kicker">Contact</p>
-                        <h2 class="section-title">Find me</h2>
-                        <p class="section-subtitle">Open to internships, research roles, and engineering work in embedded systems and robotics.</p>
-                    </div>
-
-                    <div class="contact-list">
-                        <a href="mailto:shawnagarwal0@gmail.com" class="contact-link">
-                            <span class="contact-label">Email</span>
-                            <span class="contact-value">shawnagarwal0@gmail.com</span>
-                        </a>
-                        <a href="https://github.com/dishishshawn" target="_blank" rel="noreferrer" class="contact-link">
-                            <span class="contact-label">GitHub</span>
-                            <span class="contact-value">github.com/dishishshawn</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/shawnagarwal/" target="_blank" rel="noreferrer" class="contact-link">
-                            <span class="contact-label">LinkedIn</span>
-                            <span class="contact-value">linkedin.com/in/shawnagarwal</span>
-                        </a>
-                        <a href="Shawn_Agarwal_revised.docx.pdf" target="_blank" rel="noreferrer" class="contact-link">
-                            <span class="contact-label">Resume</span>
-                            <span class="contact-value">Open PDF</span>
-                        </a>
-                    </div>
-                </div>
+            <div class="stack-row">
+              <span class="n">04 /</span>
+              <div>
+                <b>Optical</b>
+                <span
+                  >Optical characterization, cross-checked against the
+                  diffraction result</span
+                >
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+
+        <div class="cards">
+          <a
+            href="project.html?project=batio3-heterostructures"
+            class="card reveal"
+          >
+            <img
+              src="assets/research/batio3.jpg"
+              alt=""
+              class="card-art"
+              data-optional
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3>BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si heterostructures</h3>
+              <p>
+                Growing perovskite oxide on silicon, then using HRXRD,
+                transport, and optical measurement together to judge crystalline
+                quality, strain, and the interface.
+              </p>
+              <span class="card-foot">Case study &rarr;</span>
+            </div>
+          </a>
+
+          <a href="project.html?project=xrdc" class="card reveal">
+            <img
+              src="assets/research/xrdc.png"
+              alt=""
+              class="card-art"
+              data-optional
+              loading="lazy"
+            />
+            <div class="card-body">
+              <h3>XRDC &mdash; X-ray diffraction analysis</h3>
+              <p>
+                MATLAB toolkit for rocking curves, reciprocal-space maps, XRR
+                fitting, and lattice parameters. Released as a tagged build the
+                whole group can run.
+              </p>
+              <span class="card-foot">Case study &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ============================ WORK ============================ -->
+      <section class="bay-tight shell" id="work">
+        <div class="bay-head">
+          <div>
+            <p class="slug">/hardware &amp; software</p>
+            <h2 class="statement statement-wide">
+              Boards, firmware, and pipelines that had to actually work.
+            </h2>
+          </div>
+        </div>
+
+        <div class="rows">
+          <a href="project.html?project=igvc" class="row reveal">
+            <span class="row-n">01 /</span>
+            <div class="row-main">
+              <h3>Intelligent Ground Vehicle Competition</h3>
+              <p class="row-role">
+                Electrical Member &middot; Sooner Competitive Robotics &middot;
+                Aug 2025 &ndash; May 2026
+              </p>
+              <p>
+                Custom PCBs for power regulation, signal conditioning, and
+                hardware safety interlocks, taken from schematic capture through
+                layout, assembly, and system-level verification. Real-time
+                control firmware on STM32 under an RTOS, with LiDAR, cameras,
+                GPS, IMU, encoders, and e-stop all on one CAN bus.
+              </p>
+              <p class="row-stack">
+                Altium &middot; STM32 / ARM Cortex-M &middot; RTOS &middot; CAN
+                &middot; C/C++
+              </p>
+            </div>
+            <span class="row-go">Open</span>
+          </a>
+
+          <a href="project.html?project=canable" class="row reveal">
+            <span class="row-n">02 /</span>
+            <div class="row-main">
+              <h3>OpenCAN</h3>
+              <p class="row-role">CAN-to-USB bridge &middot; IGVC</p>
+              <p>
+                Compact STM32 board that puts the vehicle&rsquo;s CAN bus in
+                front of the onboard PC, so bus traffic can be watched live and
+                a fault can be reproduced instead of guessed at. Interactive 3D
+                board viewer on the case study.
+              </p>
+              <p class="row-stack">
+                STM32 &middot; CAN &middot; USB &middot; KiCad
+              </p>
+            </div>
+            <span class="row-go">Open</span>
+          </a>
+
+          <a href="project.html?project=heading-software" class="row reveal">
+            <span class="row-n">03 /</span>
+            <div class="row-main">
+              <h3>Heading Software</h3>
+              <p class="row-role">
+                Founder &amp; Engineer &middot; Jan 2026 &ndash; present
+              </p>
+              <p>
+                AI document intelligence for oil and gas land services. Built
+                the LLM extraction and verification pipeline end to end &mdash;
+                OCR, schema validation, citation grounding &mdash; plus an
+                offline evaluation harness that tracks per-field precision and
+                recall against a hand-labeled test set.
+              </p>
+              <p class="row-stack">
+                LLM pipelines &middot; OCR &middot; BullMQ / Redis &middot;
+                Evaluation harness
+              </p>
+            </div>
+            <span class="row-go">Open</span>
+          </a>
+
+          <a href="project.html?project=storm" class="row reveal">
+            <span class="row-n">04 /</span>
+            <div class="row-main">
+              <h3>Student Tele-Operated Robotics Mission</h3>
+              <p class="row-role">
+                Electrical Team Lead &middot; 2024 &ndash; 2025
+              </p>
+              <p>
+                Led the electrical team through design reviews and test phases.
+                Multi-voltage power rails and buck converters brought to under
+                5% ripple, plus IR and RF signal decoding for the robot&rsquo;s
+                sensing path.
+              </p>
+              <p class="row-stack">
+                Power electronics &middot; Buck converters &middot; IR / RF
+                decoding &middot; PCB design
+              </p>
+            </div>
+            <span class="row-go">Open</span>
+          </a>
+
+          <a
+            href="project.html?project=relevance-classification-model"
+            class="row reveal"
+          >
+            <span class="row-n">05 /</span>
+            <div class="row-main">
+              <h3>Relevance classification at scale</h3>
+              <p class="row-role">
+                Undergraduate researcher &middot; DISC, OU &middot; Sep 2024
+                &ndash; May 2025
+              </p>
+              <p>
+                Fine-tuned BERT for relevance classification over 1.6 million
+                records, using active-learning uncertainty sampling to choose
+                what got labeled next rather than labeling indiscriminately.
+              </p>
+              <p class="row-stack">
+                PyTorch &middot; BERT &middot; Active learning &middot; Python
+              </p>
+            </div>
+            <span class="row-go">Open</span>
+          </a>
+        </div>
+
+        <h3 class="hdr" style="margin-top: 3rem">Also built</h3>
+        <div class="also">
+          <a href="project.html?project=esp32pet" class="also-item">
+            <h4>ESP32Pet</h4>
+            <span>ESP32 / KiCad</span>
+            <p>
+              Handheld virtual pet on a custom PCB, with an ST7735 LCD and
+              EEPROM-backed state.
+            </p>
+          </a>
+          <a
+            href="project.html?project=infrared-sensor-board"
+            class="also-item"
+          >
+            <h4>Infrared sensor board</h4>
+            <span>RP2040 / IR</span>
+            <p>
+              TSOP receivers decoded on a Pico and streamed to the robot&rsquo;s
+              main PC in real time.
+            </p>
+          </a>
+          <a href="project.html?project=5v-buck-converter" class="also-item">
+            <h4>5 V buck converter</h4>
+            <span>Power</span>
+            <p>
+              Step-down board for the STORM power system, laid out for
+              regulation stability.
+            </p>
+          </a>
+          <a href="project.html?project=storm-control-board" class="also-item">
+            <h4>STORM control board</h4>
+            <span>Mixed signal</span>
+            <p>
+              Main interface board tying the robot&rsquo;s subsystem I/O to its
+              microcontroller.
+            </p>
+          </a>
+          <a
+            href="project.html?project=low-cost-security-camera"
+            class="also-item"
+          >
+            <h4>Low-cost security camera</h4>
+            <span>ESP32-CAM</span>
+            <p>
+              Wi-Fi streaming, motion detection, and remote viewing on
+              AI-Thinker hardware.
+            </p>
+          </a>
+          <a
+            href="project.html?project=esp32-wifi-upload-to-screen"
+            class="also-item"
+          >
+            <h4>ESP32 Wi-Fi upload to screen</h4>
+            <span>ESP32 / HTTP</span>
+            <p>
+              On-device web server that accepts a JPG and renders it to an
+              ST7735 panel.
+            </p>
+          </a>
+          <a href="project.html?project=kicad-st7735s-tft" class="also-item">
+            <h4>KiCad ST7735S library</h4>
+            <span>CAD</span>
+            <p>
+              Symbol and footprint for a 1.8&Prime; TFT, so the part stops being
+              redrawn each time.
+            </p>
+          </a>
+          <a href="project.html?project=sign-language-ai" class="also-item">
+            <h4>Sign-Language-AI</h4>
+            <span>YOLOv8 / OpenCV</span>
+            <p>
+              Gesture recognition with training, inference, and a desktop upload
+              tool.
+            </p>
+          </a>
+          <a href="project.html?project=gold-fish" class="also-item">
+            <h4>Gold.fish</h4>
+            <span>React / Node</span>
+            <p>
+              Spending tracker that renders a budget as the health of a fish
+              tank.
+            </p>
+          </a>
+          <a
+            href="project.html?project=maze-generator-solver"
+            class="also-item"
+          >
+            <h4>Maze generator &amp; solver</h4>
+            <span>Python</span>
+            <p>
+              Generates mazes and visualizes how different frontier strategies
+              search them.
+            </p>
+          </a>
+          <a href="project.html?project=diet-tracker" class="also-item">
+            <h4>Diet tracker</h4>
+            <span>Python / SQLAlchemy</span>
+            <p>
+              Offline meal and workout logging with plots over the logged
+              history.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <!-- ========================= EXPERIENCE ========================= -->
+      <section class="bay-tight shell" id="experience">
+        <div class="bay-head">
+          <div>
+            <p class="slug">/experience</p>
+            <h2 class="statement statement-wide">Where the work happened.</h2>
+          </div>
+        </div>
+
+        <div class="xp">
+          <article class="xp-item reveal">
+            <p class="xp-when">Jan 2026 &ndash; present</p>
+            <div>
+              <h3>
+                Undergraduate Researcher &amp; Engineering Pathways Fellow
+              </h3>
+              <p class="xp-org">
+                Center for Quantum Research &amp; Technology, University of
+                Oklahoma
+              </p>
+              <ul>
+                <li>
+                  Grow and characterize epitaxial oxide and nitride thin films
+                  and heterostructures in Dr. Hanjong Paik&rsquo;s group; run
+                  the vacuum deposition and measurement hardware.
+                </li>
+                <li>
+                  Compare high-resolution XRD against transport and optical
+                  measurement on BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si to
+                  assess crystalline quality, strain state, and interface
+                  behavior.
+                </li>
+                <li>
+                  Built XRDC, the MATLAB analysis tool that replaced the
+                  group&rsquo;s manual peak fitting and standardized how
+                  film-quality metrics are reported.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="xp-item reveal">
+            <p class="xp-when">Jan 2026 &ndash; present</p>
+            <div>
+              <h3>Founder &amp; Engineer</h3>
+              <p class="xp-org">
+                Heading Software &mdash; AI document intelligence for oil and
+                gas land services
+              </p>
+              <ul>
+                <li>
+                  Built the LLM document-extraction and verification pipeline
+                  end to end: OCR, schema validation, and citation grounding.
+                </li>
+                <li>
+                  Wrote an offline evaluation harness tracking per-field
+                  precision and recall against a hand-labeled test set.
+                </li>
+                <li>
+                  Built a BullMQ/Redis batch layer with idempotent workers and
+                  automated QA that catches drift, duplicates, and corrupt
+                  inputs.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="xp-item reveal">
+            <p class="xp-when">May &ndash; Aug 2026</p>
+            <div>
+              <h3>Operations Intern</h3>
+              <p class="xp-org">
+                Amazon &mdash; OKC1 Fulfillment Center, robotics-driven
+                fulfillment
+              </p>
+              <ul>
+                <li>
+                  Analyzed process and flow data to find throughput bottlenecks,
+                  then modeled a change projected to save about $800K per year
+                  at the site.
+                </li>
+                <li>
+                  Ran a 280-associate floor alongside technicians, engineers,
+                  and area managers, holding safety, quality, and
+                  operational-readiness standards against daily production
+                  targets.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="xp-item reveal">
+            <p class="xp-when">Aug 2025 &ndash; May 2026</p>
+            <div>
+              <h3>
+                Electrical Member &mdash; Intelligent Ground Vehicle Competition
+              </h3>
+              <p class="xp-org">
+                Sooner Competitive Robotics, University of Oklahoma
+              </p>
+              <ul>
+                <li>
+                  Designed and brought up custom PCBs for power regulation,
+                  signal conditioning, and hardware safety interlocks &mdash;
+                  schematic capture through layout, assembly, and system-level
+                  verification.
+                </li>
+                <li>
+                  Wrote real-time control firmware in C/C++ on STM32 (ARM
+                  Cortex-M) under an RTOS with prioritized task scheduling.
+                </li>
+                <li>
+                  Integrated LiDAR, cameras, GPS, IMU, encoders, and e-stop on a
+                  single CAN bus, and built a CAN-to-USB bridge for live bus
+                  monitoring and fault reproduction.
+                </li>
+                <li>
+                  Wrote and ran bench and vehicle-level test procedures,
+                  isolating hardware and firmware faults with oscilloscope and
+                  logic-level probing and closing them out inside fixed
+                  competition build deadlines.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="xp-item reveal">
+            <p class="xp-when">Aug 2025 &ndash; present</p>
+            <div>
+              <h3>Tutor</h3>
+              <p class="xp-org">OU Math Center</p>
+              <ul>
+                <li>
+                  Work through problems with students across the engineering
+                  math sequence.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="xp-item reveal">
+            <p class="xp-when">Sep 2024 &ndash; May 2025</p>
+            <div>
+              <h3>Undergraduate Researcher</h3>
+              <p class="xp-org">
+                Data Institute for Societal Challenges, University of Oklahoma
+              </p>
+              <ul>
+                <li>
+                  Fine-tuned BERT for relevance classification, using
+                  active-learning uncertainty sampling over 1.6 million records,
+                  for retrieval ranking.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="xp-item reveal">
+            <p class="xp-when">Aug 2024 &ndash; May 2025</p>
+            <div>
+              <h3>
+                Electrical Team Lead &mdash; Student Tele-Operated Robotics
+                Mission
+              </h3>
+              <p class="xp-org">
+                Sooner Competitive Robotics, University of Oklahoma
+              </p>
+              <ul>
+                <li>
+                  Designed multi-voltage power rails and buck converters,
+                  bringing output ripple under 5%.
+                </li>
+                <li>
+                  Implemented IR and RF signal decoding for the robot&rsquo;s
+                  sensing path.
+                </li>
+                <li>
+                  Led the electrical team through design reviews and test
+                  phases.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="xp-item reveal">
+            <p class="xp-when">Aug 2023 &ndash; May 2024</p>
+            <div>
+              <h3>Team Lead &mdash; VEX Robotics</h3>
+              <p class="xp-org">Canadian Valley Technology Center</p>
+              <ul>
+                <li>
+                  Qualified for and competed at the VEX World Championship.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================== SKILLS =========================== -->
+      <section class="bay-tight shell" id="skills">
+        <div class="bay-head">
+          <div>
+            <p class="slug">/skills</p>
+            <h2 class="statement statement-wide">
+              What I can be handed on day one.
+            </h2>
+          </div>
+        </div>
+
+        <dl class="skills">
+          <div class="skill-row">
+            <dt>Materials &amp; measurement</dt>
+            <dd>
+              Vacuum deposition, epitaxial thin-film growth, high-resolution XRD
+              (rocking curves, reciprocal-space mapping), transport measurement,
+              optical characterization
+            </dd>
+          </div>
+          <div class="skill-row">
+            <dt>Electronics &amp; hardware</dt>
+            <dd>
+              Altium (schematic + PCB layout), power electronics, buck
+              converters, signal conditioning, soldering and rework, Fusion 360
+            </dd>
+          </div>
+          <div class="skill-row">
+            <dt>Embedded</dt>
+            <dd>
+              STM32 / ARM Cortex-M, RTOS, CAN / FDCAN, SPI, I<sup>2</sup>C, UART
+            </dd>
+          </div>
+          <div class="skill-row">
+            <dt>Test &amp; instrumentation</dt>
+            <dd>
+              Oscilloscope and DMM bring-up and debug, logic-level probing, test
+              procedure development, fault isolation
+            </dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programming</dt>
+            <dd>C/C++, Python, MATLAB, Rust, SQL</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Tools</dt>
+            <dd>PyTorch, TensorFlow, Git, LaTeX, Redis / BullMQ</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- ========================= EDUCATION ========================== -->
+      <section class="bay-tight shell" id="education">
+        <div class="bay-head">
+          <div>
+            <p class="slug">/education</p>
+            <h2 class="statement statement-wide">
+              Three years, and the coursework aimed at one place.
+            </h2>
+          </div>
+        </div>
+
+        <div class="panel reveal">
+          <div class="edu-head">
+            <div>
+              <h3>
+                B.S. Electrical Engineering &mdash; University of Oklahoma
+              </h3>
+              <p>
+                Started August 2024, graduating May 2027 &mdash; a three-year
+                degree. 122 credit hours completed. Honors College coursework.
+              </p>
+            </div>
+            <p class="edu-gpa">4.00<small>Cumulative GPA</small></p>
+          </div>
+
+          <dl>
+            <div class="course-row">
+              <dt>Quantum &amp; solid state</dt>
+              <dd>
+                Modern Physics for Engineers, Electron Transport Phenomena
+                <span class="later"
+                  ><b>Fall 2026</b>Intro to Solid-State Electronic Devices</span
+                >
+                <span class="later"
+                  ><b>Spring 2027</b>Quantum Mechanics I (PHYS 3803), Quantum
+                  Structures &amp; Devices (ECE 5343,
+                  <em>graduate level</em>)</span
+                >
+              </dd>
+            </div>
+            <div class="course-row">
+              <dt>Fields &amp; waves</dt>
+              <dd>
+                Electromagnetic Fields I
+                <span class="later"
+                  ><b>Fall 2026</b>EM Fields &amp; Wave Propagation (<em
+                    >graduate level &mdash; one of two undergraduates in the
+                    class</em
+                  >)</span
+                >
+              </dd>
+            </div>
+            <div class="course-row">
+              <dt>Circuits &amp; electronics</dt>
+              <dd>
+                Circuits I&ndash;II, Introductory Electronics, Energy Conversion
+                I, circuits and electronics laboratories
+                <span class="later"><b>Fall 2026</b>PCB Design Principles</span>
+              </dd>
+            </div>
+            <div class="course-row">
+              <dt>Digital &amp; embedded</dt>
+              <dd>
+                Digital Design, Microprocessor System Design
+                <span class="later"
+                  ><b>Fall 2026</b>Digital Design Laboratory</span
+                >
+              </dd>
+            </div>
+            <div class="course-row">
+              <dt>Signals &amp; mathematics</dt>
+              <dd>
+                Signals &amp; Systems, Digital Signals &amp; Filtering, Linear
+                Algebra, Probability / Statistics / Random Processes, Calculus
+                I&ndash;III, Differential Equations
+                <span class="later"><b>Spring 2027</b>Senior capstone</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ===================== AWARDS & INVOLVEMENT ==================== -->
+      <section class="bay-tight shell" id="awards">
+        <div class="two-up">
+          <div>
+            <p class="slug">/awards</p>
+            <ul class="listing">
+              <li><b>Oklahoma Regents Scholar</b> &mdash; 2024 to present</li>
+              <li>
+                <b>President&rsquo;s List and Dean&rsquo;s List</b> &mdash;
+                every eligible semester
+              </li>
+              <li><b>Distinguished Freshman Award</b> &mdash; 2025</li>
+              <li><b>Engineering Pathways Fellowship</b> &mdash; CQRT, 2026</li>
+              <li><b>Nominee, OU Outstanding Senior Award</b> &mdash; 2026</li>
+            </ul>
+          </div>
+          <div>
+            <p class="slug">/involvement</p>
+            <ul class="listing">
+              <li>IEEE</li>
+              <li>Engineers&rsquo; Club</li>
+              <li>Sooner Competitive Robotics</li>
+              <li>Society of Asian Scientists and Engineers</li>
+              <li>Gamma Beta &mdash; Service Chair</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================== CONTACT =========================== -->
+      <section class="bay-tight shell" id="contact">
+        <div class="panel contact-panel reveal">
+          <div>
+            <p class="label">Contact</p>
+            <h2 class="statement" style="margin-top: 0.7rem">
+              Open to graduate research and engineering roles.
+            </h2>
+          </div>
+
+          <div class="contact-list">
+            <a href="mailto:shawn.a.agarwal-1@ou.edu">
+              <span class="ck">University</span>
+              <span class="cv">shawn.a.agarwal-1@ou.edu</span>
+            </a>
+            <a href="mailto:shawnagarwal0@gmail.com">
+              <span class="ck">Personal</span>
+              <span class="cv">shawnagarwal0@gmail.com</span>
+            </a>
+            <a
+              href="https://github.com/dishishshawn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="ck">GitHub</span>
+              <span class="cv">github.com/dishishshawn</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shawnagarwal/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="ck">LinkedIn</span>
+              <span class="cv">linkedin.com/in/shawnagarwal</span>
+            </a>
+            <a
+              href="assets/Shawn_Agarwal_Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="ck">Résumé</span>
+              <span class="cv">Open PDF</span>
+            </a>
+            <div>
+              <span class="ck">Based in</span>
+              <span class="cv">Yukon, Oklahoma</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>Selected work in embedded hardware, robotics, and research-oriented engineering.</p>
-        </div>
-            <div class="container">
-            <p>Website created with help of AI</p>
-        </div>
+      <div class="shell footer-in">
+        <span>Shawn Agarwal &mdash; Yukon, Oklahoma</span>
+        <span
+          ><a
+            href="https://github.com/dishishshawn/portfolio"
+            target="_blank"
+            rel="noreferrer"
+            >Source</a
+          ></span
+        >
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

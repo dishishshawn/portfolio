@@ -53,3 +53,6 @@ env/
 
 # Local browser automation artifacts
 .playwright-cli/
+
+# Internal working notes — this repo is public and the site footer links to it
+docs/agent-handoffs/
