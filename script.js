@@ -55,7 +55,11 @@ if (reveals.length && "IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+    // Expand the root well past the fold so a section has already faded in by
+    // the time it is scrolled to. A negative bottom margin (the obvious
+    // choice) does the opposite: it delays the reveal until the element is
+    // already on screen, which reads as blank space during a fast scroll.
+    { threshold: 0, rootMargin: "0px 0px 25% 0px" },
   );
 
   reveals.forEach((el) => revealer.observe(el));

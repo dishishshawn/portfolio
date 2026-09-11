@@ -30,7 +30,7 @@
   --r-sm: 10px;
 
   --gutter: clamp(1.25rem, 5vw, 2.5rem);
-  --bay: clamp(4rem, 10vw, 8rem);
+  --bay: clamp(3rem, 6vw, 5.5rem);
 }
 
 *,
@@ -501,6 +501,9 @@ a {
 .cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* Cards size to their own content. Stretching them means a card whose
+     image slot is still empty becomes a tall box of white. */
+  align-items: start;
   gap: 1.25rem;
   margin-top: 2.5rem;
 }
@@ -549,6 +552,14 @@ a {
 .card-body p {
   color: var(--muted);
   font-size: 0.93rem;
+}
+
+.card-meta {
+  font-family: var(--mono);
+  font-size: 0.71rem;
+  line-height: 1.5;
+  color: var(--muted-dim);
+  padding-top: 0.5rem;
 }
 
 .card-foot {
@@ -1358,7 +1369,7 @@ a {
 
 .has-js .reveal {
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(8px);
   transition:
     opacity 0.5s ease,
     transform 0.5s ease;
