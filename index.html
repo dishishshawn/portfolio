@@ -53,12 +53,7 @@
 
         <div class="hero-body">
           <div>
-            <p class="lede">
-              I grow epitaxial oxide and nitride thin films, characterize them
-              with high-resolution X-ray diffraction, transport, and optical
-              measurement, and build the instrumentation and analysis software
-              around that work.
-            </p>
+            <p class="lede">I grow epitaxial oxide and nitride thin films, measure them with high-resolution XRD, transport, and optical methods, and write the analysis software that turns that data into film-quality numbers.</p>
             <div class="hero-actions">
               <a href="#research" class="btn btn-solid">See the research</a>
               <a href="project.html?project=xrdc" class="btn btn-quiet">XRDC</a>
@@ -126,39 +121,15 @@
         <div class="bay-head">
           <div>
             <p class="slug">/research</p>
-            <h2 class="statement statement-wide">
-              Epitaxial oxides, and whether the interface is any good.
-            </h2>
+            <h2 class="statement statement-wide">Epitaxial oxides on silicon. Is the interface any good?</h2>
           </div>
         </div>
 
         <div class="research-split">
           <div class="prose reveal">
-            <p>
-              Since January 2026 I have worked in
-              <strong>Dr. Hanjong Paik&rsquo;s group</strong> at OU&rsquo;s
-              Center for Quantum Research &amp; Technology, where I grow
-              epitaxial oxide and nitride thin films and heterostructures and
-              run the vacuum deposition and measurement hardware that produces
-              them.
-            </p>
-            <p>
-              My main project is
-              <strong>BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si</strong>. I compare
-              high-resolution X-ray diffraction against transport and optical
-              measurements to assess crystalline quality, strain state, and
-              interface behavior &mdash; the same sample read by more than one
-              instrument, so a claim about film quality has more than one line
-              of evidence behind it.
-            </p>
-            <p>
-              Analysis was the bottleneck. The group fit peaks by hand, which
-              made film-quality numbers slow to produce and hard to compare
-              between people. I wrote
-              <strong>XRDC</strong>, a MATLAB toolkit with rocking-curve and
-              reciprocal-space-map workflows, to make that step reproducible and
-              to standardize how we report it.
-            </p>
+            <p>Since January 2026 I&rsquo;ve worked in <strong>Dr. Hanjong Paik&rsquo;s group</strong> at OU&rsquo;s Center for Quantum Research &amp; Technology. I grow epitaxial oxide and nitride thin films and heterostructures, and I run the deposition and measurement hardware.</p>
+            <p>My main project is <strong>BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si</strong>. I run high-resolution XRD on the films and compare it against transport and optical measurements from the same samples. That gives crystalline quality, strain state, and a read on the interface, and it means a claim about film quality has more than one measurement behind it.</p>
+            <p>Analysis was the slow part. The group fit peaks by hand, so getting numbers out of a scan was slow and two people could get different answers from the same data. I wrote <strong>XRDC</strong>, a MATLAB toolkit for rocking curves and reciprocal-space maps, so that step happens the same way every time.</p>
           </div>
 
           <div class="panel reveal">
@@ -178,7 +149,7 @@
               <div>
                 <b>Structure</b>
                 <span
-                  >High-resolution XRD &mdash; rocking curves, reciprocal-space
+                  >High-resolution XRD: rocking curves, reciprocal-space
                   maps, &theta;&ndash;2&theta;, reflectivity</span
                 >
               </div>
@@ -220,11 +191,7 @@
             />
             <div class="card-body">
               <h3>BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si heterostructures</h3>
-              <p>
-                Growing perovskite oxide on silicon, then using HRXRD,
-                transport, and optical measurement together to judge crystalline
-                quality, strain, and the interface.
-              </p>
+              <p>Perovskite oxide on silicon. HRXRD, transport, and optical measurements on the same samples to judge crystal quality, strain, and the interface.</p>
               <p class="card-meta">
                 Vacuum deposition &middot; HRXRD &middot; Transport &middot;
                 Optical
@@ -243,11 +210,7 @@
             />
             <div class="card-body">
               <h3>XRDC &mdash; X-ray diffraction analysis</h3>
-              <p>
-                MATLAB toolkit for rocking curves, reciprocal-space maps, XRR
-                fitting, and lattice parameters. Released as a tagged build the
-                whole group can run.
-              </p>
+              <p>MATLAB toolkit for rocking curves, reciprocal-space maps, XRR fitting, and lattice parameters. Ships as a tagged build so the whole group runs the same thing.</p>
               <p class="card-meta">
                 MATLAB &middot; 8 instrument formats &middot; v1.1.0 release
               </p>
@@ -262,9 +225,7 @@
         <div class="bay-head">
           <div>
             <p class="slug">/hardware &amp; software</p>
-            <h2 class="statement statement-wide">
-              Boards, firmware, and pipelines that had to actually work.
-            </h2>
+            <h2 class="statement statement-wide">Boards, firmware, and pipelines.</h2>
           </div>
         </div>
 
@@ -277,13 +238,7 @@
                 Electrical Member &middot; Sooner Competitive Robotics &middot;
                 Aug 2025 &ndash; May 2026
               </p>
-              <p>
-                Custom PCBs for power regulation, signal conditioning, and
-                hardware safety interlocks, taken from schematic capture through
-                layout, assembly, and system-level verification. Real-time
-                control firmware on STM32 under an RTOS, with LiDAR, cameras,
-                GPS, IMU, encoders, and e-stop all on one CAN bus.
-              </p>
+              <p>Custom PCBs for power regulation, signal conditioning, and hardware safety interlocks. I took each one from schematic through layout, assembly, and vehicle-level testing. Real-time control firmware on STM32 under an RTOS, with LiDAR, cameras, GPS, IMU, encoders, and the e-stop on one CAN bus.</p>
               <p class="row-stack">
                 Altium &middot; STM32 / ARM Cortex-M &middot; RTOS &middot; CAN
                 &middot; C/C++
@@ -297,12 +252,7 @@
             <div class="row-main">
               <h3>OpenCAN</h3>
               <p class="row-role">CAN-to-USB bridge &middot; IGVC</p>
-              <p>
-                Compact STM32 board that puts the vehicle&rsquo;s CAN bus in
-                front of the onboard PC, so bus traffic can be watched live and
-                a fault can be reproduced instead of guessed at. Interactive 3D
-                board viewer on the case study.
-              </p>
+              <p>Small STM32 board that bridges the vehicle&rsquo;s CAN bus to the onboard PC, so you can watch traffic live and reproduce a fault instead of guessing. The case study has an interactive 3D view of the board.</p>
               <p class="row-stack">
                 STM32 &middot; CAN &middot; USB &middot; KiCad
               </p>
@@ -317,13 +267,7 @@
               <p class="row-role">
                 Founder &amp; Engineer &middot; Jan 2026 &ndash; present
               </p>
-              <p>
-                AI document intelligence for oil and gas land services. Built
-                the LLM extraction and verification pipeline end to end &mdash;
-                OCR, schema validation, citation grounding &mdash; plus an
-                offline evaluation harness that tracks per-field precision and
-                recall against a hand-labeled test set.
-              </p>
+              <p>AI document extraction for oil and gas land services. I built the LLM pipeline end to end (OCR, schema validation, citation grounding) plus an offline eval harness that tracks per-field precision and recall against a hand-labeled test set.</p>
               <p class="row-stack">
                 LLM pipelines &middot; OCR &middot; BullMQ / Redis &middot;
                 Evaluation harness
@@ -339,12 +283,7 @@
               <p class="row-role">
                 Electrical Team Lead &middot; 2024 &ndash; 2025
               </p>
-              <p>
-                Led the electrical team through design reviews and test phases.
-                Multi-voltage power rails and buck converters brought to under
-                5% ripple, plus IR and RF signal decoding for the robot&rsquo;s
-                sensing path.
-              </p>
+              <p>Led the electrical team through design reviews and testing. Multi-voltage power rails and buck converters at under 5% ripple, plus IR and RF signal decoding for the robot&rsquo;s sensors.</p>
               <p class="row-stack">
                 Power electronics &middot; Buck converters &middot; IR / RF
                 decoding &middot; PCB design
@@ -364,11 +303,7 @@
                 Undergraduate researcher &middot; DISC, OU &middot; Sep 2024
                 &ndash; May 2025
               </p>
-              <p>
-                Fine-tuned BERT for relevance classification over 1.6 million
-                records, using active-learning uncertainty sampling to choose
-                what got labeled next rather than labeling indiscriminately.
-              </p>
+              <p>Fine-tuned BERT for relevance classification over 1.6 million records. Used active-learning uncertainty sampling to pick what got labeled next, since the labeling budget was a few people&rsquo;s time.</p>
               <p class="row-stack">
                 PyTorch &middot; BERT &middot; Active learning &middot; Python
               </p>
@@ -382,10 +317,7 @@
           <a href="project.html?project=esp32pet" class="also-item">
             <h4>ESP32Pet</h4>
             <span>ESP32 / KiCad</span>
-            <p>
-              Handheld virtual pet on a custom PCB, with an ST7735 LCD and
-              EEPROM-backed state.
-            </p>
+            <p>Handheld virtual pet on a custom PCB with an ST7735 LCD and state saved to EEPROM.</p>
           </a>
           <a
             href="project.html?project=infrared-sensor-board"
@@ -393,18 +325,12 @@
           >
             <h4>Infrared sensor board</h4>
             <span>RP2040 / IR</span>
-            <p>
-              TSOP receivers decoded on a Pico and streamed to the robot&rsquo;s
-              main PC in real time.
-            </p>
+            <p>TSOP receivers decoded on a Pico and streamed to the robot&rsquo;s main PC.</p>
           </a>
           <a href="project.html?project=5v-buck-converter" class="also-item">
             <h4>5 V buck converter</h4>
             <span>Power</span>
-            <p>
-              Step-down board for the STORM power system, laid out for
-              regulation stability.
-            </p>
+            <p>Step-down board for the STORM power system.</p>
           </a>
           <a href="project.html?project=storm-control-board" class="also-item">
             <h4>STORM control board</h4>
@@ -431,18 +357,12 @@
           >
             <h4>ESP32 Wi-Fi upload to screen</h4>
             <span>ESP32 / HTTP</span>
-            <p>
-              On-device web server that accepts a JPG and renders it to an
-              ST7735 panel.
-            </p>
+            <p>Web server on the ESP32 that takes a JPG upload and draws it on an ST7735.</p>
           </a>
           <a href="project.html?project=kicad-st7735s-tft" class="also-item">
             <h4>KiCad ST7735S library</h4>
             <span>CAD</span>
-            <p>
-              Symbol and footprint for a 1.8&Prime; TFT, so the part stops being
-              redrawn each time.
-            </p>
+            <p>Symbol and footprint for a 1.8&Prime; TFT so I stop redrawing it every project.</p>
           </a>
           <a href="project.html?project=sign-language-ai" class="also-item">
             <h4>Sign-Language-AI</h4>
@@ -455,10 +375,7 @@
           <a href="project.html?project=gold-fish" class="also-item">
             <h4>Gold.fish</h4>
             <span>React / Node</span>
-            <p>
-              Spending tracker that renders a budget as the health of a fish
-              tank.
-            </p>
+            <p>Spending tracker where your budget is the health of a fish tank.</p>
           </a>
           <a
             href="project.html?project=maze-generator-solver"
@@ -466,10 +383,7 @@
           >
             <h4>Maze generator &amp; solver</h4>
             <span>Python</span>
-            <p>
-              Generates mazes and visualizes how different frontier strategies
-              search them.
-            </p>
+            <p>Generates mazes and animates how different search strategies solve them.</p>
           </a>
           <a href="project.html?project=diet-tracker" class="also-item">
             <h4>Diet tracker</h4>
@@ -503,22 +417,9 @@
                 Oklahoma
               </p>
               <ul>
-                <li>
-                  Grow and characterize epitaxial oxide and nitride thin films
-                  and heterostructures in Dr. Hanjong Paik&rsquo;s group; run
-                  the vacuum deposition and measurement hardware.
-                </li>
-                <li>
-                  Compare high-resolution XRD against transport and optical
-                  measurement on BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si to
-                  assess crystalline quality, strain state, and interface
-                  behavior.
-                </li>
-                <li>
-                  Built XRDC, the MATLAB analysis tool that replaced the
-                  group&rsquo;s manual peak fitting and standardized how
-                  film-quality metrics are reported.
-                </li>
+                <li>Grow and characterize epitaxial oxide and nitride films and heterostructures in Dr. Hanjong Paik&rsquo;s group. Run the deposition and measurement hardware.</li>
+                <li>Compare high-resolution XRD with transport and optical measurements on BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si to get crystalline quality, strain state, and interface behavior.</li>
+                <li>Wrote XRDC, the MATLAB tool that replaced the group&rsquo;s manual peak fitting and standardized how we report film-quality numbers.</li>
               </ul>
             </div>
           </article>
@@ -527,10 +428,7 @@
             <p class="xp-when">Jan 2026 &ndash; present</p>
             <div>
               <h3>Founder &amp; Engineer</h3>
-              <p class="xp-org">
-                Heading Software &mdash; AI document intelligence for oil and
-                gas land services
-              </p>
+              <p class="xp-org">Heading Software, AI document intelligence for oil and gas land services</p>
               <ul>
                 <li>
                   Built the LLM document-extraction and verification pipeline
@@ -553,22 +451,10 @@
             <p class="xp-when">May &ndash; Aug 2026</p>
             <div>
               <h3>Operations Intern</h3>
-              <p class="xp-org">
-                Amazon &mdash; OKC1 Fulfillment Center, robotics-driven
-                fulfillment
-              </p>
+              <p class="xp-org">Amazon OKC1 Fulfillment Center, robotics-driven fulfillment</p>
               <ul>
-                <li>
-                  Analyzed process and flow data to find throughput bottlenecks,
-                  then modeled a change projected to save about $800K per year
-                  at the site.
-                </li>
-                <li>
-                  Ran a 280-associate floor alongside technicians, engineers,
-                  and area managers, holding safety, quality, and
-                  operational-readiness standards against daily production
-                  targets.
-                </li>
+                <li>Analyzed process and flow data to find throughput bottlenecks, then modeled a change projected to save about $800K a year at the site.</li>
+                <li>Ran a 280-associate floor with technicians, engineers, and area managers, holding safety, quality, and readiness standards against daily production targets.</li>
               </ul>
             </div>
           </article>
@@ -576,34 +462,18 @@
           <article class="xp-item reveal">
             <p class="xp-when">Aug 2025 &ndash; May 2026</p>
             <div>
-              <h3>
-                Electrical Member &mdash; Intelligent Ground Vehicle Competition
-              </h3>
+              <h3>Electrical Member, Intelligent Ground Vehicle Competition</h3>
               <p class="xp-org">
                 Sooner Competitive Robotics, University of Oklahoma
               </p>
               <ul>
-                <li>
-                  Designed and brought up custom PCBs for power regulation,
-                  signal conditioning, and hardware safety interlocks &mdash;
-                  schematic capture through layout, assembly, and system-level
-                  verification.
-                </li>
+                <li>Designed and brought up custom PCBs for power regulation, signal conditioning, and hardware safety interlocks, from schematic through layout, assembly, and system-level verification.</li>
                 <li>
                   Wrote real-time control firmware in C/C++ on STM32 (ARM
                   Cortex-M) under an RTOS with prioritized task scheduling.
                 </li>
-                <li>
-                  Integrated LiDAR, cameras, GPS, IMU, encoders, and e-stop on a
-                  single CAN bus, and built a CAN-to-USB bridge for live bus
-                  monitoring and fault reproduction.
-                </li>
-                <li>
-                  Wrote and ran bench and vehicle-level test procedures,
-                  isolating hardware and firmware faults with oscilloscope and
-                  logic-level probing and closing them out inside fixed
-                  competition build deadlines.
-                </li>
+                <li>Put LiDAR, cameras, GPS, IMU, encoders, and e-stop on a single CAN bus. Built a CAN-to-USB bridge so we could watch the bus live and reproduce faults.</li>
+                <li>Wrote and ran bench and vehicle-level test procedures. Isolated hardware and firmware faults with a scope and logic probing and closed them out before build deadlines.</li>
               </ul>
             </div>
           </article>
@@ -614,10 +484,7 @@
               <h3>Tutor</h3>
               <p class="xp-org">OU Math Center</p>
               <ul>
-                <li>
-                  Work through problems with students across the engineering
-                  math sequence.
-                </li>
+                <li>Help students through problems across the engineering math sequence.</li>
               </ul>
             </div>
           </article>
@@ -630,11 +497,7 @@
                 Data Institute for Societal Challenges, University of Oklahoma
               </p>
               <ul>
-                <li>
-                  Fine-tuned BERT for relevance classification, using
-                  active-learning uncertainty sampling over 1.6 million records,
-                  for retrieval ranking.
-                </li>
+                <li>Fine-tuned BERT for relevance classification over 1.6 million records, using active-learning uncertainty sampling to choose what to label next.</li>
               </ul>
             </div>
           </article>
@@ -642,10 +505,7 @@
           <article class="xp-item reveal">
             <p class="xp-when">Aug 2024 &ndash; May 2025</p>
             <div>
-              <h3>
-                Electrical Team Lead &mdash; Student Tele-Operated Robotics
-                Mission
-              </h3>
+              <h3>Electrical Team Lead, Student Tele-Operated Robotics Mission</h3>
               <p class="xp-org">
                 Sooner Competitive Robotics, University of Oklahoma
               </p>
@@ -669,7 +529,7 @@
           <article class="xp-item reveal">
             <p class="xp-when">Aug 2023 &ndash; May 2024</p>
             <div>
-              <h3>Team Lead &mdash; VEX Robotics</h3>
+              <h3>Team Lead, VEX Robotics</h3>
               <p class="xp-org">Canadian Valley Technology Center</p>
               <ul>
                 <li>
@@ -686,9 +546,7 @@
         <div class="bay-head">
           <div>
             <p class="slug">/skills</p>
-            <h2 class="statement statement-wide">
-              What I can be handed on day one.
-            </h2>
+            <h2 class="statement statement-wide">What you can hand me on day one.</h2>
           </div>
         </div>
 
@@ -737,22 +595,15 @@
         <div class="bay-head">
           <div>
             <p class="slug">/education</p>
-            <h2 class="statement statement-wide">
-              Three years, and the coursework aimed at one place.
-            </h2>
+            <h2 class="statement statement-wide">Three years, pointed at quantum hardware.</h2>
           </div>
         </div>
 
         <div class="panel reveal">
           <div class="edu-head">
             <div>
-              <h3>
-                B.S. Electrical Engineering &mdash; University of Oklahoma
-              </h3>
-              <p>
-                Started August 2024, graduating May 2027 &mdash; a three-year
-                degree. 122 credit hours completed. Honors College coursework.
-              </p>
+              <h3>B.S. Electrical Engineering, University of Oklahoma</h3>
+              <p>Started August 2024, graduating May 2027. Three-year degree, 122 credit hours completed. Honors College coursework.</p>
             </div>
             <p class="edu-gpa">4.00<small>Cumulative GPA</small></p>
           </div>
@@ -778,7 +629,7 @@
                 Electromagnetic Fields I
                 <span class="later"
                   ><b>Fall 2026</b>EM Fields &amp; Wave Propagation (<em
-                    >graduate level &mdash; one of two undergraduates in the
+                    >graduate level, one of two undergraduates in the
                     class</em
                   >)</span
                 >
@@ -820,14 +671,11 @@
           <div>
             <p class="slug">/awards</p>
             <ul class="listing">
-              <li><b>Oklahoma Regents Scholar</b> &mdash; 2024 to present</li>
-              <li>
-                <b>President&rsquo;s List and Dean&rsquo;s List</b> &mdash;
-                every eligible semester
-              </li>
-              <li><b>Distinguished Freshman Award</b> &mdash; 2025</li>
-              <li><b>Engineering Pathways Fellowship</b> &mdash; CQRT, 2026</li>
-              <li><b>Nominee, OU Outstanding Senior Award</b> &mdash; 2026</li>
+              <li><b>Oklahoma Regents Scholar</b>, 2024 to present</li>
+              <li><b>President&rsquo;s List and Dean&rsquo;s List</b>, every eligible semester</li>
+              <li><b>Distinguished Freshman Award</b>, 2025</li>
+              <li><b>Engineering Pathways Fellowship</b>, CQRT, 2026</li>
+              <li><b>Nominee, OU Outstanding Senior Award</b>, 2026</li>
             </ul>
           </div>
           <div>
@@ -837,7 +685,7 @@
               <li>Engineers&rsquo; Club</li>
               <li>Sooner Competitive Robotics</li>
               <li>Society of Asian Scientists and Engineers</li>
-              <li>Gamma Beta &mdash; Service Chair</li>
+              <li>Gamma Beta, Service Chair</li>
             </ul>
           </div>
         </div>
@@ -897,7 +745,7 @@
 
     <footer class="footer">
       <div class="shell footer-in">
-        <span>Shawn Agarwal &mdash; Yukon, Oklahoma</span>
+        <span>Shawn Agarwal &middot; Yukon, Oklahoma</span>
         <span
           ><a
             href="https://github.com/dishishshawn/portfolio"

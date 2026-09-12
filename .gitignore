@@ -55,4 +55,4 @@ env/
 .playwright-cli/
 
 # Internal working notes — this repo is public and the site footer links to it
-docs/agent-handoffs/
+docs/
