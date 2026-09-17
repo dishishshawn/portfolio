@@ -322,7 +322,7 @@ window.PROJECT_DATA = {
       { k: "Interface", v: "CAN ↔ USB" },
       { k: "Built for", v: "IGVC vehicle" },
     ],
-    stack: ["STM32", "CAN", "USB", "KiCad", "Embedded C"],
+    stack: ["STM32", "CAN", "USB", "Altium", "Embedded C"],
     sections: [
       {
         heading: "Why it exists",
@@ -336,7 +336,7 @@ window.PROJECT_DATA = {
         list: [
           "Small STM32 board, sized to mount inside the vehicle instead of sitting on a bench.",
           "CAN transceiver on the front end, USB to the host PC.",
-          "Laid out in KiCad. Full schematic and 3D board are viewable on this page.",
+          "Designed in Altium. Full schematic and 3D board are viewable on this page.",
         ],
       },
     ],
