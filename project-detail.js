@@ -111,7 +111,7 @@ if (!project) {
         </div>
     `;
 } else {
-  document.title = `${project.plainTitle || project.title} — Shawn Agarwal`;
+  document.title = `${project.plainTitle || project.title} | Shawn Agarwal`;
 
   const meta = document.querySelector('meta[name="description"]');
   if (meta && project.plainSummary) {

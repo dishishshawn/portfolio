@@ -80,7 +80,7 @@ window.PROJECT_DATA = {
 
   xrdc: {
     title: "XRDC",
-    plainTitle: "XRDC — X-ray diffraction analysis",
+    plainTitle: "XRDC: X-ray diffraction analysis",
     eyebrow: "Research software",
     period: "Jan 2026 – present",
     role: "Center for Quantum Research &amp; Technology, University of Oklahoma",
@@ -363,7 +363,7 @@ window.PROJECT_DATA = {
       "AI document extraction for oil and gas land services, built so the output can be checked and measured, not just produced.",
     plainSummary:
       "Heading Software: an LLM document extraction and verification pipeline for oil and gas land services.",
-    unlinkedNote: "Private — commercial product",
+    unlinkedNote: "Private (commercial product)",
     spec: [
       { k: "Role", v: "Founder &amp; Engineer" },
       { k: "Founded", v: "January 2026" },
@@ -412,7 +412,7 @@ window.PROJECT_DATA = {
 
   storm: {
     title: "Student Tele-Operated Robotics Mission",
-    plainTitle: "STORM — Electrical Team Lead",
+    plainTitle: "STORM: Electrical Team Lead",
     eyebrow: "Competition robotics",
     period: "Aug 2024 – May 2025",
     role: "Electrical Team Lead &middot; Sooner Competitive Robotics",
@@ -630,7 +630,7 @@ window.PROJECT_DATA = {
     role: "STORM",
     summary:
       "A custom step-down board for the STORM power system, feeding onboard electronics from the main supply.",
-    unlinkedNote: "Private — team hardware",
+    unlinkedNote: "Private (team hardware)",
     spec: [
       { k: "Output", v: "5 V" },
       { k: "Topology", v: "Buck" },

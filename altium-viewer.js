@@ -188,7 +188,7 @@ window.ProjectPcbViewer = (() => {
             <section class="block viewer-section">
                 <div class="viewer-head">
                     <div class="viewer-copy">
-                        <h2>Interactive board &mdash; ${title}</h2>
+                        <h2>Interactive board: ${title}</h2>
                         ${caption ? `<p>${caption}</p>` : ""}
                     </div>
                     <div class="viewer-actions">

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shawn Agarwal — Quantum Materials &amp; Hardware</title>
+    <title>Shawn Agarwal | Electrical Engineering</title>
     <meta
       name="description"
       content="Shawn Agarwal, electrical engineering senior at the University of Oklahoma. Epitaxial oxide and nitride thin-film growth, high-resolution X-ray diffraction, and the instrumentation and analysis software around quantum materials research."
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -43,13 +43,10 @@
     <main id="main">
       <!-- ============================ HERO ============================ -->
       <section class="hero shell" id="top">
+        <h1 class="hero-title">Shawn Agarwal</h1>
         <p class="label">
-          Electrical Engineering &middot; University of Oklahoma
+          Electrical engineering senior at the University of Oklahoma
         </p>
-
-        <h1 class="hero-title">
-          Quantum hardware, at the <em>materials</em> end.
-        </h1>
 
         <div class="hero-body">
           <div>
@@ -71,7 +68,7 @@
               loading="eager"
             />
             <figcaption>
-              Reciprocal-space map &mdash;
+              Reciprocal-space map of
               BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si
             </figcaption>
           </figure>
@@ -107,7 +104,7 @@
           </div>
           <div class="now-item">
             <p class="label label-dim">Most recently</p>
-            <h3>Amazon &mdash; OKC1</h3>
+            <h3>Amazon OKC1</h3>
             <p>
               Operations intern in a robotics-driven fulfillment center, summer
               2026.
@@ -119,23 +116,19 @@
       <!-- ========================== RESEARCH ========================== -->
       <section class="bay shell" id="research">
         <div class="bay-head">
-          <div>
-            <p class="slug">/research</p>
-            <h2 class="statement statement-wide">Epitaxial oxides on silicon. Is the interface any good?</h2>
-          </div>
+          <h2 class="statement">Research</h2>
         </div>
 
         <div class="research-split">
-          <div class="prose reveal">
+          <div class="prose">
             <p>Since January 2026 I&rsquo;ve worked in <strong>Dr. Hanjong Paik&rsquo;s group</strong> at OU&rsquo;s Center for Quantum Research &amp; Technology. I grow epitaxial oxide and nitride thin films and heterostructures, and I run the deposition and measurement hardware.</p>
             <p>My main project is <strong>BaTiO<sub>3</sub>/SrTiO<sub>3</sub>/Si</strong>. I run high-resolution XRD on the films and compare it against transport and optical measurements from the same samples. That gives crystalline quality, strain state, and a read on the interface, and it means a claim about film quality has more than one measurement behind it.</p>
             <p>Analysis was the slow part. The group fit peaks by hand, so getting numbers out of a scan was slow and two people could get different answers from the same data. I wrote <strong>XRDC</strong>, a MATLAB toolkit for rocking curves and reciprocal-space maps, so that step happens the same way every time.</p>
           </div>
 
-          <div class="panel reveal">
+          <div class="panel">
             <h3>What I run</h3>
             <div class="stack-row">
-              <span class="n">01 /</span>
               <div>
                 <b>Growth</b>
                 <span
@@ -145,7 +138,6 @@
               </div>
             </div>
             <div class="stack-row">
-              <span class="n">02 /</span>
               <div>
                 <b>Structure</b>
                 <span
@@ -155,7 +147,6 @@
               </div>
             </div>
             <div class="stack-row">
-              <span class="n">03 /</span>
               <div>
                 <b>Transport</b>
                 <span
@@ -165,7 +156,6 @@
               </div>
             </div>
             <div class="stack-row">
-              <span class="n">04 /</span>
               <div>
                 <b>Optical</b>
                 <span
@@ -180,7 +170,7 @@
         <div class="cards">
           <a
             href="project.html?project=batio3-heterostructures"
-            class="card reveal"
+            class="card"
           >
             <img
               src="assets/research/batio3.jpg"
@@ -196,11 +186,11 @@
                 Vacuum deposition &middot; HRXRD &middot; Transport &middot;
                 Optical
               </p>
-              <span class="card-foot">Case study &rarr;</span>
+              <span class="card-foot">Read more</span>
             </div>
           </a>
 
-          <a href="project.html?project=xrdc" class="card reveal">
+          <a href="project.html?project=xrdc" class="card">
             <img
               src="assets/research/xrdc.png"
               alt=""
@@ -209,12 +199,12 @@
               loading="lazy"
             />
             <div class="card-body">
-              <h3>XRDC &mdash; X-ray diffraction analysis</h3>
+              <h3>XRDC: X-ray diffraction analysis</h3>
               <p>MATLAB toolkit for rocking curves, reciprocal-space maps, XRR fitting, and lattice parameters. Ships as a tagged build so the whole group runs the same thing.</p>
               <p class="card-meta">
                 MATLAB &middot; 8 instrument formats &middot; v1.1.0 release
               </p>
-              <span class="card-foot">Case study &rarr;</span>
+              <span class="card-foot">Read more</span>
             </div>
           </a>
         </div>
@@ -223,15 +213,11 @@
       <!-- ============================ WORK ============================ -->
       <section class="bay-tight shell" id="work">
         <div class="bay-head">
-          <div>
-            <p class="slug">/hardware &amp; software</p>
-            <h2 class="statement statement-wide">Boards, firmware, and pipelines.</h2>
-          </div>
+          <h2 class="statement">Projects</h2>
         </div>
 
         <div class="rows">
-          <a href="project.html?project=igvc" class="row reveal">
-            <span class="row-n">01 /</span>
+          <a href="project.html?project=igvc" class="row">
             <div class="row-main">
               <h3>Intelligent Ground Vehicle Competition</h3>
               <p class="row-role">
@@ -244,11 +230,10 @@
                 &middot; C/C++
               </p>
             </div>
-            <span class="row-go">Open</span>
+            <span class="row-go">Details</span>
           </a>
 
-          <a href="project.html?project=canable" class="row reveal">
-            <span class="row-n">02 /</span>
+          <a href="project.html?project=canable" class="row">
             <div class="row-main">
               <h3>OpenCAN</h3>
               <p class="row-role">CAN-to-USB bridge &middot; IGVC</p>
@@ -257,11 +242,10 @@
                 STM32 &middot; CAN &middot; USB &middot; KiCad
               </p>
             </div>
-            <span class="row-go">Open</span>
+            <span class="row-go">Details</span>
           </a>
 
-          <a href="project.html?project=heading-software" class="row reveal">
-            <span class="row-n">03 /</span>
+          <a href="project.html?project=heading-software" class="row">
             <div class="row-main">
               <h3>Heading Software</h3>
               <p class="row-role">
@@ -273,11 +257,10 @@
                 Evaluation harness
               </p>
             </div>
-            <span class="row-go">Open</span>
+            <span class="row-go">Details</span>
           </a>
 
-          <a href="project.html?project=storm" class="row reveal">
-            <span class="row-n">04 /</span>
+          <a href="project.html?project=storm" class="row">
             <div class="row-main">
               <h3>Student Tele-Operated Robotics Mission</h3>
               <p class="row-role">
@@ -289,14 +272,13 @@
                 decoding &middot; PCB design
               </p>
             </div>
-            <span class="row-go">Open</span>
+            <span class="row-go">Details</span>
           </a>
 
           <a
             href="project.html?project=relevance-classification-model"
-            class="row reveal"
+            class="row"
           >
-            <span class="row-n">05 /</span>
             <div class="row-main">
               <h3>Relevance classification at scale</h3>
               <p class="row-role">
@@ -308,11 +290,11 @@
                 PyTorch &middot; BERT &middot; Active learning &middot; Python
               </p>
             </div>
-            <span class="row-go">Open</span>
+            <span class="row-go">Details</span>
           </a>
         </div>
 
-        <h3 class="hdr" style="margin-top: 3rem">Also built</h3>
+        <h3 class="hdr" style="margin-top: 3rem">Other projects</h3>
         <div class="also">
           <a href="project.html?project=esp32pet" class="also-item">
             <h4>ESP32Pet</h4>
@@ -399,14 +381,11 @@
       <!-- ========================= EXPERIENCE ========================= -->
       <section class="bay-tight shell" id="experience">
         <div class="bay-head">
-          <div>
-            <p class="slug">/experience</p>
-            <h2 class="statement statement-wide">Where the work happened.</h2>
-          </div>
+          <h2 class="statement">Experience</h2>
         </div>
 
         <div class="xp">
-          <article class="xp-item reveal">
+          <article class="xp-item">
             <p class="xp-when">Jan 2026 &ndash; present</p>
             <div>
               <h3>
@@ -424,7 +403,7 @@
             </div>
           </article>
 
-          <article class="xp-item reveal">
+          <article class="xp-item">
             <p class="xp-when">Jan 2026 &ndash; present</p>
             <div>
               <h3>Founder &amp; Engineer</h3>
@@ -447,7 +426,7 @@
             </div>
           </article>
 
-          <article class="xp-item reveal">
+          <article class="xp-item">
             <p class="xp-when">May &ndash; Aug 2026</p>
             <div>
               <h3>Operations Intern</h3>
@@ -459,7 +438,7 @@
             </div>
           </article>
 
-          <article class="xp-item reveal">
+          <article class="xp-item">
             <p class="xp-when">Aug 2025 &ndash; May 2026</p>
             <div>
               <h3>Electrical Member, Intelligent Ground Vehicle Competition</h3>
@@ -478,7 +457,7 @@
             </div>
           </article>
 
-          <article class="xp-item reveal">
+          <article class="xp-item">
             <p class="xp-when">Aug 2025 &ndash; present</p>
             <div>
               <h3>Tutor</h3>
@@ -489,7 +468,7 @@
             </div>
           </article>
 
-          <article class="xp-item reveal">
+          <article class="xp-item">
             <p class="xp-when">Sep 2024 &ndash; May 2025</p>
             <div>
               <h3>Undergraduate Researcher</h3>
@@ -502,7 +481,7 @@
             </div>
           </article>
 
-          <article class="xp-item reveal">
+          <article class="xp-item">
             <p class="xp-when">Aug 2024 &ndash; May 2025</p>
             <div>
               <h3>Electrical Team Lead, Student Tele-Operated Robotics Mission</h3>
@@ -526,7 +505,7 @@
             </div>
           </article>
 
-          <article class="xp-item reveal">
+          <article class="xp-item">
             <p class="xp-when">Aug 2023 &ndash; May 2024</p>
             <div>
               <h3>Team Lead, VEX Robotics</h3>
@@ -544,10 +523,7 @@
       <!-- =========================== SKILLS =========================== -->
       <section class="bay-tight shell" id="skills">
         <div class="bay-head">
-          <div>
-            <p class="slug">/skills</p>
-            <h2 class="statement statement-wide">What you can hand me on day one.</h2>
-          </div>
+          <h2 class="statement">Skills</h2>
         </div>
 
         <dl class="skills">
@@ -593,13 +569,10 @@
       <!-- ========================= EDUCATION ========================== -->
       <section class="bay-tight shell" id="education">
         <div class="bay-head">
-          <div>
-            <p class="slug">/education</p>
-            <h2 class="statement statement-wide">Three years, pointed at quantum hardware.</h2>
-          </div>
+          <h2 class="statement">Education</h2>
         </div>
 
-        <div class="panel reveal">
+        <div class="panel">
           <div class="edu-head">
             <div>
               <h3>B.S. Electrical Engineering, University of Oklahoma</h3>
@@ -669,7 +642,7 @@
       <section class="bay-tight shell" id="awards">
         <div class="two-up">
           <div>
-            <p class="slug">/awards</p>
+            <h2 class="statement">Awards</h2>
             <ul class="listing">
               <li><b>Oklahoma Regents Scholar</b>, 2024 to present</li>
               <li><b>President&rsquo;s List and Dean&rsquo;s List</b>, every eligible semester</li>
@@ -679,7 +652,7 @@
             </ul>
           </div>
           <div>
-            <p class="slug">/involvement</p>
+            <h2 class="statement">Involvement</h2>
             <ul class="listing">
               <li>IEEE</li>
               <li>Engineers&rsquo; Club</li>
@@ -693,12 +666,12 @@
 
       <!-- ========================== CONTACT =========================== -->
       <section class="bay-tight shell" id="contact">
-        <div class="panel contact-panel reveal">
+        <div class="panel contact-panel">
           <div>
-            <p class="label">Contact</p>
-            <h2 class="statement" style="margin-top: 0.7rem">
+            <h2 class="statement">Contact</h2>
+            <p class="label" style="margin-top: 0.5rem">
               Open to graduate research and engineering roles.
-            </h2>
+            </p>
           </div>
 
           <div class="contact-list">
