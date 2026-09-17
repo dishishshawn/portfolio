@@ -128,7 +128,7 @@ a {
 }
 
 .hdr {
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -549,9 +549,7 @@ a {
 
 .row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1.25rem;
-  align-items: start;
+  gap: 0;
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--line);
   text-decoration: none;
@@ -598,7 +596,7 @@ a {
 }
 
 .row-go {
-  align-self: center;
+  margin-top: 0.6rem;
   font-family: var(--sans);
   font-size: 0.9rem;
   color: var(--accent);
@@ -1372,16 +1370,6 @@ a {
   .hero-actions .btn {
     flex: 1 1 auto;
     justify-content: center;
-  }
-
-  .row {
-    grid-template-columns: 2.5rem minmax(0, 1fr);
-    gap: 0.9rem;
-  }
-
-  .row-go {
-    grid-column: 2;
-    align-self: start;
   }
 
   .xp-item,
