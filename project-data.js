@@ -252,7 +252,7 @@ window.PROJECT_DATA = {
     period: "Aug 2025 – May 2026",
     role: "Electrical Member &middot; Sooner Competitive Robotics",
     summary:
-      "Custom boards, RTOS firmware, and one CAN bus carrying every sensor on an autonomous ground vehicle, plus the bridge that made that bus debuggable.",
+      "Custom boards, RTOS firmware, and CAN integration for an autonomous ground vehicle, plus a CAN-to-USB bridge for debugging the bus.",
     plainSummary:
       "Custom PCBs, STM32 RTOS firmware, and CAN bus integration for an autonomous ground vehicle at the Intelligent Ground Vehicle Competition.",
     links: [
@@ -265,7 +265,7 @@ window.PROJECT_DATA = {
       { k: "Role", v: "Electrical member" },
       { k: "Team", v: "Sooner Competitive Robotics" },
       { k: "Duration", v: "Aug 2025 – May 2026" },
-      { k: "Bus", v: "Single CAN backbone" },
+      { k: "Bus", v: "Shared CAN backbone" },
     ],
     stack: [
       "Altium",
@@ -282,7 +282,7 @@ window.PROJECT_DATA = {
       {
         heading: "The electrical scope",
         body: [
-          "An autonomous ground vehicle has to move power, sensor data, and a safety signal around a frame that vibrates, and it has to stop the instant someone hits the e-stop. I worked the board and firmware side: the boards that regulate and condition, the firmware that schedules, and the bus that ties the sensors together.",
+          "An autonomous ground vehicle has to move power, sensor data, and a safety signal around a frame that vibrates, and it has to stop the instant someone hits the e-stop. I worked the board and firmware side: the boards that regulate and condition, the firmware that schedules, and the CAN network between the vehicle&rsquo;s controllers.",
         ],
       },
       {
@@ -303,8 +303,8 @@ window.PROJECT_DATA = {
       {
         heading: "Integration",
         list: [
-          "Put LiDAR, cameras, GPS, IMU, encoders, and the e-stop on one CAN bus. That keeps the wiring manageable, but it means the bus is the thing you have to understand.",
-          "Built a <b>CAN-to-USB bridge</b> so the onboard PC could watch bus traffic live. That turned intermittent faults into something we could capture and replay.",
+          "Connected the vehicle&rsquo;s sensor controllers and safety-status signals through a shared CAN backbone, including interfaces for GPS, IMU, encoders, LiDAR, and camera subsystems.",
+          "Built a <b>CAN-to-USB bridge</b>. It let us log CAN traffic and reproduce intermittent communication faults.",
         ],
       },
     ],
@@ -332,8 +332,8 @@ window.PROJECT_DATA = {
       {
         heading: "Why it exists",
         body: [
-          "Once every sensor shares one CAN bus, the bus is where faults hide. A dropped frame, a wrong bit rate, or two nodes talking over each other all look the same from outside: the robot does something weird and nobody knows why.",
-          "OpenCAN is the tool for that. It bridges the bus to USB so the onboard PC sees every frame as it happens. An intermittent fault becomes something you can capture and replay.",
+          "With the vehicle&rsquo;s controllers sharing one CAN bus, communication faults are hard to pin down. A dropped frame, a wrong bit rate, and two nodes transmitting at once can all look the same from outside.",
+          "OpenCAN bridges the bus to USB so the onboard PC can log every frame, which makes intermittent faults possible to reproduce.",
         ],
       },
       {
@@ -365,7 +365,7 @@ window.PROJECT_DATA = {
     period: "Jan 2026 – present",
     role: "Founder &amp; Engineer",
     summary:
-      "AI document extraction for oil and gas land services, built so the output can be checked and measured, not just produced.",
+      "AI document extraction for oil and gas land services. The system uses OCR and an LLM to extract structured fields, then links each result to its location in the source document for review.",
     plainSummary:
       "Heading Software: an LLM document extraction and verification pipeline for oil and gas land services.",
     unlinkedNote: "Private (commercial product)",
@@ -386,23 +386,22 @@ window.PROJECT_DATA = {
       {
         heading: "The problem",
         body: [
-          "Land services runs on documents: deeds, leases, assignments. The facts in them have to come out exactly right, with a pointer back to where each one came from. An extraction that&rsquo;s usually right isn&rsquo;t useful on its own. What matters is knowing <i>which</i> fields to trust.",
+          "Land services work depends on deeds, leases, and assignments. The facts pulled from them need to be correct, and each one needs a reference back to where it came from so someone can check it.",
         ],
       },
       {
         heading: "The pipeline",
         list: [
           "Built the LLM document-extraction and verification pipeline end to end: <b>OCR, schema validation, and citation grounding</b>.",
-          "Schema validation limits what each field can be, so a malformed extraction fails at the boundary instead of ending up in a report.",
-          "Citation grounding ties every value back to its spot in the source document, so a reviewer can check a field in seconds instead of rereading the instrument.",
+          "Schema validation checks each field&rsquo;s type and format and rejects malformed extractions before they reach a report.",
+          "Citation grounding links each value to its location in the source document, so a reviewer can check it without rereading the whole instrument.",
         ],
       },
       {
         heading: "Measuring it",
         list: [
-          "Wrote an <b>offline evaluation harness</b> tracking per-field precision and recall against a hand-labeled test set.",
-          "Per-field, not per-document, because fields don&rsquo;t fail at the same rate and one aggregate score hides the ones that matter.",
-          "The harness is what makes prompt and model changes decidable. A change moves the numbers on the test set or it doesn&rsquo;t ship.",
+          "Wrote an <b>offline evaluation harness</b> that scores each extracted field against a hand-labeled test set.",
+          "This shows which fields are reliable and where changes to the prompt or model cause regressions.",
         ],
       },
       {

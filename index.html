@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=202609171602" />
+    <link rel="stylesheet" href="styles.css?v=202609171626" />
   </head>
   <body>
     <a href="#main" class="skip">Skip to content</a>
@@ -200,7 +200,7 @@
             />
             <div class="card-body">
               <h3>XRDC: X-ray diffraction analysis</h3>
-              <p>MATLAB toolkit for rocking curves, reciprocal-space maps, XRR fitting, and lattice parameters. Ships as a tagged build so the whole group runs the same thing.</p>
+              <p>MATLAB toolkit for rocking curves, reciprocal-space maps, XRR fitting, and lattice parameters. Ships as a tagged release so lab members can use the same version.</p>
               <p class="card-meta">
                 MATLAB &middot; 8 instrument formats &middot; v1.1.0 release
               </p>
@@ -224,7 +224,7 @@
                 Electrical Member &middot; Sooner Competitive Robotics &middot;
                 Aug 2025 &ndash; May 2026
               </p>
-              <p>Custom PCBs for power regulation, signal conditioning, and hardware safety interlocks. I took each one from schematic through layout, assembly, and vehicle-level testing. Real-time control firmware on STM32 under an RTOS, with LiDAR, cameras, GPS, IMU, encoders, and the e-stop on one CAN bus.</p>
+              <p>Custom PCBs for power regulation, signal conditioning, and hardware safety interlocks. I took each one from schematic through layout, assembly, and vehicle-level testing. Real-time control firmware on STM32 under an RTOS, and a shared CAN backbone linking the vehicle&rsquo;s sensor controllers and safety-status signals.</p>
               <p class="row-stack">
                 Altium &middot; STM32 / ARM Cortex-M &middot; RTOS &middot; CAN
                 &middot; C/C++
@@ -451,7 +451,7 @@
                   Wrote real-time control firmware in C/C++ on STM32 (ARM
                   Cortex-M) under an RTOS with prioritized task scheduling.
                 </li>
-                <li>Put LiDAR, cameras, GPS, IMU, encoders, and e-stop on a single CAN bus. Built a CAN-to-USB bridge so we could watch the bus live and reproduce faults.</li>
+                <li>Connected the vehicle&rsquo;s sensor controllers and safety-status signals through a shared CAN backbone, including interfaces for GPS, IMU, encoders, LiDAR, and camera subsystems. Built a CAN-to-USB bridge to log CAN traffic and reproduce intermittent communication faults.</li>
                 <li>Wrote and ran bench and vehicle-level test procedures. Isolated hardware and firmware faults with a scope and logic probing and closed them out before build deadlines.</li>
               </ul>
             </div>
@@ -587,10 +587,10 @@
               <dd>
                 Modern Physics for Engineers, Electron Transport Phenomena
                 <span class="later"
-                  ><b>Fall 2026</b>Intro to Solid-State Electronic Devices</span
+                  ><b>Fall 2026</b> Intro to Solid-State Electronic Devices</span
                 >
                 <span class="later"
-                  ><b>Spring 2027</b>Quantum Mechanics I (PHYS 3803), Quantum
+                  ><b>Spring 2027</b> Quantum Mechanics I (PHYS 3803), Quantum
                   Structures &amp; Devices (ECE 5343,
                   <em>graduate level</em>)</span
                 >
@@ -601,7 +601,7 @@
               <dd>
                 Electromagnetic Fields I
                 <span class="later"
-                  ><b>Fall 2026</b>EM Fields &amp; Wave Propagation (<em
+                  ><b>Fall 2026</b> EM Fields &amp; Wave Propagation (<em
                     >graduate level, one of two undergraduates in the
                     class</em
                   >)</span
@@ -613,7 +613,7 @@
               <dd>
                 Circuits I&ndash;II, Introductory Electronics, Energy Conversion
                 I, circuits and electronics laboratories
-                <span class="later"><b>Fall 2026</b>PCB Design Principles</span>
+                <span class="later"><b>Fall 2026</b> PCB Design Principles</span>
               </dd>
             </div>
             <div class="course-row">
@@ -621,7 +621,7 @@
               <dd>
                 Digital Design, Microprocessor System Design
                 <span class="later"
-                  ><b>Fall 2026</b>Digital Design Laboratory</span
+                  ><b>Fall 2026</b> Digital Design Laboratory</span
                 >
               </dd>
             </div>
@@ -631,7 +631,7 @@
                 Signals &amp; Systems, Digital Signals &amp; Filtering, Linear
                 Algebra, Probability / Statistics / Random Processes, Calculus
                 I&ndash;III, Differential Equations
-                <span class="later"><b>Spring 2027</b>Senior capstone</span>
+                <span class="later"><b>Spring 2027</b> Senior capstone</span>
               </dd>
             </div>
           </dl>
@@ -730,6 +730,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=202609171602"></script>
+    <script src="script.js?v=202609171626"></script>
   </body>
 </html>
