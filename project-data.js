@@ -225,6 +225,11 @@ window.PROJECT_DATA = {
     ],
     media: [
       {
+        image: "assets/research/heterostructure.svg",
+        alt: "Schematic of a BaTiO3 film on an SrTiO3 template layer on a silicon (001) substrate",
+        text: "The stack: ferroelectric BaTiO<sub>3</sub> on an SrTiO<sub>3</sub> template on Si(001). Schematic, not to scale.",
+      },
+      {
         image: "assets/research/rsm.png",
         alt: "Reciprocal-space map of a BaTiO3/SrTiO3/Si heterostructure",
         text: "Reciprocal-space map used to separate in-plane from out-of-plane lattice parameter.",

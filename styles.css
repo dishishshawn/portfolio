@@ -342,6 +342,12 @@ a {
   border-top: 1px solid var(--line-soft);
 }
 
+/* Diagrams must show whole, never centre-cropped like a photo. */
+.figure img[src$=".svg"] {
+  object-fit: contain;
+  background: #fff;
+}
+
 .figure-tall img {
   aspect-ratio: 1 / 1;
 }
@@ -1134,6 +1140,7 @@ a {
 .case-media {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  align-items: start;
   gap: 1.25rem;
 }
 
