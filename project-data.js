@@ -122,7 +122,7 @@ window.PROJECT_DATA = {
       {
         heading: "What it does",
         list: [
-          "Reads <b>eight instrument formats</b> directly, no conversion step: PANalytical XRDML point and area scans, Philips X00, and Rigaku SmartLab <code>.hgx</code>, <code>.ras</code>, <code>.raw</code>, and <code>.txt</code>.",
+          "Reads <b>six file formats</b> directly, no conversion step: PANalytical XRDML point and area scans, Philips X00, Rigaku SmartLab <code>.hgx</code> and <code>.txt</code>, and plain two-column text. Readers for Rigaku <code>.ras</code> and <code>.raw</code> are in progress.",
           "Handles the standard scan types: θ&ndash;2θ, rocking curve, φ scan, X-ray reflectivity, and reciprocal-space maps.",
           "Detects peaks with a prominence threshold derived from the scan itself, not a number typed in by hand.",
           "Gets lattice parameters by <b>Nelson&ndash;Riley</b> extrapolation and matches them to a material with <code>identifyMaterial</code>.",
@@ -138,7 +138,7 @@ window.PROJECT_DATA = {
         ],
         list: [
           "One figure style for the whole group, matched to Schwaigert et al., <i>J. Vac. Sci. Technol. A</i> <b>41</b>, 022703 (2023), so plots from different people compare directly.",
-          "Every optional-toolbox code path has a <b>pure-MATLAB fallback</b>, so a result doesn&rsquo;t depend on which licenses happened to be on the machine that produced it.",
+          "Every optional-toolbox code path has a <b>pure-MATLAB fallback</b>, so XRDC runs without the toolboxes. The test suite runs both ways. One φ-scan case still only passes with the Signal Processing Toolbox installed.",
           "A <code>runtests</code> suite covers the analysis paths. If a refactor changes a fitted number, the tests catch it.",
           "v1.1.0 ships as a <b>Windows installer</b> that pulls the matching MATLAB Runtime on first launch. Labmates without a MATLAB license run the same build I do.",
         ],
@@ -201,8 +201,8 @@ window.PROJECT_DATA = {
       },
       {
         image: "assets/research/xrdc-ui.png",
-        alt: "XRDC scan analyzer interface",
-        text: "XRDC scan analyzer, rocking-curve and reciprocal-space-map workflows.",
+        alt: "XRDC scan analyzer with an XRR scan loaded, fringes marked and thickness results listed",
+        text: "XRDC with the KTaO<sub>3</sub> XRR loaded: 12 fringes detected, thickness 24.7&nbsp;&plusmn;&nbsp;0.7&nbsp;nm. Data: PARADIM.",
       },
     ],
   },
