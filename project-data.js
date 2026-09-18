@@ -150,6 +150,31 @@ window.PROJECT_DATA = {
         ],
       },
       {
+        heading: "Worked example: public MBE data",
+        body: [
+          "The Paik group&rsquo;s data is unpublished, so this example uses a public dataset instead: KTaO<sub>3</sub> grown by molecular-beam epitaxy at PARADIM (Cornell), from Schwaigert et al. (2023). A diffraction scan on its own can&rsquo;t be repeated. This dataset includes the MBE log for each growth, so the result can be tied to the conditions that produced it.",
+          "Sample TS_KTO_0019, KTaO<sub>3</sub> on SrTiO<sub>3</sub>(100). I read these values from the run&rsquo;s machine log over the window when both source shutters were open:",
+        ],
+        list: [
+          "<b>Substrate:</b> SrTiO<sub>3</sub>(100) at a 625&nbsp;&deg;C heater setpoint (held 624.6&ndash;625.4&nbsp;&deg;C).",
+          "<b>Tantalum:</b> TaO<sub>2</sub> suboxide flux from a Ta<sub>2</sub>O<sub>5</sub> effusion cell at 1770&nbsp;&deg;C.",
+          "<b>Potassium:</b> effusion cell ramped from 320 to 335&nbsp;&deg;C during growth.",
+          "<b>Oxidant:</b> 10% O<sub>3</sub> + 90% O<sub>2</sub>, chamber pressure around 3.9&nbsp;&times;&nbsp;10<sup>&minus;6</sup> Torr.",
+          "<b>Time:</b> 2 hours of co-deposition.",
+          "<b>Cooldown:</b> potassium flux kept on down to 400&nbsp;&deg;C and ozone down to 300&nbsp;&deg;C.",
+        ],
+      },
+      {
+        heading: "What XRDC gets from it",
+        list: [
+          "<b>Thickness from XRR:</b> 24.7&nbsp;nm (95% CI 23.4&ndash;26.2&nbsp;nm) from 12 Kiessig fringes. That works out to about 0.2&nbsp;nm/min over the 2-hour growth.",
+          "<b>103 reciprocal-space map:</b> the SrTiO<sub>3</sub> substrate peak sits at Q<sub>x</sub>&nbsp;=&nbsp;0.256&nbsp;&Aring;<sup>&minus;1</sup>, where its 3.905&nbsp;&Aring; lattice puts it. The KTaO<sub>3</sub> film shows up as a separate peak at lower Q, which means the film has relaxed away from the substrate&rsquo;s in-plane spacing.",
+          "<b>2&theta;&ndash;&omega; scan:</b> film peaks next to each substrate reflection, with thickness fringes around them.",
+        ],
+        caveat:
+          'Data: PARADIM Data Collective, <a href="https://doi.org/10.34863/crr6-z966" target="_blank" rel="noreferrer">doi:10.34863/crr6-z966</a> (CC BY-NC-ND 4.0), from Schwaigert et al., <i>J. Vac. Sci. Technol. A</i> <b>41</b>, 022703 (2023), <a href="https://doi.org/10.1116/6.0002223" target="_blank" rel="noreferrer">doi:10.1116/6.0002223</a>. I didn&rsquo;t grow this sample. The figures are the raw files re-plotted with XRDC.',
+      },
+      {
         heading: "Credit and scope",
         body: [
           "XRDC is a MATLAB port of Dr. Tassilo Heeg&rsquo;s Delphi XRDC tool (FZJ/ISG1-IT). The core algorithms are his. The port, the XRR slab fitting, the RSM strain and composition work, the test suite, and the packaged release are mine.",
@@ -159,6 +184,21 @@ window.PROJECT_DATA = {
       },
     ],
     media: [
+      {
+        image: "assets/research/xrdc-example/kto0019-rsm103.jpg",
+        alt: "Reciprocal-space map around the 103 reflection of a KTaO3 film on SrTiO3(100)",
+        text: "103 RSM, KTaO<sub>3</sub> on SrTiO<sub>3</sub>(100), sample TS_KTO_0019. Substrate peak at center, relaxed film peak lower left. Data: PARADIM.",
+      },
+      {
+        image: "assets/research/xrdc-example/kto0019-xrr.png",
+        alt: "X-ray reflectivity of the KTaO3 film showing Kiessig fringes",
+        text: "XRR of the same film. XRDC fits 24.7&nbsp;nm from the fringe spacing. Data: PARADIM.",
+      },
+      {
+        image: "assets/research/xrdc-example/kto0019-xrd.png",
+        alt: "2theta-omega scan of the KTaO3 film on SrTiO3",
+        text: "2&theta;&ndash;&omega; scan: film peaks beside each SrTiO<sub>3</sub> 00l reflection. Data: PARADIM.",
+      },
       {
         image: "assets/research/xrdc-ui.png",
         alt: "XRDC scan analyzer interface",
