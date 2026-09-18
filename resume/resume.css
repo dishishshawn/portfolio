@@ -29,11 +29,12 @@
   padding: 0;
 }
 
-/* The sheet sits on a panel of ESP32Pet boards: the real front and back
-   copper, outline, and silkscreen exported from the KiCad layout. */
+/* The sheet sits on a panel of my boards (OpenCAN, STORM control board,
+   IR receiver, ESP32Pet) at true relative scale: real copper, outline, and
+   silkscreen exported through KiCad and recolored as seen through the mask. */
 body {
-  background: var(--board) url("esp32pet-board.svg") repeat;
-  background-size: 760px;
+  background: var(--board) url("boards.webp") repeat;
+  background-size: 927px 810px;
   color: var(--ink);
   font-family: var(--cm);
   font-size: 15px;
