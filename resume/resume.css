@@ -29,10 +29,11 @@
   padding: 0;
 }
 
-/* The sheet sits on a circuit board: solder mask, copper, vias (pcb.svg). */
+/* The sheet sits on a panel of ESP32Pet boards: the real front and back
+   copper, outline, and silkscreen exported from the KiCad layout. */
 body {
-  background: var(--board) url("pcb.svg") repeat;
-  background-size: 360px;
+  background: var(--board) url("esp32pet-board.svg") repeat;
+  background-size: 760px;
   color: var(--ink);
   font-family: var(--cm);
   font-size: 15px;
@@ -393,6 +394,21 @@ sup {
   margin-top: 0.9rem;
 }
 
+/* --- credit line under the sheet ---------------------------------------- */
+
+.credit {
+  width: min(816px, 100%);
+  margin: 0.9rem auto 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--bar-ink);
+  opacity: 0.85;
+}
+
+.credit a {
+  color: inherit;
+}
+
 /* --- small screens -------------------------------------------------------- */
 
 @media (max-width: 640px) {
@@ -449,7 +465,8 @@ sup {
   }
 
   .insert,
-  .bar {
+  .bar,
+  .credit {
     display: none;
   }
 
