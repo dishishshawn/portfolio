@@ -29,17 +29,24 @@
   padding: 0;
 }
 
-/* The sheet sits on my schematics: twelve sheets from OpenCAN, STORM,
-   the IR receiver, and ESP32Pet, recolored as lines on solder-mask green
-   and laid edge to edge so the whole area is covered. */
+/* The sheet sits on my schematics: all fifteen sheets from OpenCAN, STORM,
+   the IR receiver, and ESP32Pet in one canvas, pinned behind the page so the
+   résumé scrolls over it. One canvas, never tiled, so nothing repeats. */
 body {
-  background: var(--board) url("schematics.webp") repeat;
-  background-size: 2800px 1500px;
+  background: var(--board);
   color: var(--ink);
   font-family: var(--cm);
   font-size: 15px;
   line-height: 1.38;
   -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("schematics.webp") center / cover no-repeat;
 }
 
 .desk {
