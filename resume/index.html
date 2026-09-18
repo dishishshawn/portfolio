@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shawn Agarwal | Résumé</title>
+    <link rel="icon" href="data:," />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/font/Serif/cmun-serif.css"
+    />
+    <link rel="stylesheet" href="resume.css?v=202609180707" />
+  </head>
+  <body>
+    <main class="desk">
+      <nav class="bar" aria-label="Résumé">
+        <a href="../index.html">Back to portfolio</a>
+        <span class="hint">Click a boxed entry to see the work behind it.</span>
+        <a
+          class="download"
+          href="../assets/Resume.pdf"
+          download="Shawn_Agarwal_Resume.pdf"
+          >Download PDF</a
+        >
+      </nav>
+      <article class="sheet" aria-label="Résumé of Shawn Agarwal">
+        <header class="head">
+          <h1>Shawn Agarwal</h1>
+          <p class="contact">
+            Yukon, OK &bull;
+            <a class="box ext" href="mailto:shawnagarwal0@gmail.com"
+              >shawnagarwal0@gmail.com</a
+            >
+            &bull;
+            <a
+              class="box ext"
+              href="https://www.linkedin.com/in/shawnagarwal/"
+              target="_blank"
+              rel="noreferrer"
+              >linkedin.com/in/shawnagarwal</a
+            >
+            &bull;
+            <a
+              class="box ext"
+              href="https://github.com/dishishshawn"
+              target="_blank"
+              rel="noreferrer"
+              >github.com/dishishshawn</a
+            >
+          </p>
+        </header>
+
+        <section>
+          <h2>Education</h2>
+          <div class="entry">
+            <p class="row">
+              <b>University of Oklahoma, B.S. Electrical Engineering</b
+              ><span>Expected May 2027</span>
+            </p>
+            <p class="row">
+              GPA: 4.0 &bull; Oklahoma Regents Scholar &bull; Presidential Honor
+              Roll &bull; Distinguished Freshman Award<span>Norman, OK</span>
+            </p>
+            <p>
+              <b>Relevant Coursework:</b> Signals &amp; Systems, Electromagnetic
+              Fields &amp; Wave Propagation, Solid-State Electronic Devices,
+              Digital Design Laboratory, PCB Design Principles, Energy
+              Conversion
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Experience</h2>
+
+          <div class="entry">
+            <p class="row">
+              <b>Operations Intern, Amazon OKC1 Fulfillment Center</b
+              ><span>May 2026 &ndash; Aug 2026</span>
+            </p>
+            <p class="row sub">
+              Robotics-driven fulfillment operations<span
+                >Oklahoma City, OK</span
+              >
+            </p>
+            <ul>
+              <li>
+                Analyzed process and flow data to isolate throughput
+                bottlenecks; redesigned the station-replenishment SOP and
+                water-spider role, raising pack rate with modeled savings of
+                $790K/yr at OKC1 and $160M+ network-wide
+              </li>
+              <li>
+                Ran a 280-associate operation alongside technicians, engineers,
+                and area managers, enforcing safety, quality, and
+                operational-readiness standards against daily production targets
+              </li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <p class="row">
+              <b
+                ><button class="box" data-project="batio3-heterostructures">
+                  Undergraduate Researcher, Engineering Pathways Fellow
+                </button></b
+              ><span>Jan 2026 &ndash; Present</span>
+            </p>
+            <p class="row sub">
+              Center for Quantum Research &amp; Technology (CQRT), University of
+              Oklahoma<span>Norman, OK</span>
+            </p>
+            <ul>
+              <li>
+                Grew and characterized 10+ epitaxial thin-film samples
+                (currently MgZnO cubic metastructures) in Dr. Hanjong
+                Paik&rsquo;s group, running vacuum deposition and measurement
+                hardware and logging 25+ hours of HRXRD
+              </li>
+              <li>
+                Evaluated BaTiO<sub>3</sub> / SrTiO<sub>3</sub> / Si
+                heterostructures by comparing HRXRD against transport and
+                optical measurements to assess crystalline quality, strain
+                state, and interface behavior
+              </li>
+              <li>
+                Wrote <button class="box" data-project="xrdc">XRDC</button>, a
+                MATLAB HRXRD analysis tool with rocking-curve and
+                reciprocal-space workflows, replacing manual peak fitting and
+                standardizing film-quality metrics across the group
+              </li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <p class="row">
+              <b
+                ><button class="box" data-project="heading-software">
+                  Founder &amp; Engineer, Heading Software
+                </button></b
+              ><span>Jan 2026 &ndash; Present</span>
+            </p>
+            <p class="row sub">
+              AI document intelligence for oil &amp; gas land services<span
+                >Oklahoma</span
+              >
+            </p>
+            <ul>
+              <li>
+                Built an LLM document-extraction and verification pipeline (OCR,
+                schema validation, citation grounding) end to end with an
+                offline evaluation harness; reached 0.99 per-field precision and
+                recall on a hand-labeled test set and cut title-office review
+                from a full day to under 5 minutes
+              </li>
+              <li>
+                Wrote the BullMQ/Redis batch layer with idempotent workers and
+                automated QA catching drift, duplicates, and corrupt inputs;
+                validated with 3 title offices and onboarded a pilot customer
+              </li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <p class="row">
+              <b
+                ><button
+                  class="box"
+                  data-project="relevance-classification-model"
+                >
+                  Undergraduate Researcher, Machine Learning
+                </button></b
+              ><span>Sep 2024 &ndash; May 2025</span>
+            </p>
+            <p class="row sub">
+              Data Institute for Societal Challenges (DISC), University of
+              Oklahoma<span>Norman, OK</span>
+            </p>
+            <ul>
+              <li>
+                Fine-tuned BERT with active-learning uncertainty sampling over
+                1.6M records, &sim;95% accuracy with 100 human labels vs.
+                &sim;90% for standard BERT on 1,000 labels (10&times; less
+                labeling)
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Embedded &amp; Hardware Engineering</h2>
+
+          <div class="entry">
+            <p class="row">
+              <b
+                ><button class="box" data-project="igvc">
+                  Intelligent Ground Vehicle Competition, Electrical Member
+                </button></b
+              ><span>Aug 2025 &ndash; May 2026</span>
+            </p>
+            <ul>
+              <li>
+                Designed, built, and brought up custom PCBs with power
+                regulation, signal conditioning, and hardware safety interlocks,
+                owning schematic capture through layout, assembly, and
+                system-level verification against competition safety
+                requirements
+              </li>
+              <li>
+                Wrote real-time C/C++ firmware on STM32 (ARM Cortex-M) under an
+                RTOS, using prioritized task scheduling to keep closed-loop
+                actuation deterministic; connected the vehicle&rsquo;s sensor
+                controllers and safety-status signals through a shared CAN
+                backbone and built a
+                <button class="box" data-project="canable">
+                  CAN-to-USB bridge
+                </button>
+                to log CAN traffic and reproduce intermittent communication
+                faults
+              </li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <p class="row">
+              <b
+                ><button class="box" data-project="storm">
+                  Student Tele-Operated Robotics Mission, Electrical Team Lead
+                </button></b
+              ><span>Aug 2024 &ndash; May 2025</span>
+            </p>
+            <ul>
+              <li>
+                Designed multi-voltage power rails and
+                <button class="box" data-project="5v-buck-converter">
+                  buck converters
+                </button>
+                to a &lt;5% ripple specification for reliable motor and sensor
+                supply; implemented
+                <button class="box" data-project="infrared-sensor-board">
+                  IR/RF signal decoding
+                </button>
+                integrated with embedded firmware for remote command and control
+              </li>
+              <li>
+                Led the electrical team through design reviews, subsystem
+                integration, and structured test phases against a fixed
+                end-of-year mission schedule
+              </li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <p class="row">
+              <b
+                >VEX Robotics Competition, Team Lead, Canadian Valley Technology
+                Center</b
+              ><span>Aug 2023 &ndash; May 2024</span>
+            </p>
+            <ul>
+              <li>
+                Led end-to-end robot design, build, and test across iterative
+                competition cycles; competed at the VEX Robotics World
+                Championship
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+          <div class="entry skills">
+            <p>
+              <b>Hardware:</b> Schematic capture &amp; PCB layout (Altium),
+              power electronics, buck converters, signal conditioning, STM32 /
+              ARM Cortex-M, RTOS, CAN/FDCAN, SPI, I<sup>2</sup>C, UART,
+              oscilloscope/DMM bring-up and debug, soldering and board rework,
+              Fusion 360
+            </p>
+            <p>
+              <b>Software:</b> C/C++, Python, MATLAB, Rust, SQL, PyTorch,
+              TensorFlow, Git, LaTeX
+            </p>
+            <p>
+              <b>Test &amp; Analysis:</b> High-resolution X-ray diffraction,
+              transport measurement, optical characterization, vacuum deposition
+              systems, MATLAB data analysis
+            </p>
+            <p>
+              <b>Activities:</b> IEEE, Engineers&rsquo; Club, Sooner Competitive
+              Robotics, Society of Asian Scientists and Engineers
+            </p>
+          </div>
+        </section>
+      </article>
+
+      <p class="credit">
+        Background: schematics from boards I designed:
+        <a href="https://github.com/dishishshawn/STORM_Control_Board">STORM control board</a>,
+        <a href="https://github.com/dishishshawn/ESP32Pet">ESP32Pet</a>,
+        <a href="https://github.com/dishishshawn/InfaredPCB">IR receiver</a>, and
+        <a href="https://github.com/dishishshawn/OpenCAN">OpenCAN</a>.
+      </p>
+
+    </main>
+
+    <script src="../project-data.js?v=202609180707"></script>
+    <script src="resume.js?v=202609180707"></script>
+  </body>
+</html>

@@ -1,0 +1,484 @@
+/* Interactive résumé (experimental).
+   The page is the LaTeX résumé: Computer Modern on a letter-size sheet.
+   Clickable entries wear hyperref-style link boxes (crimson internal, teal
+   external). Opening one folds out a sheet of engineering computation paper. */
+
+:root {
+  --board: #16322a;
+  --bar-ink: #e9efe9;
+  --paper: #ffffff;
+  --ink: #000000;
+  --ink-soft: #3b3b3b;
+  --link: #841617;
+  --url: #1f7a8c;
+  --eng: #eaf1e1;
+  --eng-grid: #bdd3a8;
+  --eng-ink: #22301a;
+
+  --cm:
+    "Computer Modern Serif", "Latin Modern Roman", "CMU Serif", Georgia, serif;
+  --sheet-pad: clamp(1.25rem, 6vw, 3.4rem);
+  --fold: 520ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* The sheet sits on my schematics: all fifteen sheets from OpenCAN, STORM,
+   the IR receiver, and ESP32Pet in one canvas, pinned behind the page so the
+   résumé scrolls over it. One canvas, never tiled, so nothing repeats. */
+body {
+  background: var(--board);
+  color: var(--ink);
+  font-family: var(--cm);
+  font-size: 15px;
+  line-height: 1.38;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("schematics.webp") center / cover no-repeat;
+}
+
+.desk {
+  padding: clamp(0.75rem, 4vw, 3rem) clamp(0.5rem, 3vw, 2rem) 3rem;
+}
+
+/* --- top bar: the PDF is always one click away ------------------------------ */
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  width: min(816px, 100%);
+  margin: 0 auto 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  color: var(--bar-ink);
+  background: color-mix(in srgb, var(--board) 88%, transparent);
+  backdrop-filter: blur(3px);
+}
+
+.bar a {
+  color: inherit;
+}
+
+.bar .hint {
+  flex: 1;
+  text-align: center;
+  font-size: 0.93rem;
+  opacity: 0.85;
+}
+
+.bar .download {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--paper);
+  padding: 0.3rem 0.85rem;
+}
+
+.bar .download:hover {
+  background: var(--eng);
+}
+
+.bar a:focus-visible {
+  outline: 2px solid var(--bar-ink);
+  outline-offset: 3px;
+}
+
+/* --- the sheet ------------------------------------------------------------ */
+
+.sheet {
+  width: min(816px, 100%);
+  min-height: min(1056px, 100vh);
+  margin-inline: auto;
+  background: var(--paper);
+  padding: var(--sheet-pad);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.18),
+    0 12px 30px -12px rgba(0, 0, 0, 0.35);
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 0.9rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.contact {
+  margin-top: 0.3rem;
+  font-size: 0.93rem;
+}
+
+h2 {
+  font-size: 1.12rem;
+  font-weight: normal;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  border-bottom: 0.6px solid var(--ink);
+  margin: 1rem 0 0.45rem;
+  padding-bottom: 0.1rem;
+}
+
+.entry + .entry {
+  margin-top: 0.55rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.row > span {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.row.sub {
+  font-style: italic;
+}
+
+ul {
+  margin: 0.15rem 0 0 1.35rem;
+}
+
+li {
+  padding-left: 0.2rem;
+}
+
+li::marker {
+  content: "\2022";
+}
+
+.skills p + p {
+  margin-top: 0.12rem;
+}
+
+sub,
+sup {
+  font-size: 0.72em;
+  line-height: 0;
+}
+
+/* --- hyperref link boxes --------------------------------------------------
+   A thin rectangle around the link text, like pdfTeX draws for \href and
+   \hyperref. The outline draws itself in once on load, one box at a time. */
+
+.box {
+  position: relative;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  text-align: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0 0.12em;
+  margin: 0 -0.12em;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  inset: -0.04em -0.02em -0.1em;
+  border: 1px solid var(--link);
+  pointer-events: none;
+  clip-path: inset(0 100% 100% 0);
+  animation: draw 700ms ease-out forwards;
+  animation-delay: calc(250ms + var(--i, 0) * 90ms);
+}
+
+.box.ext::after {
+  border-color: var(--url);
+}
+
+@keyframes draw {
+  45% {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.box:hover,
+.box[aria-expanded="true"] {
+  background: color-mix(in srgb, var(--link) 7%, transparent);
+}
+
+.box.ext:hover {
+  background: color-mix(in srgb, var(--url) 8%, transparent);
+}
+
+.box:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* --- the fold-out ---------------------------------------------------------
+   Height animates through a 0fr -> 1fr grid row; the paper inside swings
+   down from the fold line so it reads as a sheet unfolding out of the page. */
+
+.insert {
+  display: grid;
+  grid-template-rows: 0fr;
+  margin: 0 calc(var(--sheet-pad) * -1);
+  transition:
+    grid-template-rows var(--fold),
+    margin var(--fold);
+  perspective: 1400px;
+}
+
+.insert.is-open {
+  grid-template-rows: 1fr;
+  margin-top: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.insert > .fold {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.paper {
+  position: relative;
+  background-color: var(--eng);
+  background-image:
+    linear-gradient(var(--eng-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--eng-grid) 1px, transparent 1px);
+  background-size:
+    100% 0.25in,
+    0.25in 100%;
+  background-position:
+    0 -1px,
+    -1px 0;
+  color: var(--eng-ink);
+  padding: 1.1rem var(--sheet-pad) 1.4rem;
+  box-shadow:
+    inset 0 7px 9px -8px rgba(0, 0, 0, 0.35),
+    inset 0 -7px 9px -8px rgba(0, 0, 0, 0.3);
+  transform-origin: top center;
+  transform: rotateX(-78deg);
+  opacity: 0;
+  transition:
+    transform var(--fold),
+    opacity 300ms ease;
+}
+
+.insert.is-open .paper {
+  transform: none;
+  opacity: 1;
+}
+
+.paper-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.paper h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Focus lands on the title so screen readers announce the fold-out;
+   it is not an interactive control, so no ring. */
+.paper h3:focus {
+  outline: none;
+}
+
+.paper .role {
+  font-style: italic;
+  margin-bottom: 0.6rem;
+}
+
+.paper .summary {
+  font-size: 1.04rem;
+  max-width: 68ch;
+}
+
+.paper h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.9rem 0 0.25rem;
+}
+
+.paper p,
+.paper li {
+  max-width: 72ch;
+}
+
+.paper p + p {
+  margin-top: 0.35rem;
+}
+
+.paper .caveat {
+  font-style: italic;
+  margin-top: 0.45rem;
+  font-size: 0.93rem;
+}
+
+.paper a {
+  color: var(--url);
+}
+
+.paper code {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.86em;
+}
+
+.close {
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 0.93rem;
+  background: var(--paper);
+  color: var(--eng-ink);
+  border: 1px solid var(--eng-grid);
+  padding: 0.15rem 0.6rem;
+  cursor: pointer;
+}
+
+.close:hover {
+  border-color: var(--eng-ink);
+}
+
+.close:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+.figs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 0.9rem;
+  margin-top: 0.9rem;
+  align-items: start;
+}
+
+.figs figure {
+  background: var(--paper);
+  padding: 0.45rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.figs img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.figs figcaption {
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+  line-height: 1.3;
+}
+
+.more {
+  margin-top: 0.9rem;
+}
+
+/* --- credit line under the sheet ---------------------------------------- */
+
+.credit {
+  width: min(816px, 100%);
+  margin: 0.9rem auto 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--bar-ink);
+  opacity: 0.85;
+}
+
+.credit a {
+  color: inherit;
+}
+
+/* --- small screens -------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .row > span {
+    white-space: normal;
+    font-size: 0.93em;
+  }
+
+  .bar .hint {
+    display: none;
+  }
+
+  .bar {
+    justify-content: space-between;
+    padding-inline: 0.25rem;
+  }
+}
+
+/* --- motion + print ------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .box::after {
+    animation: none;
+    clip-path: none;
+  }
+
+  .insert,
+  .paper {
+    transition: none;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .desk {
+    padding: 0;
+  }
+
+  .sheet {
+    box-shadow: none;
+    padding: 0.5in;
+  }
+
+  .insert,
+  .bar,
+  .credit {
+    display: none;
+  }
+
+  .box::after {
+    display: none;
+  }
+}
