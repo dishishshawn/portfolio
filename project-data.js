@@ -295,6 +295,12 @@ window.PROJECT_DATA = {
     plainSummary:
       "Programmable protocol-emulator ASIC for the Jane Street ASIC Competition: a Verilog pin engine that runs UART, SPI, and I²C as firmware, verified with cocotb and SymbiYosys and laid out on IHP 130 nm through Tiny Tapeout.",
     github: "https://github.com/dishishshawn/protocol-emulator-asic",
+    links: [
+      {
+        label: "3D layout viewer",
+        href: "https://dishishshawn.github.io/protocol-emulator-asic/",
+      },
+    ],
     spec: [
       { k: "Competition", v: "Jane Street ASIC Competition" },
       { k: "Process", v: "IHP SG13CMOS5L, 130 nm" },
