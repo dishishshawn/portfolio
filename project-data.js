@@ -285,6 +285,73 @@ window.PROJECT_DATA = {
 
   /* ===================== HARDWARE & SOFTWARE ===================== */
 
+  "protocol-emulator-asic": {
+    title: "Programmable protocol-emulator ASIC",
+    eyebrow: "Digital design",
+    period: "Sep 2026 – present",
+    role: "Jane Street ASIC Competition entry &middot; Tiny Tapeout",
+    summary:
+      "A chip that runs UART, SPI, and I²C as firmware on one programmable pin engine, with host FIFOs and a timestamped capture unit for injecting protocol faults at an exact clock. Verified in simulation and formally, and laid out on IHP 130 nm.",
+    plainSummary:
+      "Programmable protocol-emulator ASIC for the Jane Street ASIC Competition: a Verilog pin engine that runs UART, SPI, and I²C as firmware, verified with cocotb and SymbiYosys and laid out on IHP 130 nm through Tiny Tapeout.",
+    github: "https://github.com/dishishshawn/protocol-emulator-asic",
+    spec: [
+      { k: "Competition", v: "Jane Street ASIC Competition" },
+      { k: "Process", v: "IHP SG13CMOS5L, 130 nm" },
+      { k: "Area", v: "6×4 Tiny Tapeout tiles" },
+      { k: "Clock", v: "10 MHz" },
+      { k: "Cells", v: "18,776 (2,644 flip-flops)" },
+      { k: "Status", v: "Pre-submission, not fabricated" },
+    ],
+    stack: [
+      "Verilog",
+      "cocotb",
+      "SymbiYosys",
+      "Yosys",
+      "Icarus Verilog",
+      "LibreLane",
+      "Tiny Tapeout",
+      "GitHub Actions",
+    ],
+    sections: [
+      {
+        heading: "The idea",
+        body: [
+          "The chip runs firmware: a 15-opcode instruction set that drives, samples, and shifts data on five bidirectional lanes. UART, SPI, and I²C are all programs on the same engine.",
+          "Because the timing lives in firmware, the chip can also break a protocol on purpose, at an exact clock, and record how the target responds.",
+        ],
+      },
+      {
+        heading: "Architecture",
+        list: [
+          "<b>64 × 32-bit writable instruction store</b>, byte registers, independent bit and byte loops, and input-dependent branches.",
+          "Eight-byte TX and RX <b>host FIFOs</b> with explicit backpressure for streaming transfers.",
+          "Eight-entry <b>timestamped capture FIFO</b> that records the target&rsquo;s response to a timed fault.",
+          "Protocols as programs: UART 8N1, SPI in all four modes and both bit orders, and I²C reads, writes, and repeated-START register transactions with ACK/NACK, bounded clock stretching, and contention detection.",
+        ],
+      },
+      {
+        heading: "Verification",
+        list: [
+          "<b>22 cocotb regressions</b>, plus nine mutation controls that confirm the streaming tests catch deliberately broken RTL.",
+          "<b>Formal proofs</b> with SymbiYosys (k-induction) of safety, bounded-wait, and FIFO data-integrity properties, with seven negative controls.",
+          "Receiver fingerprinting: 179 malformed frames tell five UART receiver algorithms apart from their verdicts alone, identifying each in at most six probes.",
+          "CI reruns the regressions, a 100-run fault sweep, and the fingerprint, and fails unless the results match the committed reports byte for byte.",
+        ],
+      },
+      {
+        heading: "Physical design",
+        list: [
+          "Completed layout on 6×4 Tiny Tapeout tiles in IHP SG13CMOS5L at 10 MHz: 18,776 cells, 34.1% utilization.",
+          "<b>Clean DRC, LVS, and antenna checks</b>. +57.4 ns setup slack at the slow corner, +0.12 ns hold slack at the fast corner.",
+          "Gate-level tests pass on the routed netlist with SDF back-annotation at all three timing corners, in CI.",
+        ],
+        caveat:
+          "Simulation and layout only. The chip has not been fabricated, electrical compliance has not been measured, and the competition submission is due January 2027.",
+      },
+    ],
+  },
+
   igvc: {
     title: "Intelligent Ground Vehicle Competition",
     plainTitle: "IGVC ground vehicle electronics",
@@ -400,55 +467,57 @@ window.PROJECT_DATA = {
   },
 
   "heading-software": {
-    title: "Heading Software",
+    title: "REP",
+    plainTitle: "REP: computer-vision lift analysis",
     eyebrow: "Company",
     period: "Jan 2026 – present",
-    role: "Founder &amp; Engineer",
+    role: "Founder &amp; ML Engineer &middot; Heading Software",
     summary:
-      "AI document extraction for oil and gas land services. The system uses OCR and an LLM to extract structured fields, then links each result to its location in the source document for review.",
+      "A computer-vision lifting app, in closed beta with OU Powerlifting. Upload a lift video and it returns rep count, bar path, bar speed, and form checks in under 60 seconds.",
     plainSummary:
-      "Heading Software: an LLM document extraction and verification pipeline for oil and gas land services.",
-    unlinkedNote: "Private (commercial product)",
+      "REP, a computer-vision lifting app from Heading Software: rep count, bar path, bar speed, and form checks from an uploaded lift video in under 60 seconds.",
+    unlinkedNote: "Private (closed beta)",
     spec: [
-      { k: "Role", v: "Founder &amp; Engineer" },
+      { k: "Role", v: "Founder &amp; ML Engineer" },
+      { k: "Company", v: "Heading Software" },
       { k: "Founded", v: "January 2026" },
-      { k: "Domain", v: "Oil &amp; gas land services" },
+      { k: "Status", v: "Closed beta, OU Powerlifting" },
+      { k: "Target", v: "Under 60 s per video" },
     ],
     stack: [
-      "LLM pipelines",
-      "OCR",
-      "Schema validation",
-      "Citation grounding",
-      "BullMQ",
-      "Redis",
+      "Computer vision",
+      "Server GPUs",
+      "React Native",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
     ],
     sections: [
       {
-        heading: "The problem",
+        heading: "What it does",
         body: [
-          "Land services work depends on deeds, leases, and assignments. The facts pulled from them need to be correct, and each one needs a reference back to where it came from so someone can check it.",
+          "Upload a video of a lift and REP returns rep count, bar path, bar speed, and form checks in under 60 seconds. It&rsquo;s in closed beta with OU Powerlifting.",
         ],
       },
       {
-        heading: "The pipeline",
+        heading: "The vision pipeline",
         list: [
-          "Built the LLM document-extraction and verification pipeline end to end: <b>OCR, schema validation, and citation grounding</b>.",
-          "Schema validation checks each field&rsquo;s type and format and rejects malformed extractions before they reach a report.",
-          "Citation grounding links each value to its location in the source document, so a reviewer can check it without rereading the whole instrument.",
+          "Built the <b>computer-vision pipeline</b> that turns an uploaded lift video into rep count, bar path, bar speed, and form checks.",
+          "Benchmarked on-device inference on iPhone at <b>0.7&ndash;1.7 s per frame</b>, then moved analysis to server GPUs to meet the 60-second target.",
         ],
       },
       {
         heading: "Measuring it",
         list: [
-          "Wrote an <b>offline evaluation harness</b> that scores each extracted field against a hand-labeled test set.",
-          "This shows which fields are reliable and where changes to the prompt or model cause regressions.",
+          "An automated test suite over <b>85 labeled clips</b> gates every model change, so a change that breaks rep counting doesn&rsquo;t ship.",
+          "Exact rep-count accuracy on that set: <b>85%</b>.",
         ],
       },
       {
-        heading: "Running it at volume",
+        heading: "Shipping it",
         list: [
-          "<b>BullMQ/Redis batch layer with idempotent workers</b>, so a retry after a crash doesn&rsquo;t duplicate work or double-write results.",
-          "Automated QA catches drift, duplicates, and corrupt inputs before a person sees them.",
+          "Deployed the production backend on <b>Supabase</b>: auth, rate limiting, sandboxed video processing, and monitoring.",
+          "The app is React Native and TypeScript.",
         ],
       },
     ],
@@ -461,7 +530,7 @@ window.PROJECT_DATA = {
     period: "Aug 2024 – May 2025",
     role: "Electrical Team Lead &middot; Sooner Competitive Robotics",
     summary:
-      "Led the electrical team on a tele-operated competition robot: power rails, signal decoding, and the design reviews that kept everyone&rsquo;s boards compatible with each other.",
+      "Led a 5-person electrical team on a tele-operated competition robot: the power distribution system, the firmware for wireless remote control, and the design reviews that kept everyone&rsquo;s boards compatible with each other.",
     plainSummary:
       "Electrical team lead for STORM, a tele-operated competition robot: multi-voltage power rails, buck converters, and IR/RF signal decoding.",
     spec: [
@@ -494,7 +563,7 @@ window.PROJECT_DATA = {
       {
         heading: "Sensing",
         list: [
-          "Implemented <b>IR and RF signal decoding</b> for the robot&rsquo;s sensing path.",
+          "Wrote the firmware for <b>wireless remote control</b>, including IR and RF signal decoding.",
           "The IR board used TSOP receivers on a Raspberry Pi Pico, decoding in real time and passing results to the main PC.",
         ],
       },
@@ -548,6 +617,12 @@ window.PROJECT_DATA = {
           "Ran it as a loop (train, sample, label, retrain) and compared model variants inside it.",
         ],
       },
+      {
+        heading: "Result",
+        list: [
+          "<b>95% accuracy from 100 labels</b> with active learning, against 90% from 1,000 labels with standard training: <b>10&times; less human labeling</b> for a better model.",
+        ],
+      },
     ],
     media: [
       {
@@ -559,6 +634,153 @@ window.PROJECT_DATA = {
   },
 
   /* ===================== SMALLER BUILDS ===================== */
+
+  "stm32-sim": {
+    title: "stm32-sim",
+    eyebrow: "Embedded tooling",
+    role: "Personal project",
+    summary:
+      "An offline simulator for an STM32G031 on a virtual breadboard. It runs the real <code>.elf</code> that arm-none-eabi-gcc builds from register-level C against LEDs, buttons, 7-segment digits, and I²C parts.",
+    github: "https://github.com/dishishshawn/stm32-sim",
+    spec: [
+      { k: "Target", v: "STM32G031K8 (NUCLEO)" },
+      { k: "Interface", v: "Browser UI and CLI" },
+      { k: "Runs", v: "Offline, no account" },
+    ],
+    stack: [
+      "TypeScript",
+      "Node.js",
+      "ARM Cortex-M0+",
+      "arm-none-eabi-gcc",
+      "I²C",
+      "Playwright",
+    ],
+    sections: [
+      {
+        heading: "What it does",
+        body: [
+          "Like the real chip, it fails silently: a GPIO write with the port&rsquo;s clock off does nothing, and an I²C bus without pull-ups never starts. Unlike the real chip, it then explains, with a diagnostic that names the line that made the mistake and what went wrong.",
+          "The browser view runs the circuit live, with panels for the current source line, every register with its named bits, and an I²C trace (START, address, ACK/NACK, data, STOP). Firmware is written the way the course exams ask for: register addresses from the reference manual, no HAL.",
+        ],
+      },
+    ],
+  },
+
+  "tic-tac-toe-stm32": {
+    title: "Tic-tac-toe on STM32",
+    eyebrow: "Embedded lab",
+    role: "ECE 4273 Digital Design Lab, with a lab partner",
+    summary:
+      "Two-player tic-tac-toe on an STM32G031 with a 3×3 grid of bi-color LEDs and three buttons, written against the registers with no HAL.",
+    github: "https://github.com/dishishshawn/Tic-Tac-Toe-STM32",
+    spec: [
+      { k: "Board", v: "NUCLEO-G031K8" },
+      { k: "Display", v: "9 bi-color LEDs" },
+      { k: "Worst-case load", v: "48.3 mA" },
+    ],
+    stack: ["C", "STM32G031", "Bare-metal GPIO", "STM32CubeIDE"],
+    sections: [
+      {
+        heading: "Notes",
+        list: [
+          "BSRR/BRR writes so each LED changes without a read-modify-write.",
+          "Win, tie, and occupied-square checks, with 50 ms software debounce and rising-edge detection.",
+          "Current budget measured, not assumed: 5.36 mA per LED and 48.3 mA with all nine lit, under the 60 mA USB limit even at &minus;5% resistor tolerance. 180 &Omega; would have gone over.",
+        ],
+      },
+    ],
+  },
+
+  "firmware-drills": {
+    title: "Firmware Drills",
+    eyebrow: "Embedded C++",
+    role: "Personal project",
+    summary:
+      "39 interview-style C++ problems across embedded, RTOS, and core C++, each with real tests compiled by your own g++.",
+    github: "https://github.com/dishishshawn/Firmware-Drills",
+    spec: [
+      { k: "Problems", v: "39" },
+      { k: "Topics", v: "Embedded, RTOS, core C++" },
+    ],
+    stack: ["C++", "g++", "AddressSanitizer", "UBSan", "RTOS concepts"],
+    sections: [
+      {
+        heading: "Notes",
+        list: [
+          "Tests build with AddressSanitizer and UBSan where the compiler has them, so a bad pointer crashes with a report instead of passing by luck.",
+          "Exceptions are off (<code>-fno-exceptions</code>), like many embedded builds.",
+          "RTOS problems model the scheduler, semaphores, queues, and timers as plain data structures, so they run without threads. Embedded ones include packing a CAN frame, a fixed-size byte queue, and a moving-average filter.",
+        ],
+      },
+    ],
+  },
+
+  mnemo: {
+    title: "Mnemo",
+    eyebrow: "Web app",
+    role: "Personal project",
+    summary:
+      "A study app that turns course material (slides, PDFs, photos of notes, lecture recordings) into adaptive practice questions, flashcards, practice tests, study guides, and podcasts. Runs in the browser on your own Gemini key.",
+    github: "https://github.com/dishishshawn/mnemo",
+    links: [{ label: "Open the app", href: "https://mnemo-iota.vercel.app" }],
+    spec: [
+      { k: "Accounts", v: "None" },
+      { k: "Storage", v: "On the device (IndexedDB)" },
+      { k: "Model", v: "Gemini, your own key" },
+    ],
+    stack: [
+      "TypeScript",
+      "Gemini API",
+      "RDKit",
+      "FSRS",
+      "IndexedDB",
+      "PWA",
+      "Vercel",
+    ],
+    sections: [
+      {
+        heading: "Notes",
+        list: [
+          "Adaptive questions target the weakest concepts. Each concept&rsquo;s level climbs on first-try right answers and drops on a miss.",
+          "Flashcards use FSRS spaced repetition. Set an exam date and it works out, on the device, how many questions a day keep recall above 90% on exam day.",
+          "Chemistry structures are drawn from SMILES with RDKit and checked against PubChem before a question is saved. A question whose structure contradicts its name is dropped.",
+          "No accounts. Data stays in the browser, with end-to-end encrypted sync between devices.",
+        ],
+      },
+    ],
+  },
+
+  "whisper-voice-os": {
+    title: "Whisper Voice OS",
+    eyebrow: "Local AI tooling",
+    role: "Personal project",
+    summary:
+      "Offline voice dictation and voice commands for a Linux desktop. Whisper does speech-to-text and a local Ollama model turns a spoken request into a shell command.",
+    github: "https://github.com/dishishshawn/whisper-voice-os",
+    spec: [
+      { k: "Runs", v: "Fully local, GPU" },
+      { k: "Speech", v: "faster-whisper large-v3-turbo" },
+      { k: "Commands", v: "Ollama" },
+    ],
+    stack: [
+      "Python",
+      "faster-whisper",
+      "CUDA",
+      "Ollama",
+      "Silero VAD",
+      "systemd",
+    ],
+    sections: [
+      {
+        heading: "Notes",
+        list: [
+          "A systemd user service keeps the speech model warm in VRAM, so there&rsquo;s no cold start.",
+          "Silero VAD drops background noise before transcription.",
+          "Commands use context from the active terminal (working directory, Git state, project tooling), and the <code>ask</code> CLI confirms before it runs anything.",
+        ],
+      },
+    ],
+  },
 
   esp32pet: {
     title: "ESP32Pet",
